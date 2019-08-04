@@ -1,0 +1,9 @@
+#background {
+    background-attachment:  fixed;
+    background-image: url("../images/landDark2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    padding: 0;
+    text-align: center;
+}
