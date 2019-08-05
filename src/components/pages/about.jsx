@@ -13,7 +13,7 @@ class About extends React.Component {
           <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
               <div id="background" style={{width:"100%", }}>
                   <NavBar />
-                  <h1>About</h1>
+                  <h1 style={{color:'white'}}>About</h1>
                   <FooterBar />
               </div>    
           </div>

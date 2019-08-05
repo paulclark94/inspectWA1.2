@@ -1,12 +1,36 @@
 import React, { Component } from 'react';
 
+
+import { Route, Link } from 'react-router-dom'
+
 //Import stylesheets
 
+import Auth0Lock from 'auth0-lock';
 
 class NavBar extends Component {
     state = {
         
     };
+
+    loginBtnClick() {
+        var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.com', {
+            auth: {
+                redirectUrl: 'http://localhost:3000',
+                responseType: 'code',
+                params: {
+                    scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+                }
+                },    
+            theme: {
+                primaryColor: 'rgb(100,100,100)',            
+            },    
+            languageDictionary: {
+                title: "InspectWA sign in"
+            },    
+            allowSignUp: false
+        });
+        lock.show();
+    }
 
     styles = {
         bar: {
@@ -69,12 +93,12 @@ class NavBar extends Component {
                 <div style={this.styles.headerCenter}>
                 </div>
                 <div style={this.styles.headerRight}>
-                    <a href="/" style={this.styles.headerLink}>
+                    <Link to="/" style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>Home</span>
-                    </a>
-                    <a href="/about" style={this.styles.headerLink}>
+                    </Link>
+                    <Link to="/about" style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>About us</span>
-                    </a>
+                    </Link>
                     <a style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>Membership</span>
                     </a>
@@ -84,7 +108,7 @@ class NavBar extends Component {
                     <a style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>Contact</span>
                     </a>
-                    <a style={this.styles.headerLink}>
+                    <a onClick={this.loginBtnClick} style={this.styles.headerLink}>
                         <div style={this.styles.headerLoginButton}>Login</div>
                     </a>
                 </div>
