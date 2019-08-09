@@ -48,7 +48,7 @@ const checkAuth = async () => {
   await lock.checkSession({}, function (error, authResult) {
       if (error || !authResult) {
           //USER IS NOT ALLOWED TO ACCESS ROUTE, REDIRECT TO /contact
-          return true;
+          return false;
       } else {  
           //USER CAN PROCEED TO MEMBERS ROUTE
           return true;
@@ -58,7 +58,7 @@ const checkAuth = async () => {
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-    checkAuth() === false
+    checkAuth() === true
       ? <Component {...props} />
       : <Redirect to='/contact' />
   )} />
