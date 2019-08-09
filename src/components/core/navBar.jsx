@@ -1,35 +1,76 @@
 import React, { Component } from 'react';
-
-
 import { Route, Link } from 'react-router-dom'
 
-//Import stylesheets
+import { addtoken } from '../../actions/addtoken'
+import { removetoken } from '../../actions/removetoken'
 
 import Auth0Lock from 'auth0-lock';
 
-class NavBar extends Component {
-    state = {
-        
-    };
 
-    loginBtnClick() {
-        var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.com', {
-            auth: {
-                redirectUrl: 'http://localhost:3000',
-                responseType: 'code',
-                params: {
-                    scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
-                }
-                },    
-            theme: {
-                primaryColor: 'rgb(100,100,100)',            
-            },    
-            languageDictionary: {
-                title: "InspectWA sign in"
-            },    
-            allowSignUp: false
+
+
+
+
+var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.com', {   
+    theme: {
+        primaryColor: 'rgb(100,100,100)',            
+    },    
+    languageDictionary: {
+        title: "InspectWA sign in"
+    },    
+    allowSignUp: false
+});
+
+
+
+
+class NavBar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            token: 0
+        }
+    } 
+
+    loginBtnClick = () => {
+        lock.on("authenticated", function(authResult) {
+            alert(authResult)
+            lock.getUserInfo(authResult.accessToken, function(error, profile) {
+              if (error) {
+                // Handle error
+                return;
+              }
+           
+              localStorage.setItem("accessToken", authResult.accessToken);
+              localStorage.setItem("profile", JSON.stringify(profile));
+           
+              // Update DOM
+            });
         });
+        
         lock.show();
+    }
+
+    checkToken = () => {
+        lock.checkSession({}, function (error, authResult) {
+            if (error || !authResult) {
+                lock.show();
+                alert('dead')
+            } else {
+                alert('alive')
+                // user has an active session, so we can use the accessToken directly.
+                lock.getUserInfo(authResult.accessToken, function (error, profile) {
+
+                        console.log(error, profile);
+                });
+
+            }
+        });
+    }
+
+    logout = () => {
+        lock.logout();
     }
 
     styles = {
@@ -105,9 +146,18 @@ class NavBar extends Component {
                     <a style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>Code of ethics</span>
                     </a>
-                    <a style={this.styles.headerLink}>
+                    <a onClick={this.checkToken} style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>Contact</span>
                     </a>
+                    <a onClick={this.checkToken} style={this.styles.headerLink}>
+                        <span style={this.styles.headerLinkText}>Test token</span>
+                    </a>
+                    <a onClick={this.logout} style={this.styles.headerLink}>
+                        <span style={this.styles.headerLinkText}>Logout</span>
+                    </a>
+                    <Link to="/members" style={this.styles.headerLink}>
+                        <span style={this.styles.headerLinkText}>Members</span>
+                    </Link>
                     <a onClick={this.loginBtnClick} style={this.styles.headerLink}>
                         <div style={this.styles.headerLoginButton}>Login</div>
                     </a>
@@ -117,5 +167,5 @@ class NavBar extends Component {
          );
     }
 }
- 
-export default NavBar;
+
+export default NavBar
