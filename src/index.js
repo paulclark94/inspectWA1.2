@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -27,9 +27,8 @@ import About from './components/pages/about'
 import Membership from './components/pages/membership'
 import Ethics from './components/pages/ethics'
 import Inspectors from './components/pages/inspectors'
-import Documents from './components/pages/documents'
-import Calendar from './components/pages/calendar'
 import Contact from './components/pages/contact'
+import Members from './components/pages/members'
 
 
 
@@ -44,28 +43,44 @@ var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.co
 });
 
         
-const checkAuth = async () => {    
-  await lock.checkSession({}, function (error, authResult) {
+       
+const useCheckAuth = () => {    
+  
+  const [isAuth, setAuth] = useState(false);
+
+   useEffect(()=>{
+
+   lock.checkSession({}, (error, authResult) => {
+     
       if (error || !authResult) {
           //USER IS NOT ALLOWED TO ACCESS ROUTE, REDIRECT TO /contact
-          return false;
+          setAuth(false)
       } else {  
           //USER CAN PROCEED TO MEMBERS ROUTE
-          return true;
+          setAuth(true)
       }
+
+    })
+
   })
+
+  return isAuth
+
 }
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={(props) => (
-    checkAuth() === true
-      ? <Component {...props} />
-      : <Redirect to='/contact' />
-  )} />
-)
+const PrivateRoute = ({ component: Component, ...rest }) => {
+  
+  const isAuth = useCheckAuth()
+  
+  return (
+    <Route {...rest} render={(props) => (
+      isAuth === true
+        ? <Component {...props} />
+        : <Redirect to='/membership' />
+    )} />
+  )
+}
 
-
-const Members = () => <h3>Hello protected member</h3>
 
 //Define routing
 const routing = (
@@ -76,8 +91,6 @@ const routing = (
         <Route path="/membership" component={Membership} />
         <Route path="/ethics" component={Ethics} />
         <Route path="/inspectors" component={Inspectors} />
-        <Route path="/documents" component={Documents} />
-        <Route path="/calendar" component={Calendar} />
         <Route path="/contact" component={Contact} />           
         <PrivateRoute path='/members' component={Members} />
       </div>

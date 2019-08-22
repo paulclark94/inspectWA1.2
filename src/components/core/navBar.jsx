@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, withRouter } from 'react-router-dom'
 
 import { addtoken } from '../../actions/addtoken'
 import { removetoken } from '../../actions/removetoken'
@@ -33,23 +33,32 @@ class NavBar extends Component {
         }
     } 
 
+
     loginBtnClick = () => {
-        lock.on("authenticated", function(authResult) {
-            alert(authResult)
-            lock.getUserInfo(authResult.accessToken, function(error, profile) {
-              if (error) {
-                // Handle error
-                return;
-              }
-           
-              localStorage.setItem("accessToken", authResult.accessToken);
-              localStorage.setItem("profile", JSON.stringify(profile));
-           
-              // Update DOM
-            });
-        });
+        let that = this;
+
+        lock.checkSession({}, (error, authResult) => {     
+            if (error || !authResult) {
+                lock.on("authenticated", function(authResult) {            
+                    //Update state of parent component
+                    that.props.authHandler(true);
         
-        lock.show();
+                    //Set the token in the local storage
+                    localStorage.setItem("accessToken", authResult.accessToken);           
+                    
+                    //Now successfully authenticated, take them to the members area. 
+                    that.props.history.push('/members')
+                    
+                });
+                
+                lock.show();
+            } else {  
+                //USER IS CURRENTLY LOGGED IN
+                that.props.history.push('/members')
+            }
+      
+        })
+              
     }
 
     checkToken = () => {
@@ -82,7 +91,6 @@ class NavBar extends Component {
             left: 0,
             position: 'fixed',
             top: 0,
-            width: '100%',
             display:'flex',
             flexDirection:'row'
         },
@@ -107,6 +115,14 @@ class NavBar extends Component {
         headerLoginButton: {
             borderRadius:'1vh',
             background:'rgba(100,100,100)',
+            fontSize:'2vh',
+            height:'6vh',
+            lineHeight:'6vh',
+        },
+        headerMemberButton: {
+            borderRadius:'1vh',
+            color:'rgba(100,100,100)',
+            background: 'rgb(200,200,200)',
             fontSize:'2vh',
             height:'6vh',
             lineHeight:'6vh',
@@ -138,34 +154,27 @@ class NavBar extends Component {
                         <span style={this.styles.headerLinkText}>Home</span>
                     </Link>
                     <Link to="/about" style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>About us</span>
+                        <span style={this.styles.headerLinkText}>About</span>
                     </Link>
-                    <a style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Membership</span>
-                    </a>
-                    <a style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Code of ethics</span>
-                    </a>
-                    <a onClick={this.checkToken} style={this.styles.headerLink}>
+                    <Link to="/membership" style={this.styles.headerLink}>
+                        <span style={this.styles.headerLinkText}>Join</span>
+                    </Link>
+                    <Link to="/ethics" style={this.styles.headerLink}>
+                        <span style={this.styles.headerLinkText}>Ethics</span>
+                    </Link>
+                    <Link to="/contact" style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>Contact</span>
-                    </a>
-                    <a onClick={this.checkToken} style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Test token</span>
-                    </a>
-                    <a onClick={this.logout} style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Logout</span>
-                    </a>
-                    <Link to="/members" style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Members</span>
                     </Link>
                     <a onClick={this.loginBtnClick} style={this.styles.headerLink}>
-                        <div style={this.styles.headerLoginButton}>Login</div>
+                        <div style={this.styles.headerLoginButton}>Members</div>
                     </a>
                 </div>
                     
             </div>
-         );
+            );
+        
     }
 }
 
-export default NavBar
+
+export default withRouter(NavBar)

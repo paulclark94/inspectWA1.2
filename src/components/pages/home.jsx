@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom'
 
 //Import stylesheets
 
@@ -12,6 +13,8 @@ class Home extends Component {
         banner: {
             width:'100%',
             height: '100vh', //Covers initial screen (Not fixed in place),
+            contentAlign: 'center',
+            textAlign: 'center',
         },
         homeBodySection: {
             backgroundColor:'rgba(255,255,255,0.2)',
@@ -24,6 +27,22 @@ class Home extends Component {
         homeBodySectionText: {
             color:'rgb(255,255,255)'
         },
+        bannerText: {
+            fontSize:'2vh',
+            color:'rgb(220,220,220)',
+            cursor: 'pointer'
+        },
+        bannerButton: {
+            borderRadius:'1vh',
+            background:'rgba(100,100,100,0.5)',
+            fontSize:'2vh',
+            height:'6vh',
+            lineHeight:'6vh', 
+            width:'20vw', 
+            color:'white',
+            cursor: 'pointer',
+            margin:5
+        }
     }
 
     render() { 
@@ -31,16 +50,22 @@ class Home extends Component {
             <div>
                 
                 <div style={this.styles.banner}>            
-                    <img src={require("../../assets/images/logoLightSub.png")} style={{height:'30vh', marginTop:'40vh'}}></img>                    
-                </div>
+                    <img src={require("../../assets/images/logoLightSub.png")} style={{height:'30vh', marginTop:'20vh'}}></img>  
+                    <br></br> 
+                    <br></br> 
+                    <br></br>
+                    <div style={{ display: 'inline-block', width:'60vw'}}>
+                        <p style={this.styles.bannerText}>
+                            Welcome to The Industry Association of Building and Property Inspectors in WA – Inspect WA. 
+                            Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses.
+                        </p>
+                        <div style={{ display: 'inline-block'}}>
+                            <Link to="/inspectors">
+                                <div style={this.styles.bannerButton}>Find an inspector</div>
+                            </Link>
+                        </div>
 
-                <div style={this.styles.homeBodySection}>
-                    <h1 style={this.styles.homeBodySectionHeaderText}>
-                        Find a building inspector in WA
-                    </h1>
-                    <p style={this.styles.homeBodySectionText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    </div>
                 </div>
 
             </div>
