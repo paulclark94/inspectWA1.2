@@ -47,8 +47,14 @@ class Membership extends React.Component {
                             <h1 style={this.styles.BodySectionHeaderText}>
                                 Membership
                             </h1>
-                            <div style={this.styles.BodySectionTextDiv}>
-                                
+                            <div style={{ display: 'inline-block', width:'60vw'}}>
+                                <p style={{color:'white'}}>
+                                    To become a member of InspectWA, please click on the button below to download the membership form.     
+                                    Complete the form and email it to info@inspectwa.org.au     
+                                </p>
+                                <img style={{height:'30vh', margin:'5vh'}} src={require('../../assets/icons/file.png')} />
+                                <div style={{backgroundColor:'rgb(100,100,100)', borderRadius:10, padding:10, color:'white', width:'30vw', marginLeft:'15vw', cursor:'pointer'}}>Download the membership form</div>
+
                             </div>
                         </div>
                     </div>

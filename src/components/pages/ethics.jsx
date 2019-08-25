@@ -54,7 +54,11 @@ class Ethics extends React.Component {
                             </h1>
                             <div style={this.styles.BodySectionTextDiv}>
                                 
-                                <div style={this.styles.ethicsContainer}>
+                                <div style={this.styles.ethicsContainer}>                 
+                                    <div style={{textAlign:'center'}}>
+                                        <img style={{height:'20vh', margin:'5vh'}} src={require('../../assets/icons/open-book.png')} />
+                                    </div>                   
+
                                     <p>
                                         1.	A member shall act in an impartial, honest manner and in the interest of their clients.
                                     </p>
@@ -80,6 +84,8 @@ class Ethics extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <br></br>
+                        <br></br>
                     </div>
 
                     <FooterBar />

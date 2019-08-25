@@ -81,51 +81,44 @@ class About extends React.Component {
                         </div>
                         
 
-                        <div style={{backgroundColor:'rgba(255,255,255,0.2)', padding:30}}>
-                            <h1 style={this.styles.homeBodySectionHeaderText}>
+                        <div style={{backgroundColor:'rgba(255,255,255,0.7)', padding:30}}>
+                            <h1 style={{color:'rgb(40,40,40)', padding:20}}>
                                 Our team
                             </h1>
+                            <br></br>
                             <div style={{display:'flex', flexDirection:'row'}}>
                                 <div style={{flex:1, marginLeft:'10vw', marginRight:'0vw', display: 'grid', placeItems: 'center center'}}>
-                                    <p style={{textAlign:'left', color:'white', fontSize:16}}>
+                                    <p style={{textAlign:'left', color:'rgb(40,40,40)', fontSize:16}}>
                                         Inspectors within the association are either a registered engineer, builder or surveyor. Our inspectors extensively cover metro & regional WA. 
                                     </p>
                                 </div>
                                 <div style={{flex:1, marginLeft:'5vw', marginRight:'10vw'}}>   
                                     <div style={{display:'flex', flexDirection:'row'}}>
                                         <div style={{flex:1}}>
-                                            <span style={{color:'white', fontSize:36}}>
+                                            <span style={{color:'rgb(40,40,40)', fontSize:36}}>
                                                 51
                                             </span>
                                             <br></br>
-                                            <span style={{color:'white', fontSize:16}}>
+                                            <span style={{color:'rgb(40,40,40)', fontSize:16}}>
                                                 Inspectors
                                             </span>
                                         </div>
                                         <div style={{flex:1}}>
-                                            <span style={{color:'white', fontSize:36}}>
-                                                40+
-                                            </span>
-                                            <br></br>
-                                            <span style={{color:'white', fontSize:16}}>
-                                                Years experience
-                                            </span>
-                                        </div>
-                                        <div style={{flex:1}}>
-                                            <span style={{color:'white', fontSize:36}}>
+                                            <span style={{color:'rgb(40,40,40)', fontSize:36}}>
                                                 10,000+
                                             </span>
                                             <br></br>
-                                            <span style={{color:'white', fontSize:16}}>
+                                            <span style={{color:'rgb(40,40,40)', fontSize:16}}>
                                                 Inspections completed
                                             </span>
                                         </div>
 
 
                                     </div>
-                                </div>
-                                
+                                </div>                                
                             </div>
+                            <br></br>
+
                         </div>
 
 
@@ -133,6 +126,7 @@ class About extends React.Component {
                             <h1 style={this.styles.homeBodySectionHeaderText}>
                                 Industry leaders
                             </h1>
+                            <br></br>
                             <div style={{display:'flex', flexDirection:'row'}}>
                                 <div style={{flex:1, marginLeft:'10vw', marginRight:'0vw', display: 'grid', placeItems: 'center center'}}>                                    
                                     <img style={{height:'30vh'}} src={require('../../assets/icons/seminar.png')} />
@@ -145,9 +139,10 @@ class About extends React.Component {
                                         The initial focus will be on Building and Pest Inspections but it is envisaged that this will be expanded over time to include a range of building and property inspection professions such as, Electrics, Plumbing, Gas, Asbestos and Drug. 
                                     </p>
                                     
-                                </div>
-                                
+                                </div>                                
                             </div>
+                            <br></br>
+
                         </div>
 
 
