@@ -5,7 +5,10 @@
   "dependencies": {
     "auth0-lock": "^11.17.1",
     "react": "^16.8.6",
+    "react-burger-menu": "^2.6.11",
+    "react-device-detect": "^1.7.5",
     "react-dom": "^16.8.6",
+    "react-fontawesome": "^1.6.1",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",

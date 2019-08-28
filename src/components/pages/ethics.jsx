@@ -1,12 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+  } from "react-device-detect";
+import { Route, Link } from 'react-router-dom'
 
 import NavBar from '../core/navBar'
+import NavBarMobile from '../core/navBarMobile'
 
 import FooterBar from '../core/footerBar'
+import FooterBarMobile from '../core/footerBarMobile'
+
 
 
 
 class Ethics extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            isAuthenticated: false
+        }
+  
+        this.authHandler = this.authHandler.bind(this)
+    } 
+  
+    
+    authHandler(newValue) {
+        this.setState({
+          isAuthenticated: newValue
+        })
+    }
+    
     styles = {
         banner: {
             width:'100%',
@@ -41,58 +68,120 @@ class Ethics extends React.Component {
         
     }
 
-    render() { 
-        return (
-            <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
-                <div id="background" style={{width:"100%", }}>
-                    <NavBar />
 
-                    <div>    
-                        <div style={this.styles.BodySection}>
-                            <h1 style={this.styles.BodySectionHeaderText}>
-                                InspectWA code of ethics
-                            </h1>
-                            <div style={this.styles.BodySectionTextDiv}>
-                                
-                                <div style={this.styles.ethicsContainer}>                 
-                                    <div style={{textAlign:'center'}}>
-                                        <img style={{height:'20vh', margin:'5vh'}} src={require('../../assets/icons/open-book.png')} />
-                                    </div>                   
+    
+    
+    renderContent = () => {
+        if (isMobile) {
+            return (
+                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
+                    <div id="background" style={{width:"100%", }}>
+                        <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 
-                                    <p>
-                                        1.	A member shall act in an impartial, honest manner and in the interest of their clients.
-                                    </p>
-                                    <p>
-                                        2.	A member shall not offer services or express opinions beyond their capabilities and qualifications. Members should disclose their experience, qualifications and or Registrations in their engagement documentation and reports so as to demonstrate the validity of their opinions and capabilities.
-                                    </p>
-                                    <p>
-                                        3.	A member should do their utmost to avoid a conflict of interest and shall disclose a conflict of interest with a client as soon as that conflict becomes apparent.
-                                    </p>
-                                    <p>
-                                        4.	The members should not offer or receive commissions or payment from any party other than the client in conjunction with an inspection of a property. 
-                                    </p>
-                                    <p>
-                                        5.	A member shall not make an un-solicited offer to undertake remediation work identified and recommended in their report. 
-                                    </p>
-                                    <p>
-                                        6.	A member shall not accept payment from a contractor for the referral of remediation work identified and recommended in their report.
-                                    </p>
-                                    <p>
-                                        7.	A member should disclosure to their clients the status of all Professional Indemnity, Public Liability and Workers Compensation insurances prior to being engaged by that client so that the client can make an informed decision. 
+                        <div>    
+                            <div style={this.styles.BodySection}>
+                                <h1 style={this.styles.BodySectionHeaderText}>
+                                    Code of ethics
+                                </h1>
+                                <div style={{color:'rgb(255,255,255)',textAlign:'left',fontSize:'0.8rem',lineHeight:'1rem',width:'90vw',marginLeft:'5vw',}}>
+                                    
+                                    <div style={this.styles.ethicsContainer}>                 
+                                        <div style={{textAlign:'center'}}>
+                                            <img style={{height:'20vh'}} src={require('../../assets/icons/open-book.png')} />
+                                        </div>                   
 
-                                    </p>
+                                        <p>
+                                            1.	A member shall act in an impartial, honest manner and in the interest of their clients.
+                                        </p>
+                                        <p>
+                                            2.	A member shall not offer services or express opinions beyond their capabilities and qualifications. Members should disclose their experience, qualifications and or Registrations in their engagement documentation and reports so as to demonstrate the validity of their opinions and capabilities.
+                                        </p>
+                                        <p>
+                                            3.	A member should do their utmost to avoid a conflict of interest and shall disclose a conflict of interest with a client as soon as that conflict becomes apparent.
+                                        </p>
+                                        <p>
+                                            4.	The members should not offer or receive commissions or payment from any party other than the client in conjunction with an inspection of a property. 
+                                        </p>
+                                        <p>
+                                            5.	A member shall not make an un-solicited offer to undertake remediation work identified and recommended in their report. 
+                                        </p>
+                                        <p>
+                                            6.	A member shall not accept payment from a contractor for the referral of remediation work identified and recommended in their report.
+                                        </p>
+                                        <p>
+                                            7.	A member should disclosure to their clients the status of all Professional Indemnity, Public Liability and Workers Compensation insurances prior to being engaged by that client so that the client can make an informed decision. 
+
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <br></br>
+                            <br></br>
                         </div>
-                        <br></br>
-                        <br></br>
-                    </div>
 
-                    <FooterBar />
-                </div>    
-            </div>
-            
-        );
+                        <FooterBarMobile />
+                    </div>    
+                </div>
+                
+                
+            );
+        } else {
+            return (               
+                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
+                    <div id="background" style={{width:"100%", }}>
+                        <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
+
+                        <div>    
+                            <div style={this.styles.BodySection}>
+                                <h1 style={this.styles.BodySectionHeaderText}>
+                                    InspectWA code of ethics
+                                </h1>
+                                <div style={this.styles.BodySectionTextDiv}>
+                                    
+                                    <div style={this.styles.ethicsContainer}>                 
+                                        <div style={{textAlign:'center'}}>
+                                            <img style={{height:'20vh', margin:'5vh'}} src={require('../../assets/icons/open-book.png')} />
+                                        </div>                   
+
+                                        <p>
+                                            1.	A member shall act in an impartial, honest manner and in the interest of their clients.
+                                        </p>
+                                        <p>
+                                            2.	A member shall not offer services or express opinions beyond their capabilities and qualifications. Members should disclose their experience, qualifications and or Registrations in their engagement documentation and reports so as to demonstrate the validity of their opinions and capabilities.
+                                        </p>
+                                        <p>
+                                            3.	A member should do their utmost to avoid a conflict of interest and shall disclose a conflict of interest with a client as soon as that conflict becomes apparent.
+                                        </p>
+                                        <p>
+                                            4.	The members should not offer or receive commissions or payment from any party other than the client in conjunction with an inspection of a property. 
+                                        </p>
+                                        <p>
+                                            5.	A member shall not make an un-solicited offer to undertake remediation work identified and recommended in their report. 
+                                        </p>
+                                        <p>
+                                            6.	A member shall not accept payment from a contractor for the referral of remediation work identified and recommended in their report.
+                                        </p>
+                                        <p>
+                                            7.	A member should disclosure to their clients the status of all Professional Indemnity, Public Liability and Workers Compensation insurances prior to being engaged by that client so that the client can make an informed decision. 
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <br></br>
+                            <br></br>
+                        </div>
+
+                        <FooterBar />
+                    </div>    
+                </div>
+                
+            );
+        }
+    }
+     
+    render() {
+        return this.renderContent();
     }
   
 }

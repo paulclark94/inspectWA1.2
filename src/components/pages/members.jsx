@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+  } from "react-device-detect";
+import { Route, Link } from 'react-router-dom'
 
 import NavBar from '../core/navBar'
+import NavBarMobile from '../core/navBarMobile'
 
 import FooterBar from '../core/footerBar'
+import FooterBarMobile from '../core/footerBarMobile'
 
 import './members.css'
 
@@ -11,6 +20,22 @@ import paper2 from '../../assets/files/Sample doc.docx'
 
 
 class Members extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            isAuthenticated: false
+        }
+  
+        this.authHandler = this.authHandler.bind(this)
+    } 
+  
+    
+    authHandler(newValue) {
+        this.setState({
+          isAuthenticated: newValue
+        })
+    }
     styles = {
         banner: {
             width:'100%',
@@ -69,7 +94,7 @@ class Members extends React.Component {
         return (
             <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
                 <div id="background" style={{width:"100%", }}>
-                    <NavBar />
+                    <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 
                     <div>    
                         <div style={this.styles.BodySection}>

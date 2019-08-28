@@ -28,13 +28,10 @@ class App extends React.Component {
 
   render() { 
       return ( 
-          <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
-              <div id="background" style={{width:"100%", }}>
-                  <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
-                  <HomeBody />
-                  <FooterBar />
-              </div>
+          <div>
+              <HomeBody />
           </div>
+          
       );
   }
 }
