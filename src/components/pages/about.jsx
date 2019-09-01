@@ -39,7 +39,7 @@ class About extends React.Component {
                     <div id="background" style={{width:"100%", }}>
                         <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
     
-                        <div style={{backgroundColor:'rgba(255,255,255,0.2)',marginTop:'10vh'}}>    
+                        <div style={{marginTop:'10vh'}}>    
                             <div style={{height:'50vh', width:'90vw', marginLeft:'5vw', fontSize:30, display: 'grid', placeItems: 'center center'}}>
                                 <img style={{height:'30vh', marginTop:'20vh'}} src={require('../../assets/icons/check-mark.png')} />
                             </div>
@@ -139,7 +139,7 @@ class About extends React.Component {
                     <div id="background" style={{width:"100%", }}>
                         <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
     
-                        <div style={{backgroundColor:'rgba(255,255,255,0.2)',marginTop:'10vh'}}>    
+                        <div style={{marginTop:'10vh'}}>    
                             <div style={{height:'50vh', width:'60vw', marginLeft:'20vw', fontSize:30, display: 'grid', placeItems: 'center center'}}>
                                 <img style={{height:'30vh', marginTop:'20vh'}} src={require('../../assets/icons/check-mark.png')} />
                             </div>

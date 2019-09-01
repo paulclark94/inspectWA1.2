@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import Collapsible from 'react-collapsible';
+
 import {
     BrowserView,
     MobileView,
@@ -7,12 +10,18 @@ import {
   } from "react-device-detect";
 import { Route, Link } from 'react-router-dom'
 
+
+
 import NavBar from '../core/navBar'
 import NavBarMobile from '../core/navBarMobile'
 
 import FooterBar from '../core/footerBar'
 import FooterBarMobile from '../core/footerBarMobile'
 
+
+import './inspectors.css'
+
+var FontAwesome = require('react-fontawesome');
 
 
 class Inspectors extends React.Component {
@@ -342,11 +351,143 @@ class Inspectors extends React.Component {
         
 
     }
+
+    
+    GenerateOpacityMobile = (Name, Phone, Email, Qualification, PIInsurance ) => {
+        return(
+            <div style={{backgroundColor:'rgba(0,0,0,0.6)', borderRadius:10, marginLeft:'1%', marginTop:10, width:'98%'}}>
+                <div style={{width: '100%', textAlign:'left',}}>
+                    <div style={{width:'100%', padding:10, contentAlign:'center', justifyContent:'center'}}>
+                        <span style={{color:'rgb(150,150,150)', fontSize:10}}>
+                            INSPECTOR
+                        </span>
+                        <br></br>
+                        <span style={{color:'white', fontSize:30}}>
+                            {Name}
+                        </span>
+                        <br></br>
+                        <span style={{color:'rgb(150,150,150)', fontSize:10}}>
+                            PHONE
+                        </span>
+                        <br></br>
+                        <span style={{color:'white', fontSize:20}}>
+                            {Phone}
+                        </span>
+                        <br></br>
+                        <span style={{color:'rgb(150,150,150)', fontSize:10}}>
+                            EMAIL
+                        </span>
+                        <br></br>
+                        <span style={{color:'white', fontSize:20}}>
+                            {Email}
+                        </span>
+                    
+                    </div>
+                    
+                </div>
+
+            </div>    
+        )
+    }
+
+    
+    renderTilesMobile = () => {
+        const views = [];
+        const InspectorsObject = [{'Name': 'Bob Harrison','Phone':'0457398292','Email':'bob.harrison@gmail.com','Qualification':'Engineer','PIInsurance':'1','Types':{'Type1':1,'Type2':1,'Type3':0,'Type4':1,'Type5':0,'Type6':0,'Type7':0,'Type8':0,'Type9':1,'Type10':1,'Type11':1,'Type12':1,'Type13':1},'Locations':{'Location1':0,'Location2':1,'Location3':0,'Location4':0,'Location5':0,'Location6':0,'Location7':0,'Location8':0,'Location9':0,'Location10':0,'Location11':0,'Location12':0},'Properties':{'Property1':1,'Property2':1,'Property3':1,'Property4':0,'Property5':0}},{'Name': 'Ryan Michaels','Phone':'0457398292','Email':'rmichaels@outlook.com','Qualification':'Builder','PIInsurance':'1','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':0,'Type5':1,'Type6':1,'Type7':1,'Type8':0,'Type9':1,'Type10':1,'Type11':1,'Type12':1,'Type13':0},'Locations':{'Location1':1,'Location2':0,'Location3':1,'Location4':1,'Location5':1,'Location6':1,'Location7':0,'Location8':0,'Location9':1,'Location10':1,'Location11':1,'Location12':1},'Properties':{'Property1':1,'Property2':1,'Property3':0,'Property4':0,'Property5':0}},{'Name': 'Daniel Clarke','Phone':'0457398292','Email':'clarkey123@gmail.com','Qualification':'Surveyor','PIInsurance':'1','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':1,'Type5':0,'Type6':1,'Type7':1,'Type8':1,'Type9':0,'Type10':1,'Type11':1,'Type12':0,'Type13':1},'Locations':{'Location1':1,'Location2':0,'Location3':0,'Location4':1,'Location5':1,'Location6':1,'Location7':1,'Location8':1,'Location9':0,'Location10':1,'Location11':1,'Location12':1},'Properties':{'Property1':1,'Property2':0,'Property3':1,'Property4':0,'Property5':0}},{'Name': 'Shaun Davies','Phone':'0457398292','Email':'sdavies@inspectwa.com','Qualification':'Engineer','PIInsurance':'1','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':1,'Type5':1,'Type6':0,'Type7':0,'Type8':0,'Type9':0,'Type10':0,'Type11':0,'Type12':0,'Type13':1},'Locations':{'Location1':1,'Location2':1,'Location3':0,'Location4':1,'Location5':1,'Location6':1,'Location7':1,'Location8':1,'Location9':1,'Location10':0,'Location11':1,'Location12':1},'Properties':{'Property1':0,'Property2':1,'Property3':1,'Property4':0,'Property5':0}},{'Name': 'Matt Guy','Phone':'0457398292','Email':'mguy@guysinspos.com','Qualification':'Builder','PIInsurance':'1','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':1,'Type5':1,'Type6':1,'Type7':1,'Type8':0,'Type9':1,'Type10':1,'Type11':1,'Type12':0,'Type13':1},'Locations':{'Location1':1,'Location2':0,'Location3':0,'Location4':0,'Location5':0,'Location6':0,'Location7':0,'Location8':0,'Location9':0,'Location10':0,'Location11':0,'Location12':0},'Properties':{'Property1':1,'Property2':0,'Property3':0,'Property4':0,'Property5':0}},{'Name': 'Paul Junio','Phone':'0457398292','Email':'pj23419807@gmail.com','Qualification':'Surveyor','PIInsurance':'1','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':1,'Type5':1,'Type6':1,'Type7':1,'Type8':1,'Type9':1,'Type10':1,'Type11':1,'Type12':1,'Type13':0},'Locations':{'Location1':1,'Location2':0,'Location3':0,'Location4':0,'Location5':0,'Location6':0,'Location7':0,'Location8':0,'Location9':0,'Location10':0,'Location11':0,'Location12':0},'Properties':{'Property1':1,'Property2':0,'Property3':1,'Property4':0,'Property5':0}},{'Name': 'Chad Stevens','Phone':'0457398292','Email':'cstevens2178@hotmail.com','Qualification':'Engineer','PIInsurance':'1','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':1,'Type5':1,'Type6':1,'Type7':1,'Type8':1,'Type9':1,'Type10':1,'Type11':1,'Type12':1,'Type13':1},'Locations':{'Location1':1,'Location2':0,'Location3':0,'Location4':0,'Location5':0,'Location6':0,'Location7':0,'Location8':0,'Location9':0,'Location10':0,'Location11':0,'Location12':0},'Properties':{'Property1':1,'Property2':0,'Property3':1,'Property4':0,'Property5':0}},{'Name': 'Nick Citizen','Phone':'0457398292','Email':'ncitizen@outlook.com','Qualification':'Builder','PIInsurance':'1','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':1,'Type5':1,'Type6':1,'Type7':1,'Type8':1,'Type9':1,'Type10':1,'Type11':1,'Type12':1,'Type13':1},'Locations':{'Location1':1,'Location2':0,'Location3':0,'Location4':0,'Location5':0,'Location6':0,'Location7':0,'Location8':0,'Location9':0,'Location10':0,'Location11':0,'Location12':0},'Properties':{'Property1':0,'Property2':0,'Property3':1,'Property4':0,'Property5':0}},{'Name': 'Mr Inspector','Phone':'0457398292','Email':'1289128967@gmail.com','Qualification':'Surveyor','PIInsurance':'0','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':1,'Type5':1,'Type6':1,'Type7':1,'Type8':1,'Type9':1,'Type10':1,'Type11':1,'Type12':1,'Type13':1},'Locations':{'Location1':1,'Location2':0,'Location3':0,'Location4':0,'Location5':0,'Location6':0,'Location7':0,'Location8':0,'Location9':0,'Location10':0,'Location11':0,'Location12':0},'Properties':{'Property1':1,'Property2':0,'Property3':1,'Property4':0,'Property5':0}},{'Name': 'Shelley Davies','Phone':'0457398292','Email':'sdavies129@gmail.com','Qualification':'Engineer','PIInsurance':'1','Types':{'Type1':0,'Type2':1,'Type3':1,'Type4':1,'Type5':1,'Type6':1,'Type7':1,'Type8':1,'Type9':1,'Type10':1,'Type11':1,'Type12':1,'Type13':1},'Locations':{'Location1':1,'Location2':0,'Location3':0,'Location4':0,'Location5':0,'Location6':0,'Location7':0,'Location8':0,'Location9':0,'Location10':0,'Location11':0,'Location12':0},'Properties':{'Property1':1,'Property2':1,'Property3':0,'Property4':1,'Property5':1}}]
+        
+        
+
+        try {
+            
+            for ( var i =0; i < InspectorsObject.length; i++){
+                var Name = InspectorsObject[i].Name;
+                var Phone = InspectorsObject[i].Phone;
+                var Email = InspectorsObject[i].Email;
+                var Qualification = InspectorsObject[i].Qualification;
+
+                if(InspectorsObject[i].PIInsurance == 1) {
+                    var PIInsurance = 'Yes'
+                } else {
+                    var PIInsurance = 'No'
+                }
+
+                var displayIndicator = true;
+
+                //Review whether AT LEAST 1 match for type of report
+                if( 
+                    ((InspectorsObject[i].Types.Type1 == 1) && (this.state.type1 === true)) ||
+                    ((InspectorsObject[i].Types.Type2 == 1) && (this.state.type2 === true)) ||
+                    ((InspectorsObject[i].Types.Type3 == 1) && (this.state.type3 === true)) ||
+                    ((InspectorsObject[i].Types.Type4 == 1) && (this.state.type4 === true)) ||
+                    ((InspectorsObject[i].Types.Type5 == 1) && (this.state.type5 === true)) ||
+                    ((InspectorsObject[i].Types.Type6 == 1) && (this.state.type6 === true)) ||
+                    ((InspectorsObject[i].Types.Type7 == 1) && (this.state.type7 === true)) ||
+                    ((InspectorsObject[i].Types.Type8 == 1) && (this.state.type8 === true)) ||
+                    ((InspectorsObject[i].Types.Type9 == 1) && (this.state.type9 === true)) ||
+                    ((InspectorsObject[i].Types.Type10 == 1) && (this.state.type10 === true)) ||
+                    ((InspectorsObject[i].Types.Type11 == 1) && (this.state.type11 === true)) ||
+                    ((InspectorsObject[i].Types.Type12 == 1) && (this.state.type12 === true)) ||
+                    ((InspectorsObject[i].Types.Type13 == 1) && (this.state.type13 === true))
+                    ) {
+                } else {
+                    displayIndicator = false;
+                }
+
+                //Review whether AT LEAST 1 match for location of inspector
+                if( 
+                    ((InspectorsObject[i].Locations.Location1 == 1) && (this.state.location1 === true)) ||
+                    ((InspectorsObject[i].Locations.Location2 == 1) && (this.state.location2 === true)) ||
+                    ((InspectorsObject[i].Locations.Location3 == 1) && (this.state.location3 === true)) ||
+                    ((InspectorsObject[i].Locations.Location4 == 1) && (this.state.location4 === true)) ||
+                    ((InspectorsObject[i].Locations.Location5 == 1) && (this.state.location5 === true)) ||
+                    ((InspectorsObject[i].Locations.Location6 == 1) && (this.state.location6 === true)) ||
+                    ((InspectorsObject[i].Locations.Location7 == 1) && (this.state.location7 === true)) ||
+                    ((InspectorsObject[i].Locations.Location8 == 1) && (this.state.location8 === true)) ||
+                    ((InspectorsObject[i].Locations.Location9 == 1) && (this.state.location9 === true)) ||
+                    ((InspectorsObject[i].Locations.Location10 == 1) && (this.state.location10 === true)) ||
+                    ((InspectorsObject[i].Locations.Location11 == 1) && (this.state.location11 === true)) ||
+                    ((InspectorsObject[i].Locations.Location12 == 1) && (this.state.location12 === true))
+                    ) {
+                } else {
+                    displayIndicator = false;
+                }
+
+                //Review whether AT LEAST 1 match for property type
+                if( 
+                    ((InspectorsObject[i].Properties.Property1 == 1) && (this.state.property1 === true)) ||
+                    ((InspectorsObject[i].Properties.Property2 == 1) && (this.state.property2 === true)) ||
+                    ((InspectorsObject[i].Properties.Property3 == 1) && (this.state.property3 === true)) ||
+                    ((InspectorsObject[i].Properties.Property4 == 1) && (this.state.property4 === true)) ||
+                    ((InspectorsObject[i].Properties.Property5 == 1) && (this.state.property5 === true))
+                    ) {
+                } else {
+                    displayIndicator = false;
+                }
+
+
+
+                if(displayIndicator === true) {
+                    
+                    views.push(             
+                        this.GenerateOpacityMobile(Name, Phone, Email, Qualification, PIInsurance )
+                    );
+                }
+
+                
+                
+                
+            }  
+        } catch(e) {
+            //An error has occurred
+        }
+
+        return views;
+    }
     
     GenerateOpacity = (Name, Phone, Email, Qualification, PIInsurance ) => {
         return(
-            <div style={{backgroundColor:'rgba(0,0,0,0.6)', borderRadius:10, padding:5, margin:10, width:'100%', height:100}}>
-                <div style={{display:'flex', flexDirection: 'row', width: '100%', textAlign:'left'}}>
+            <div style={{backgroundColor:'rgba(0,0,0,0.6)', borderRadius:10, margin:10, width:'98%', height:100}}>
+                <div style={{display:'flex', flexDirection: 'row', width: '100%', textAlign:'left', padding:5}}>
                     <div style={{width:'33%', height: 80, padding:10, contentAlign:'center', justifyContent:'center'}}>
                         <span style={{color:'rgb(150,150,150)', fontSize:10}}>
                             INSPECTOR
@@ -398,6 +539,8 @@ class Inspectors extends React.Component {
             </div>    
         )
     }
+
+
 
     renderTiles = () => {
         const views = [];
@@ -493,130 +636,203 @@ class Inspectors extends React.Component {
     }
 
 
+    
+    
+    renderContent = () => {
 
 
-    render() { 
-        return (
-            <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
-                <div id="background" style={{width:"100%", }}>
-                    <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 
-                    <div>    
-                        <div style={{ backgroundColor:'rgba(0,0,0,0.2)',marginTop:'10vh',minHeight:'90vh'}}>
-                            <h1 style={{color:'rgb(220,220,220)',padding:20}}>
-                                InspectWA - Find an inspector
-                            </h1>
-                            <div style={{color:'rgb(255,255,255)',textAlign:'left',fontSize:'1rem',lineHeight:'1.2rem',width:'90vw',marginLeft:'5vw',}}>
-                                
-                                <div style={{width: '100%',borderRadius: 10,backgroundColor: 'rgba(100,100,100,0.2)',padding: 20}}>
-                                    <p>
-                                        Refine the search criteria below to find the inspector that best suits your needs. 
-                                    </p>
-                                    <div style={{width:'100%', display:'flex'}}>    
-                                        <div style={{width:'32%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, marginRight:'2%', fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
-                                            <p style={{fontSize:'1.5rem'}}>Inspection types</p>
-                                            
-                                            <input type="checkbox" id="type-all" ref={this.checkBoxTypeAll} onClick={() => {this.selectAll('type')}}></input><span>Select all</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-none" ref={this.checkBoxTypeNone} onClick={() => {this.deselectAll('type')}}></input><span>Deselect all</span>
-                                            <br></br>
-                                            <br></br>
-                                            <input type="checkbox" id="type-1" ref={this.checkBoxType1} onChange={() => this.checkboxChange('type1')}></input><span>Pre purchase Structural</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-2" ref={this.checkBoxType2} onChange={() => this.checkboxChange('type2')}></input><span>Pre Purchase Building</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-3" ref={this.checkBoxType3} onChange={() => this.checkboxChange('type3')}></input><span>Staged Construction</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-4" ref={this.checkBoxType4} onChange={() => this.checkboxChange('type4')}></input><span>Practical Completion</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-5" ref={this.checkBoxType5} onChange={() => this.checkboxChange('type5')}></input><span>Statutory Defect Liability</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-6" ref={this.checkBoxType6} onChange={() => this.checkboxChange('type6')}></input><span>Builders Indemnity</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-7" ref={this.checkBoxType7} onChange={() => this.checkboxChange('type7')}></input><span>Dilapidation Inspection</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-8" ref={this.checkBoxType8} onChange={() => this.checkboxChange('type8')}></input><span>Investigation</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-9" ref={this.checkBoxType9} onChange={() => this.checkboxChange('type9')}></input><span>Maintenance Inspection</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-10" ref={this.checkBoxType10} onChange={() => this.checkboxChange('type10')}></input><span>WA Building Commission Independent Expert</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-11" ref={this.checkBoxType11} onChange={() => this.checkboxChange('type11')}></input><span>State Administrative Tribunal Independent Expert</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-12" ref={this.checkBoxType12} onChange={() => this.checkboxChange('type12')}></input><span>Litigation - Independent Expert Opinion</span>
-                                            <br></br>
-                                            <input type="checkbox" id="type-13" ref={this.checkBoxType13} onChange={() => this.checkboxChange('type13')}></input><span>Special Purpose Inspection</span>
-                                        </div> 
-                                        <div style={{width:'32%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, marginRight:'2%', fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
-                                            <p style={{fontSize:'1.5rem'}}>Locations</p>
-                                            
-                                            <input type="checkbox" id="location-all" ref={this.checkBoxLocationAll} onClick={() => {this.selectAll('location')}}></input><span>Select all</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-none" ref={this.checkBoxLocationNone} onClick={() => {this.deselectAll('location')}}></input><span>Deselect all</span>
-                                            <br></br>
-                                            <br></br>
-                                            <input type="checkbox" id="location-1" ref={this.checkBoxLocation1} onChange={() => this.checkboxChange('location1')}></input><span>Perth Metropolitan Area</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-2" ref={this.checkBoxLocation2} onChange={() => this.checkboxChange('location2')}></input><span>Bunbury</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-3" ref={this.checkBoxLocation3} onChange={() => this.checkboxChange('location3')}></input><span>Mandurah</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-4" ref={this.checkBoxLocation4} onChange={() => this.checkboxChange('location4')}></input><span>Margaret River</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-5" ref={this.checkBoxLocation5} onChange={() => this.checkboxChange('location5')}></input><span>Busselton</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-6" ref={this.checkBoxLocation6} onChange={() => this.checkboxChange('location6')}></input><span>Bunbury</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-7" ref={this.checkBoxLocation7} onChange={() => this.checkboxChange('location7')}></input><span>Great Southern</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-8" ref={this.checkBoxLocation8} onChange={() => this.checkboxChange('location8')}></input><span>Goldfields - Esperance</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-9" ref={this.checkBoxLocation9} onChange={() => this.checkboxChange('location9')}></input><span>Wheat Belt</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-10" ref={this.checkBoxLocation10} onChange={() => this.checkboxChange('location10')}></input><span>Mid-West</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-11" ref={this.checkBoxLocation11} onChange={() => this.checkboxChange('location11')}></input><span>Pilbara</span>
-                                            <br></br>
-                                            <input type="checkbox" id="location-12" ref={this.checkBoxLocation12} onChange={() => this.checkboxChange('location12')}></input><span>Kimberley </span>
-                                            <br></br>
-                                        </div> 
-                                        <div style={{width:'32%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
-                                            <p style={{fontSize:'1.5rem'}}>Property types</p>
-                                            
-                                            <input type="checkbox" id="property-all" ref={this.checkBoxPropertyAll} onClick={() => {this.selectAll('property')}}></input><span>Select all</span>
-                                            <br></br>
-                                            <input type="checkbox" id="property-none" ref={this.checkBoxPropertyNone} onClick={() => {this.deselectAll('property')}}></input><span>Deselect all</span>
-                                            <br></br>
-                                            <br></br>
-                                            <input type="checkbox" id="property-1" ref={this.checkBoxProperty1} onChange={() => this.checkboxChange('property1')}></input><span>Residential</span>
-                                            <br></br>
-                                            <input type="checkbox" id="property-2" ref={this.checkBoxProperty2} onChange={() => this.checkboxChange('property2')}></input><span>Apartment – Individual Lots </span>
-                                            <br></br>
-                                            <input type="checkbox" id="property-3" ref={this.checkBoxProperty3} onChange={() => this.checkboxChange('property3')}></input><span>Commercial </span>
-                                            <br></br>
-                                            <input type="checkbox" id="property-4" ref={this.checkBoxProperty4} onChange={() => this.checkboxChange('property4')}></input><span>Industrial</span>
-                                            <br></br>
-                                            <input type="checkbox" id="property-5" ref={this.checkBoxProperty5} onChange={() => this.checkboxChange('property5')}></input><span>Strata – Entire Complex </span>
-                                        </div> 
-                                    </div>  
-                                    <div style={{width: '100%',borderRadius: 10,backgroundColor: 'rgba(120,120,120,0.2)',padding: 20}}>               
-                                        {this.renderTiles()}
+        if (isMobile) {
+            return (
+                
+                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
+                    <div id="background" style={{width:"100%", }}>
+                        <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
+
+                        <div>    
+                            <div style={{ backgroundColor:'rgba(0,0,0,0.2)',marginTop:'10vh',minHeight:'90vh'}}>
+                                <h1 style={{color:'rgb(220,220,220)',padding:20}}>
+                                    Find an inspector
+                                </h1>
+                                <div style={{color:'rgb(255,255,255)',textAlign:'left',fontSize:'1rem',lineHeight:'1.2rem',width:'90vw',marginLeft:'5vw',}}>
+                                    
+                                    <div style={{width: '100%',borderRadius: 10,padding: 5, zIndex:5}}>
+                                        <div style={{padding:20, textAlign:'center'}}>
+                                            <Collapsible trigger="Refine search results" triggerStyle={{backgroundColor:'rgb(220,220,220)', color:'rgb(40,40,40)', padding:10, borderRadius:10, margin:30, cursor:'pointer'}}>
+                                                <div style={{width:'100%', display:'inline-block', padding:0, paddingTop:20,textAlign:'left', marginTop:10}}>    
+                                                    <div style={{width:'100%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, marginRight:'2%', fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
+                                                        <p style={{fontSize:'1.5rem'}}>Inspection types</p>
+                                                        
+                                                        <label class="container">Select all<input type="checkbox" id="type-all" ref={this.checkBoxTypeAll} onClick={() => {this.selectAll('type')}}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Deselect all<input type="checkbox" id="type-none" ref={this.checkBoxTypeNone} onClick={() => {this.deselectAll('type')}}></input><span class="checkmark"></span></label>
+                                                        <br></br>
+                                                        <label class="container">Pre purchase Structural <input type="checkbox" id="type-1" ref={this.checkBoxType1} onChange={() => this.checkboxChange('type1')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Pre Purchase Building <input type="checkbox" id="type-2" ref={this.checkBoxType2} onChange={() => this.checkboxChange('type2')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Staged Construction <input type="checkbox" id="type-3" ref={this.checkBoxType3} onChange={() => this.checkboxChange('type3')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Practical Completion <input type="checkbox" id="type-4" ref={this.checkBoxType4} onChange={() => this.checkboxChange('type4')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Statutory Defect Liability <input type="checkbox" id="type-5" ref={this.checkBoxType5} onChange={() => this.checkboxChange('type5')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Builders Indemnity <input type="checkbox" id="type-6" ref={this.checkBoxType6} onChange={() => this.checkboxChange('type6')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Dilapidation Inspection <input type="checkbox" id="type-7" ref={this.checkBoxType7} onChange={() => this.checkboxChange('type7')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Investigation <input type="checkbox" id="type-8" ref={this.checkBoxType8} onChange={() => this.checkboxChange('type8')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Maintenance Inspection <input type="checkbox" id="type-9" ref={this.checkBoxType9} onChange={() => this.checkboxChange('type9')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">WA Building Commission Independent Expert <input type="checkbox" id="type-10" ref={this.checkBoxType10} onChange={() => this.checkboxChange('type10')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">State Administrative Tribunal Independent Expert <input type="checkbox" id="type-11" ref={this.checkBoxType11} onChange={() => this.checkboxChange('type11')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Litigation - Independent Expert Opinion<input type="checkbox" id="type-12" ref={this.checkBoxType12} onChange={() => this.checkboxChange('type12')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Special Purpose Inspection <input type="checkbox" id="type-13" ref={this.checkBoxType13} onChange={() => this.checkboxChange('type13')}></input><span class="checkmark"></span></label>
+                                                    </div> 
+                                                    <div style={{width:'100%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, marginRight:'2%', fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
+                                                        <p style={{fontSize:'1.5rem'}}>Locations</p>
+                                                        
+                                                        <label class="container">Select all<input type="checkbox" id="location-all" ref={this.checkBoxLocationAll} onClick={() => {this.selectAll('location')}}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Deselect all<input type="checkbox" id="location-none" ref={this.checkBoxLocationNone} onClick={() => {this.deselectAll('location')}}></input><span class="checkmark"></span></label>
+                                                        <br></br>
+                                                        <label class="container">Perth Metropolitan Area<input type="checkbox" id="location-1" ref={this.checkBoxLocation1} onChange={() => this.checkboxChange('location1')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Bunbury<input type="checkbox" id="location-2" ref={this.checkBoxLocation2} onChange={() => this.checkboxChange('location2')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Mandurah<input type="checkbox" id="location-3" ref={this.checkBoxLocation3} onChange={() => this.checkboxChange('location3')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Margaret River<input type="checkbox" id="location-4" ref={this.checkBoxLocation4} onChange={() => this.checkboxChange('location4')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Busselton<input type="checkbox" id="location-5" ref={this.checkBoxLocation5} onChange={() => this.checkboxChange('location5')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Bunbury<input type="checkbox" id="location-6" ref={this.checkBoxLocation6} onChange={() => this.checkboxChange('location6')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Great Southern<input type="checkbox" id="location-7" ref={this.checkBoxLocation7} onChange={() => this.checkboxChange('location7')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Goldfields - Esperance<input type="checkbox" id="location-8" ref={this.checkBoxLocation8} onChange={() => this.checkboxChange('location8')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Wheat Belt<input type="checkbox" id="location-9" ref={this.checkBoxLocation9} onChange={() => this.checkboxChange('location9')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Mid-West<input type="checkbox" id="location-10" ref={this.checkBoxLocation10} onChange={() => this.checkboxChange('location10')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Pilbara<input type="checkbox" id="location-11" ref={this.checkBoxLocation11} onChange={() => this.checkboxChange('location11')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Kimberley<input type="checkbox" id="location-12" ref={this.checkBoxLocation12} onChange={() => this.checkboxChange('location12')}></input><span class="checkmark"></span></label>
+                                                    </div> 
+                                                    <div style={{width:'100%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
+                                                        <p style={{fontSize:'1.5rem'}}>Property types</p>
+                                                        
+                                                        <label class="container">Select all<input type="checkbox" id="property-all" ref={this.checkBoxPropertyAll} onClick={() => {this.selectAll('property')}}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Deselect all<input type="checkbox" id="property-none" ref={this.checkBoxPropertyNone} onClick={() => {this.deselectAll('property')}}></input><span class="checkmark"></span></label>
+                                                        <br></br>
+                                                        <label class="container">Residential<input type="checkbox" id="property-1" ref={this.checkBoxProperty1} onChange={() => this.checkboxChange('property1')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Apartment – Individual Lots <input type="checkbox" id="property-2" ref={this.checkBoxProperty2} onChange={() => this.checkboxChange('property2')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Commercial<input type="checkbox" id="property-3" ref={this.checkBoxProperty3} onChange={() => this.checkboxChange('property3')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Industrial<input type="checkbox" id="property-4" ref={this.checkBoxProperty4} onChange={() => this.checkboxChange('property4')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Strata – Entire Complex<input type="checkbox" id="property-5" ref={this.checkBoxProperty5} onChange={() => this.checkboxChange('property5')}></input><span class="checkmark"></span></label>
+                                                    </div> 
+                                                </div>  
+                                            </Collapsible>
+                                        </div>
+                                        
+                                        
+                                        <div style={{width: '100%',borderRadius: 10,backgroundColor: 'rgba(120,120,120,0.2)',padding: 20}}>               
+                                            {this.renderTilesMobile()}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                                        
-                    <br></br>
-                    <br></br>
                                             
+                        <br></br>
+                        <br></br>
+                                                
 
-                    <FooterBar />
-                </div>    
-            </div>
-            
-        );
+                        <FooterBarMobile />
+                    </div>    
+                </div>
+                
+                
+            );
+        } else {
+            return (     
+                
+                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
+                    <div id="background" style={{width:"100%", }}>
+                        <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
+
+                        <div>    
+                            <div style={{ backgroundColor:'rgba(0,0,0,0.2)',marginTop:'10vh',minHeight:'90vh'}}>
+                                <h1 style={{color:'rgb(220,220,220)',padding:20}}>
+                                    InspectWA - Find an inspector
+                                </h1>
+                                <div style={{color:'rgb(255,255,255)',textAlign:'left',fontSize:'1rem',lineHeight:'1.2rem',width:'90vw',marginLeft:'5vw',}}>
+                                    
+                                    <div style={{width: '100%',borderRadius: 10,backgroundColor: 'rgba(100,100,100,0.2)',padding: 20, display:'block'}}>
+                                        <div style={{padding:30, textAlign:'center'}}>
+                                            <Collapsible trigger="Refine search results" triggerStyle={{backgroundColor:'rgb(220,220,220)', color:'rgb(40,40,40)', padding:20, borderRadius:10, margin:30, cursor:'pointer'}}>
+                                                <div style={{width:'100%', display:'flex', padding:20, paddingBottom:0, textAlign:'left', marginTop:10}}>    
+                                                    <div style={{width:'32%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, marginRight:'2%', fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
+                                                        <p style={{fontSize:'1.5rem'}}>Inspection types</p>
+                                                        
+                                                        <label class="container">Select all<input type="checkbox" id="type-all" ref={this.checkBoxTypeAll} onClick={() => {this.selectAll('type')}}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Deselect all<input type="checkbox" id="type-none" ref={this.checkBoxTypeNone} onClick={() => {this.deselectAll('type')}}></input><span class="checkmark"></span></label>
+                                                        <br></br>
+                                                        <label class="container">Pre purchase Structural <input type="checkbox" id="type-1" ref={this.checkBoxType1} onChange={() => this.checkboxChange('type1')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Pre Purchase Building <input type="checkbox" id="type-2" ref={this.checkBoxType2} onChange={() => this.checkboxChange('type2')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Staged Construction <input type="checkbox" id="type-3" ref={this.checkBoxType3} onChange={() => this.checkboxChange('type3')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Practical Completion <input type="checkbox" id="type-4" ref={this.checkBoxType4} onChange={() => this.checkboxChange('type4')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Statutory Defect Liability <input type="checkbox" id="type-5" ref={this.checkBoxType5} onChange={() => this.checkboxChange('type5')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Builders Indemnity <input type="checkbox" id="type-6" ref={this.checkBoxType6} onChange={() => this.checkboxChange('type6')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Dilapidation Inspection <input type="checkbox" id="type-7" ref={this.checkBoxType7} onChange={() => this.checkboxChange('type7')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Investigation <input type="checkbox" id="type-8" ref={this.checkBoxType8} onChange={() => this.checkboxChange('type8')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Maintenance Inspection <input type="checkbox" id="type-9" ref={this.checkBoxType9} onChange={() => this.checkboxChange('type9')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">WA Building Commission Independent Expert <input type="checkbox" id="type-10" ref={this.checkBoxType10} onChange={() => this.checkboxChange('type10')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">State Administrative Tribunal Independent Expert <input type="checkbox" id="type-11" ref={this.checkBoxType11} onChange={() => this.checkboxChange('type11')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Litigation - Independent Expert Opinion<input type="checkbox" id="type-12" ref={this.checkBoxType12} onChange={() => this.checkboxChange('type12')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Special Purpose Inspection <input type="checkbox" id="type-13" ref={this.checkBoxType13} onChange={() => this.checkboxChange('type13')}></input><span class="checkmark"></span></label>
+                                                    </div> 
+                                                    <div style={{width:'32%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, marginRight:'2%', fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
+                                                        <p style={{fontSize:'1.5rem'}}>Locations</p>
+                                                        
+                                                        <label class="container">Select all<input type="checkbox" id="location-all" ref={this.checkBoxLocationAll} onClick={() => {this.selectAll('location')}}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Deselect all<input type="checkbox" id="location-none" ref={this.checkBoxLocationNone} onClick={() => {this.deselectAll('location')}}></input><span class="checkmark"></span></label>
+                                                        <br></br>
+                                                        <label class="container">Perth Metropolitan Area<input type="checkbox" id="location-1" ref={this.checkBoxLocation1} onChange={() => this.checkboxChange('location1')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Bunbury<input type="checkbox" id="location-2" ref={this.checkBoxLocation2} onChange={() => this.checkboxChange('location2')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Mandurah<input type="checkbox" id="location-3" ref={this.checkBoxLocation3} onChange={() => this.checkboxChange('location3')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Margaret River<input type="checkbox" id="location-4" ref={this.checkBoxLocation4} onChange={() => this.checkboxChange('location4')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Busselton<input type="checkbox" id="location-5" ref={this.checkBoxLocation5} onChange={() => this.checkboxChange('location5')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Bunbury<input type="checkbox" id="location-6" ref={this.checkBoxLocation6} onChange={() => this.checkboxChange('location6')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Great Southern<input type="checkbox" id="location-7" ref={this.checkBoxLocation7} onChange={() => this.checkboxChange('location7')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Goldfields - Esperance<input type="checkbox" id="location-8" ref={this.checkBoxLocation8} onChange={() => this.checkboxChange('location8')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Wheat Belt<input type="checkbox" id="location-9" ref={this.checkBoxLocation9} onChange={() => this.checkboxChange('location9')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Mid-West<input type="checkbox" id="location-10" ref={this.checkBoxLocation10} onChange={() => this.checkboxChange('location10')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Pilbara<input type="checkbox" id="location-11" ref={this.checkBoxLocation11} onChange={() => this.checkboxChange('location11')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Kimberley<input type="checkbox" id="location-12" ref={this.checkBoxLocation12} onChange={() => this.checkboxChange('location12')}></input><span class="checkmark"></span></label>
+                                                    </div> 
+                                                    <div style={{width:'32%', backgroundColor:'rgba(255,255,255,0.1)', borderRadius:10, padding:10, fontSize:'0.8rem', marginTop:'1vh', marginBottom:'4vh'}}>
+                                                        <p style={{fontSize:'1.5rem'}}>Property types</p>
+                                                        
+                                                        <label class="container">Select all<input type="checkbox" id="property-all" ref={this.checkBoxPropertyAll} onClick={() => {this.selectAll('property')}}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Deselect all<input type="checkbox" id="property-none" ref={this.checkBoxPropertyNone} onClick={() => {this.deselectAll('property')}}></input><span class="checkmark"></span></label>
+                                                        <br></br>
+                                                        <label class="container">Residential<input type="checkbox" id="property-1" ref={this.checkBoxProperty1} onChange={() => this.checkboxChange('property1')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Apartment – Individual Lots <input type="checkbox" id="property-2" ref={this.checkBoxProperty2} onChange={() => this.checkboxChange('property2')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Commercial<input type="checkbox" id="property-3" ref={this.checkBoxProperty3} onChange={() => this.checkboxChange('property3')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Industrial<input type="checkbox" id="property-4" ref={this.checkBoxProperty4} onChange={() => this.checkboxChange('property4')}></input><span class="checkmark"></span></label>
+                                                        <label class="container">Strata – Entire Complex<input type="checkbox" id="property-5" ref={this.checkBoxProperty5} onChange={() => this.checkboxChange('property5')}></input><span class="checkmark"></span></label>
+                                                    </div> 
+                                                </div>  
+                                            </Collapsible>
+                                        </div>
+                                        
+                                        
+                                        <div style={{width: '100%',borderRadius: 10,backgroundColor: 'rgba(120,120,120,0.2)',padding: 20}}>               
+                                            {this.renderTiles()}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            
+                        <br></br>
+                        <br></br>
+                                                
+
+                        <FooterBar />
+                    </div>    
+                </div>           
+                
+                
+            );
+        }
     }
+     
+    render() {
+        return this.renderContent();
+    }
+  
   
 }
 export default Inspectors

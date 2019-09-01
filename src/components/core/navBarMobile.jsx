@@ -203,7 +203,8 @@ class NavBarMobile extends Component {
                     position: 'fixed',
                     top: 0,
                     display:'flex',
-                    flexDirection:'row'
+                    flexDirection:'row',
+                    zIndex:1000
                 }}>
                 <div style={{width:'40vw', height:'10vh', display:'flex', flexDirection:'row'}}>              
                 

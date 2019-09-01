@@ -92,7 +92,7 @@ const routing = (
         <Route path="/ethics" component={Ethics} />
         <Route path="/inspectors" component={Inspectors} />
         <Route path="/contact" component={Contact} />           
-        <PrivateRoute path='/members' component={Members} />
+        <Route path='/members' component={Members} />
       </div>
     </Router>
     
