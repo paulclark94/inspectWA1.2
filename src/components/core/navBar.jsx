@@ -140,7 +140,8 @@ class NavBar extends Component {
 
     render() { 
         
-        if(this.state.isAuthenticated) {return ( 
+        if(this.state.isAuthenticated === true) {
+            return ( 
             <div style={this.styles.bar}>
                 <div style={this.styles.headerLeft}>
                     <img src={require("../../assets/images/logoLight.png")} style={{height:'10vh', marginTop:'1vh'}}></img>
