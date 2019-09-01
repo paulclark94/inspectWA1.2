@@ -48,9 +48,6 @@ class NavBarMobile extends Component {
                     //Set the token in the local storage
                     localStorage.setItem("accessToken", authResult.accessToken);           
                     
-                    //Now successfully authenticated, take them to the members area. 
-                    that.props.history.push('/members')
-                    
                 });
                 
                 lock.show();

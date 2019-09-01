@@ -37,7 +37,6 @@ class NavBar extends Component {
 
     loginBtnClick = () => {
         let that = this;
-
         lock.checkSession({}, (error, authResult) => {     
             if (error || !authResult) {
                 lock.on("authenticated", function(authResult) {            
@@ -45,17 +44,14 @@ class NavBar extends Component {
                     that.props.authHandler(true);
         
                     //Set the token in the local storage
-                    localStorage.setItem("accessToken", authResult.accessToken);     
-
-                    that.setState({authenticated: true})
-                    
-                    alert('authenticated')
-                    
+                    localStorage.setItem("accessToken", authResult.accessToken);           
                     
                 });
                 
                 lock.show();
             } else {  
+                //USER IS CURRENTLY LOGGED IN
+                that.props.history.push('/members')
             }
       
         })
@@ -144,8 +140,7 @@ class NavBar extends Component {
 
     render() { 
         
-        if(this.state.isAuthenticated) {
-            return ( 
+        if(this.state.isAuthenticated) {return ( 
             <div style={this.styles.bar}>
                 <div style={this.styles.headerLeft}>
                     <img src={require("../../assets/images/logoLight.png")} style={{height:'10vh', marginTop:'1vh'}}></img>
