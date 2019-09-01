@@ -36,6 +36,9 @@ var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.co
     theme: {
         primaryColor: 'rgb(100,100,100)',            
     },    
+    auth: {
+      redirectUrl: 'https://master.d1bb13ffz8u3gv.amplifyapp.com/#/members',
+    },
     languageDictionary: {
         title: "InspectWA sign in"
     },    
@@ -92,7 +95,7 @@ const routing = (
         <Route path="/ethics" component={Ethics} />
         <Route path="/inspectors" component={Inspectors} />
         <Route path="/contact" component={Contact} />           
-        <Route path='/members' component={Members} />
+        <PrivateRoute path='/members' component={Members} />
       </div>
     </Router>
     

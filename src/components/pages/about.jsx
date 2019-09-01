@@ -60,44 +60,55 @@ class About extends React.Component {
                                 <p style={{textAlign:'left', color:'rgb(40,40,40)', fontSize:16, width:'100%'}}>
                                     Inspectors within the association are either a registered engineer, builder or surveyor. Our inspectors extensively cover metro & regional WA. 
                                 </p>
-                                <div style={{
-                                        height: '40vw',
-                                        width: '40vw',
-                                        backgroundColor: 'rgb(40,40,40)',
-                                        borderRadius: '50%',
-                                        display: 'table-cell',
-                                        textAlign: 'center',
-                                        verticalAlign: 'middle',
-                                        padding:'2vw'
-                                    }}>
-                                    <span style={{color:'rgb(200,200,200)', fontSize:30}}>
-                                        51
-                                    </span>
-                                    <br></br>
-                                    <span style={{color:'rgb(200,200,200)', fontSize:12}}>
-                                        Inspectors
-                                    </span>
-                                
+                                <div style={{display:'flex', flexDirection:'row'}}>
+                                    <div style={{width:'50vw', textAlign:'center'}}>
+                                        <div style={{
+                                                height: '40vw',
+                                                width: '40vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '50%',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'2vw',
+                                            }}>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:30}}>
+                                                51
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:12}}>
+                                                Inspectors
+                                            </span>
+                                        
+                                        </div>
+                                    </div>
+                                    
+                                    <div style={{width:'50vw', textAlign:'center'}}>
+                                        <div style={{
+                                                height: '40vw',
+                                                width: '40vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '50%',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'2vw',
+                                                marginLeft:'5vw'
+                                            }}>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:30}}>
+                                                4,000+
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:12}}>
+                                                Inspections completed
+                                            </span>
+                                        
+                                        </div>
+                                    </div>
                                 </div>
-                                <div style={{
-                                        height: '40vw',
-                                        width: '40vw',
-                                        backgroundColor: 'rgb(40,40,40)',
-                                        borderRadius: '50%',
-                                        display: 'table-cell',
-                                        textAlign: 'center',
-                                        verticalAlign: 'middle',
-                                        padding:'2vw'
-                                    }}>
-                                    <span style={{color:'rgb(200,200,200)', fontSize:30}}>
-                                        4,000+
-                                    </span>
-                                    <br></br>
-                                    <span style={{color:'rgb(200,200,200)', fontSize:12}}>
-                                        Inspections completed
-                                    </span>
                                 
-                                </div>
+                                
+                                
                                 
     
                             </div>

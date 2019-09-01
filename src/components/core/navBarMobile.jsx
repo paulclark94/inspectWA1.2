@@ -11,11 +11,13 @@ import { elastic as Menu } from 'react-burger-menu'
 
 
 
-
 var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.com', {   
     theme: {
         primaryColor: 'rgb(100,100,100)',            
     },    
+    auth: {
+      redirectUrl: 'https://master.d1bb13ffz8u3gv.amplifyapp.com/#/members',
+    },
     languageDictionary: {
         title: "InspectWA sign in"
     },    
