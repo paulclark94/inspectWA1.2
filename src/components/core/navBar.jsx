@@ -44,7 +44,9 @@ class NavBar extends Component {
                     that.props.authHandler(true);
         
                     //Set the token in the local storage
-                    localStorage.setItem("accessToken", authResult.accessToken);           
+                    localStorage.setItem("accessToken", authResult.accessToken);      
+                    
+                    that.setState({isAuthenticated: true});
                     
                 });
                 

@@ -44,7 +44,9 @@ class NavBarMobile extends Component {
                     that.props.authHandler(true);
         
                     //Set the token in the local storage
-                    localStorage.setItem("accessToken", authResult.accessToken);           
+                    localStorage.setItem("accessToken", authResult.accessToken);             
+                    
+                    that.setState({isAuthenticated: true});    
                     
                 });
                 
@@ -190,61 +192,122 @@ class NavBarMobile extends Component {
       
 
     render() { 
-        return ( 
-            <div style={{
-                    width:'100%',
-                    background: 'rgb(60,60,60)',
-                    color: 'rgb(200,200,200)',
-                    height: '10vh',
-                    left: 0,
-                    position: 'fixed',
-                    top: 0,
-                    display:'flex',
-                    flexDirection:'row',
-                    zIndex:1000
-                }}>
-                <div style={{width:'40vw', height:'10vh', display:'flex', flexDirection:'row'}}>              
-                
-                    <Menu disableAutoFocus width={ '70vw' }styles={ this.menuStyles } >
+        
+        if(this.state.isAuthenticated === true) {
+            return ( 
+                <div style={{
+                        width:'100%',
+                        background: 'rgb(60,60,60)',
+                        color: 'rgb(200,200,200)',
+                        height: '10vh',
+                        left: 0,
+                        position: 'fixed',
+                        top: 0,
+                        display:'flex',
+                        flexDirection:'row',
+                        zIndex:1000
+                    }}>
+                    <div style={{width:'40vw', height:'10vh', display:'flex', flexDirection:'row'}}>              
                     
-                        <Link to="/" style={{}}>
-                            <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Home</p>
-                        </Link>
-                        <br></br>
-                        <Link to="/about" style={{}}>
-                            <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>About</p>
-                        </Link>
-                        <br></br>
-                        <Link to="/membership" style={{}}>
-                            <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Join</p>
-                        </Link>
-                        <br></br>
-                        <Link to="/ethics" style={{}}>
-                            <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Ethics</p>
-                        </Link>
-                        <br></br>
-                        <Link to="/contact" style={{}}>
-                            <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Contact</p>
-                        </Link>
-                        <br></br>
-                        <a onClick={this.loginBtnClick} style={{}}>
-                            <div style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Members</div>
-                        </a>
-                    </Menu>
-                    <span style={{color:'rgb(200,200,200)', fontSize:'3vh', lineHeight:'3vh', marginLeft:'8vh', marginTop:'3.5vh'}}>
-                        Menu
-                    </span>
-                </div>                
-                <div style={{width:'20vw'}}>
-                
-                </div>
-                <div style={{width:'40vw'}}>
-                
-                    <img src={require("../../assets/images/logoLight.png")} style={{height:'8vh', marginTop:'1vh'}}></img>          
-                </div>
+                        <Menu disableAutoFocus width={ '70vw' }styles={ this.menuStyles } >
+                        
+                            <Link to="/" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Home</p>
+                            </Link>
+                            <br></br>
+                            <Link to="/about" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>About</p>
+                            </Link>
+                            <br></br>
+                            <Link to="/membership" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Join</p>
+                            </Link>
+                            <br></br>
+                            <Link to="/ethics" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Ethics</p>
+                            </Link>
+                            <br></br>
+                            <Link to="/contact" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Contact</p>
+                            </Link>
+                            <br></br>
+                            <a onClick={this.loginBtnClick} style={{}}>
+                                <div style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Members</div>
+                            </a>
+                        </Menu>
+                        <span style={{color:'rgb(200,200,200)', fontSize:'3vh', lineHeight:'3vh', marginLeft:'8vh', marginTop:'3.5vh'}}>
+                            Menu
+                        </span>
+                    </div>                
+                    <div style={{width:'20vw'}}>
                     
-            </div>
+                    </div>
+                    <div style={{width:'40vw'}}>
+                    
+                        <img src={require("../../assets/images/logoLight.png")} style={{height:'8vh', marginTop:'1vh'}}></img>          
+                    </div>
+                        
+                </div>
             );
+        } else {
+            return ( 
+                <div style={{
+                        width:'100%',
+                        background: 'rgb(60,60,60)',
+                        color: 'rgb(200,200,200)',
+                        height: '10vh',
+                        left: 0,
+                        position: 'fixed',
+                        top: 0,
+                        display:'flex',
+                        flexDirection:'row',
+                        zIndex:1000
+                    }}>
+                    <div style={{width:'40vw', height:'10vh', display:'flex', flexDirection:'row'}}>              
+                    
+                        <Menu disableAutoFocus width={ '70vw' }styles={ this.menuStyles } >
+                        
+                            <Link to="/" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Home</p>
+                            </Link>
+                            <br></br>
+                            <Link to="/about" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>About</p>
+                            </Link>
+                            <br></br>
+                            <Link to="/membership" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Join</p>
+                            </Link>
+                            <br></br>
+                            <Link to="/ethics" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Ethics</p>
+                            </Link>
+                            <br></br>
+                            <Link to="/contact" style={{}}>
+                                <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Contact</p>
+                            </Link>
+                            <br></br>
+                            <a onClick={this.loginBtnClick} style={{}}>
+                                <div style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Login</div>
+                            </a>
+                        </Menu>
+                        <span style={{color:'rgb(200,200,200)', fontSize:'3vh', lineHeight:'3vh', marginLeft:'8vh', marginTop:'3.5vh'}}>
+                            Menu
+                        </span>
+                    </div>                
+                    <div style={{width:'20vw'}}>
+                    
+                    </div>
+                    <div style={{width:'40vw'}}>
+                    
+                        <img src={require("../../assets/images/logoLight.png")} style={{height:'8vh', marginTop:'1vh'}}></img>          
+                    </div>
+                        
+                </div>
+            );
+
+        }
+        
         
     }
 }
