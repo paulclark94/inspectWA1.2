@@ -15,6 +15,9 @@ var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.co
     theme: {
         primaryColor: 'rgb(100,100,100)',            
     },    
+    auth: {
+        redirect: false
+    },
     languageDictionary: {
         title: "InspectWA sign in"
     },    
@@ -30,9 +33,20 @@ class NavBar extends Component {
 
         this.state = {
             token: 0,
-            isAuthenticated: false
+            isAuthenticated: 0
         }
     } 
+
+    componentDidMount() {
+        let that = this;
+        lock.checkSession({}, (error, authResult) => {     
+            if (error || !authResult) {                   
+            } else {  
+                that.setState({isAuthenticated: true});
+            }
+      
+        })
+    }
 
 
     loginBtnClick = () => {
@@ -47,6 +61,8 @@ class NavBar extends Component {
                     localStorage.setItem("accessToken", authResult.accessToken);      
                     
                     that.setState({isAuthenticated: true});
+
+                    window.location.reload();
                     
                 });
                 
@@ -75,6 +91,19 @@ class NavBar extends Component {
 
             }
         });
+    }
+
+    navButton = () => {        
+        var buttonString = ''
+
+        if(this.state.isAuthenticated === true) {
+            buttonString = 'Members'
+        } else if(this.state.isAuthenticated === false) {
+            buttonString = 'Login'
+        } else if(this.state.isAuthenticated === '') {
+            buttonString = 'Login'
+        }
+        return buttonString
     }
 
     logout = () => {
@@ -141,9 +170,7 @@ class NavBar extends Component {
     }
 
     render() { 
-        
-        if(this.state.isAuthenticated === true) {
-            return ( 
+        return ( 
             <div style={this.styles.bar}>
                 <div style={this.styles.headerLeft}>
                     <img src={require("../../assets/images/logoLight.png")} style={{height:'10vh', marginTop:'1vh'}}></img>
@@ -167,48 +194,12 @@ class NavBar extends Component {
                         <span style={this.styles.headerLinkText}>Contact</span>
                     </Link>
                     <a onClick={this.loginBtnClick} style={this.styles.headerLink}>
-                        <div style={this.styles.headerLoginButton}>Members</div>
+                        <div style={this.styles.headerLoginButton}>{this.navButton()}</div>
                     </a>
                 </div>
                     
             </div>
-            );
-
-        } else {
-            return ( 
-            <div style={this.styles.bar}>
-                <div style={this.styles.headerLeft}>
-                    <img src={require("../../assets/images/logoLight.png")} style={{height:'10vh', marginTop:'1vh'}}></img>
-                </div>                
-                <div style={this.styles.headerCenter}>
-                </div>
-                <div style={this.styles.headerRight}>
-                    <Link to="/" style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Home</span>
-                    </Link>
-                    <Link to="/about" style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>About</span>
-                    </Link>
-                    <Link to="/membership" style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Join</span>
-                    </Link>
-                    <Link to="/ethics" style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Ethics</span>
-                    </Link>
-                    <Link to="/contact" style={this.styles.headerLink}>
-                        <span style={this.styles.headerLinkText}>Contact</span>
-                    </Link>
-                    <a onClick={this.loginBtnClick} style={this.styles.headerLink}>
-                        <div style={this.styles.headerLoginButton}>Login</div>
-                    </a>
-                </div>
-                    
-            </div>
-            );
-
-        }
-        
-        
+        );        
     }
 }
 

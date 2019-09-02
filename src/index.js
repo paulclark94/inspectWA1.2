@@ -35,7 +35,10 @@ import Members from './components/pages/members'
 var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.com', {   
     theme: {
         primaryColor: 'rgb(100,100,100)',            
-    },    
+    },        
+    auth: {
+        redirect: false
+    },
     languageDictionary: {
         title: "InspectWA sign in"
     },    
