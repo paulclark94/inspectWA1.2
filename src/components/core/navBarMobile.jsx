@@ -102,6 +102,8 @@ class NavBarMobile extends Component {
             buttonString = 'Members'
         } else if(this.state.isAuthenticated === false) {
             buttonString = 'Login'
+        } else if(this.state.isAuthenticated === '') {
+            buttonString = 'Login'
         }
         return buttonString
     }
