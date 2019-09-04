@@ -184,6 +184,9 @@ class NavBar extends Component {
                     <Link to="/about" style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>About</span>
                     </Link>
+                    <Link to="/media" style={this.styles.headerLink}>
+                        <span style={this.styles.headerLinkText}>Media</span>
+                    </Link>
                     <Link to="/membership" style={this.styles.headerLink}>
                         <span style={this.styles.headerLinkText}>Join</span>
                     </Link>

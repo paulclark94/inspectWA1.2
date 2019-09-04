@@ -248,6 +248,10 @@ class NavBarMobile extends Component {
                             <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>About</p>
                         </Link>
                         <br></br>
+                        <Link to="/media" style={{}}>
+                            <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Media</p>
+                        </Link>
+                        <br></br>
                         <Link to="/membership" style={{}}>
                             <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Join</p>
                         </Link>

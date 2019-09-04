@@ -131,6 +131,126 @@ class About extends React.Component {
                                               
     
                             </div>
+                            
+
+                            
+
+                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', padding:'5vw'}}>
+                                <h1 style={{color:'rgb(40,40,40)'}}>
+                                    Committee
+                                </h1>
+                                <br></br>
+                                <div style={{}}>
+                            
+                                    <div style={{margin:'2vh',}}>   
+                                        <div style={{
+                                                width: '90vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '2vh',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'2vh'}}>
+                                                Chairman
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
+                                                Andrew Booth
+                                            </span>                                        
+                                        </div>      
+                                    </div>     
+                            
+                                    <div style={{margin:'2vh',}}>   
+                                        <div style={{
+                                                width: '90vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '2vh',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'2vh'}}>
+                                                Deputy Chairman
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
+                                                Ross Hall
+                                            </span>                                         
+                                        </div>      
+                                    </div>     
+                            
+                                    <div style={{margin:'2vh',}}>   
+                                        <div style={{
+                                                width: '90vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '2vh',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'2vh'}}>
+                                                Treasurer
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
+                                                Andrew Scales
+                                            </span>                                        
+                                        </div>      
+                                    </div>     
+                            
+                                    <div style={{margin:'2vh',}}>   
+                                        <div style={{
+                                                width: '90vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '2vh',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'2vh'}}>
+                                                Secretary
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
+                                                Dave Clark
+                                            </span>                                         
+                                        </div>     
+                                    </div>     
+                            
+                                    <div style={{margin:'2vh',}}>   
+                                        <div style={{                                                
+                                                width: '90vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '2vh',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'2vh'}}>
+                                                General Committee & Communications
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
+                                                Elias Oostveen
+                                            </span>                                         
+                                        </div> 
+                                    </div>     
+
+
+                                </div>
+    
+    
+    
+    
+    
+    
+                        </div>
     
     
     
@@ -244,6 +364,125 @@ class About extends React.Component {
                                         </p>
                                         
                                     </div>                                
+                                </div>
+                                <br></br>
+    
+                            </div>
+
+
+                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', padding:'5vw'}}>
+                                <h1 style={{color:'rgb(40,40,40)', padding:20}}>
+                                    Current committee
+                                </h1>
+                                <br></br>
+                                <div style={{display:'flex', flexDirection:'row'}}>
+                            
+                                    <div style={{flex:1}}>   
+                                        <div style={{
+                                                height: '10vw',
+                                                width: '15vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '10%',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'1vw'}}>
+                                                Chairman
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'1.5vw'}}>
+                                                Andrew Booth
+                                            </span>                                        
+                                        </div>      
+                                    </div>     
+                            
+                                    <div style={{flex:1}}>   
+                                        <div style={{
+                                                height: '10vw',
+                                                width: '15vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '10%',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'1vw'}}>
+                                                Deputy Chairman
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'1.5vw'}}>
+                                                Ross Hall
+                                            </span>                                        
+                                        </div>      
+                                    </div>     
+                                    
+                                    <div style={{flex:1}}>   
+                                        <div style={{
+                                                height: '10vw',
+                                                width: '15vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '10%',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'1vw'}}>
+                                                Treasurer
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'1.5vw'}}>
+                                                Andrew Scales
+                                            </span>                                        
+                                        </div>      
+                                    </div>     
+                                    
+                                    <div style={{flex:1}}>   
+                                        <div style={{
+                                                height: '10vw',
+                                                width: '15vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '10%',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'1vw'}}>
+                                                Secretary
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'1.5vw'}}>
+                                                Dave Clark
+                                            </span>                                        
+                                        </div>      
+                                    </div>     
+                            
+                                    <div style={{flex:1}}>   
+                                        <div style={{
+                                                height: '10vw',
+                                                width: '15vw',
+                                                backgroundColor: 'rgb(40,40,40)',
+                                                borderRadius: '10%',
+                                                display: 'table-cell',
+                                                textAlign: 'center',
+                                                verticalAlign: 'middle',
+                                                padding:'1vw'
+                                            }}>
+                                            <span style={{color:'rgb(100,100,100)', fontSize:'1vw'}}>
+                                                General Committee & Communications
+                                            </span>
+                                            <br></br>
+                                            <span style={{color:'rgb(200,200,200)', fontSize:'1.5vw'}}>
+                                                Elias Oostveen
+                                            </span>                                        
+                                        </div>      
+                                    </div>     
+
+
                                 </div>
                                 <br></br>
     

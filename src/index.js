@@ -29,6 +29,7 @@ import Ethics from './components/pages/ethics'
 import Inspectors from './components/pages/inspectors'
 import Contact from './components/pages/contact'
 import Members from './components/pages/members'
+import Media from './components/pages/media'
 
 
 
@@ -94,7 +95,8 @@ const routing = (
         <Route path="/membership" component={Membership} />
         <Route path="/ethics" component={Ethics} />
         <Route path="/inspectors" component={Inspectors} />
-        <Route path="/contact" component={Contact} />           
+        <Route path="/contact" component={Contact} />          
+        <Route path="/media" component={Media} />           
         <PrivateRoute path='/members' component={Members} />
       </div>
     </Router>
