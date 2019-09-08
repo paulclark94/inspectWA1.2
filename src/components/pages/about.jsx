@@ -58,7 +58,7 @@ class About extends React.Component {
                                     Our team
                                 </h1>
                                 <p style={{textAlign:'left', color:'rgb(40,40,40)', fontSize:16, width:'100%'}}>
-                                    Inspectors within the association are either a registered engineer, builder or surveyor. Our inspectors extensively cover metro & regional WA. 
+                                    Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
                                 </p>
                                 <div style={{display:'flex', flexDirection:'row'}}>
                                     <div style={{width:'50vw', textAlign:'center'}}>
@@ -289,9 +289,9 @@ class About extends React.Component {
                                 </h1>
                                 <br></br>
                                 <div style={{display:'flex', flexDirection:'row'}}>
-                                    <div style={{flex:1, marginLeft:'10vw', marginRight:'0vw', display: 'grid', placeItems: 'center center'}}>
-                                        <p style={{textAlign:'left', color:'rgb(40,40,40)', fontSize:16}}>
-                                            Inspectors within the association are either a registered engineer, builder or surveyor. Our inspectors extensively cover metro & regional WA. 
+                                    <div style={{flex:1, marginLeft:'10vw', marginRight:'0vw', display: 'grid', placeItems: 'center center'}}>                                        
+                                        <p style={{textAlign:'left', color:'rgb(40,40,40)', fontSize:16, width:'100%'}}>
+                                            Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
                                         </p>
                                     </div>
                             

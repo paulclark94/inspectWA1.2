@@ -238,7 +238,7 @@ class NavBarMobile extends Component {
                 }}>
                 <div style={{width:'40vw', height:'10vh', display:'flex', flexDirection:'row'}}>              
                 
-                    <Menu disableAutoFocus width={ '70vw' }styles={ this.menuStyles } >
+                    <Menu disableAutoFocus styles={ this.menuStyles } >
                     
                         <Link to="/" style={{}}>
                             <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Home</p>
@@ -275,9 +275,8 @@ class NavBarMobile extends Component {
                 <div style={{width:'20vw'}}>
                 
                 </div>
-                <div style={{width:'40vw'}}>
-                
-                    <img src={require("../../assets/images/logoLight.png")} style={{height:'8vh', marginTop:'1vh'}}></img>          
+                <div style={{width:'40vw', textAlign:'right'}}>                
+                    <img src={require("../../assets/images/logoLight.png")} style={{height:'8vh', marginTop:'1.5vh'}}></img>          
                 </div>
                     
             </div>
