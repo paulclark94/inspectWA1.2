@@ -14,6 +14,9 @@ import FooterBar from '../core/footerBar'
 import FooterBarMobile from '../core/footerBarMobile'
 
 
+import membershipForm from '../../assets/files/Membership Applciation Sept 2019 .pdf'
+
+
 
 class Membership extends React.Component {
     constructor(props) {
@@ -85,7 +88,10 @@ class Membership extends React.Component {
                                         Complete the form and email it to info@inspectwa.org.au     
                                     </p>
                                     <img style={{height:'20vw', margin:'5vh'}} src={require('../../assets/icons/file.png')} />
-                                    <div style={{backgroundColor:'rgb(100,100,100)', borderRadius:10, padding:10, color:'white', width:'60vw',marginLeft:'15vw', cursor:'pointer'}}>Download the membership form</div>
+
+                                    <a href={membershipForm}>
+                                        <div style={{backgroundColor:'rgb(100,100,100)', borderRadius:10, padding:10, color:'white', width:'60vw',marginLeft:'15vw', cursor:'pointer'}}>Download the membership form</div>
+                                    </a>
 
                                 </div>
                             </div>
@@ -115,7 +121,10 @@ class Membership extends React.Component {
                                         Complete the form and email it to info@inspectwa.org.au     
                                     </p>
                                     <img style={{height:'30vh', margin:'5vh'}} src={require('../../assets/icons/file.png')} />
-                                    <div style={{backgroundColor:'rgb(100,100,100)', borderRadius:10, padding:10, color:'white', width:'30vw', marginLeft:'15vw', cursor:'pointer'}}>Download the membership form</div>
+                                    
+                                    <a href={membershipForm}>
+                                        <div style={{backgroundColor:'rgb(100,100,100)', borderRadius:10, padding:10, color:'white', width:'30vw', marginLeft:'15vw', cursor:'pointer'}}>Download the membership form</div>
+                                    </a>
 
                                 </div>
                             </div>

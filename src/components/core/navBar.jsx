@@ -33,14 +33,16 @@ class NavBar extends Component {
 
         this.state = {
             token: 0,
-            isAuthenticated: 0
+            isAuthenticated: ''
         }
     } 
 
     componentDidMount() {
         let that = this;
         lock.checkSession({}, (error, authResult) => {     
-            if (error || !authResult) {                   
+            if (error || !authResult) {         
+                
+                that.setState({isAuthenticated: false});          
             } else {  
                 that.setState({isAuthenticated: true});
             }
@@ -101,7 +103,7 @@ class NavBar extends Component {
         } else if(this.state.isAuthenticated === false) {
             buttonString = 'Login'
         } else if(this.state.isAuthenticated === '') {
-            buttonString = 'Login'
+            buttonString = ''
         }
         return buttonString
     }

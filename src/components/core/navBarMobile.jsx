@@ -33,7 +33,7 @@ class NavBarMobile extends Component {
 
         this.state = {
             token: 0,
-            isAuthenticated: false
+            isAuthenticated: ''
         }
     } 
 
@@ -44,6 +44,7 @@ class NavBarMobile extends Component {
         let that = this;
         lock.checkSession({}, (error, authResult) => {     
             if (error || !authResult) {                   
+                that.setState({isAuthenticated: false});
             } else {  
                 that.setState({isAuthenticated: true});
             }
@@ -65,6 +66,8 @@ class NavBarMobile extends Component {
                     localStorage.setItem("accessToken", authResult.accessToken);             
                     
                     that.setState({isAuthenticated: true});    
+
+                    window.location.reload();
                     
                 });
                 
@@ -103,7 +106,7 @@ class NavBarMobile extends Component {
         } else if(this.state.isAuthenticated === false) {
             buttonString = 'Login'
         } else if(this.state.isAuthenticated === '') {
-            buttonString = 'Login'
+            buttonString = ''
         }
         return buttonString
     }

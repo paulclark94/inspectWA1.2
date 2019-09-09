@@ -15,8 +15,9 @@ import FooterBarMobile from '../core/footerBarMobile'
 
 import './members.css'
 
-import paper1 from '../../assets/files/Published doc.pdf'
-import paper2 from '../../assets/files/Sample doc.docx'
+import paper1 from '../../assets/files/Inspect WA Position Papers 1.2019 Dilignification of Tile Battens Approved for Member Comment .pdf'
+import paper2 from '../../assets/files/Inspect WA Position Papers 2.2019 Elevated Moisture Levels in Masonary Walls V2 Approved for Member Comment.pdf'
+import paper3 from '../../assets/files/Inspect WA Position Papers 3.2019 Pre Purchase Builing Insepction Report Clarity V2 Approved for Member Comment .pdf'
 
 
 class Members extends React.Component {
@@ -202,22 +203,33 @@ class Members extends React.Component {
                                                         <td>
                                                             <a href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Paper 1
+                                                                    Dilignification of Tile Battens
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>3rd June 2019</td>
-                                                        <td>Published</td>
+                                                        <td>9th September 2019</td>
+                                                        <td>Draft</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper2}>
+                                                            <a href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Paper 2
+                                                                    Moisture in masonary walls
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>24th August 2019</td>
+                                                        <td>9th September 2019</td>
+                                                        <td>Draft</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href={paper1}>
+                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                    Pre Purchase inspection clarity
+                                                                </span>
+                                                            </a>
+                                                        </td>
+                                                        <td>9th September 2019</td>
                                                         <td>Draft</td>
                                                     </tr>
                                                 </tbody>
@@ -300,22 +312,33 @@ class Members extends React.Component {
                                                         <td>
                                                             <a href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Paper 1
+                                                                    Dilignification of Tile Battens
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>3rd June 2019</td>
-                                                        <td>Published</td>
+                                                        <td>9th September 2019</td>
+                                                        <td>Draft</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper2}>
+                                                            <a href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Paper 2
+                                                                    Moisture in masonary walls
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>24th August 2019</td>
+                                                        <td>9th September 2019</td>
+                                                        <td>Draft</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href={paper1}>
+                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                    Pre Purchase inspection clarity
+                                                                </span>
+                                                            </a>
+                                                        </td>
+                                                        <td>9th September 2019</td>
                                                         <td>Draft</td>
                                                     </tr>
                                                 </tbody>
