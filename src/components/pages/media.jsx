@@ -114,7 +114,8 @@ class Members extends React.Component {
             display:'flex',
         },
         docLibraryContainer: {
-            width: '100%',
+            width: '60%',
+            marginLeft:'20%',
             marginTop:20,
             textAlign:'center'
         },
@@ -211,7 +212,7 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper1}>
+                                                        <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper1}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Paper 1
                                                             </span>
@@ -221,7 +222,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper2}>
+                                                        <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper2}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Paper 2
                                                             </span>

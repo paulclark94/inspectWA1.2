@@ -53,58 +53,15 @@ class About extends React.Component {
                             
     
                             
-                            <div style={{backgroundColor:'rgba(255,255,255,0.7)', padding:20, textAlign:'center', contentAlign:'center'}}>
+                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', padding:20, textAlign:'center', contentAlign:'center'}}>
                                 <h1 style={{color:'rgb(40,40,40)'}}>
                                     Our team
                                 </h1>
                                 <p style={{textAlign:'left', color:'rgb(40,40,40)', fontSize:16, width:'100%'}}>
                                     Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
                                 </p>
-                                <div style={{display:'flex', flexDirection:'row'}}>
-                                    <div style={{width:'50vw', textAlign:'center'}}>
-                                        <div style={{
-                                                height: '40vw',
-                                                width: '40vw',
-                                                backgroundColor: 'rgb(40,40,40)',
-                                                borderRadius: '50%',
-                                                display: 'table-cell',
-                                                textAlign: 'center',
-                                                verticalAlign: 'middle',
-                                                padding:'2vw',
-                                            }}>
-                                            <span style={{color:'rgb(200,200,200)', fontSize:30}}>
-                                                51
-                                            </span>
-                                            <br></br>
-                                            <span style={{color:'rgb(200,200,200)', fontSize:12}}>
-                                                Inspectors
-                                            </span>
-                                        
-                                        </div>
-                                    </div>
-                                    
-                                    <div style={{width:'50vw', textAlign:'center'}}>
-                                        <div style={{
-                                                height: '40vw',
-                                                width: '40vw',
-                                                backgroundColor: 'rgb(40,40,40)',
-                                                borderRadius: '50%',
-                                                display: 'table-cell',
-                                                textAlign: 'center',
-                                                verticalAlign: 'middle',
-                                                padding:'2vw',
-                                                marginLeft:'5vw'
-                                            }}>
-                                            <span style={{color:'rgb(200,200,200)', fontSize:30}}>
-                                                4,000+
-                                            </span>
-                                            <br></br>
-                                            <span style={{color:'rgb(200,200,200)', fontSize:12}}>
-                                                Inspections completed
-                                            </span>
-                                        
-                                        </div>
-                                    </div>
+                                <div style={{flex:1, display: 'grid', placeItems: 'center center', padding:30}}>                                                                                                           
+                                    <img style={{height:'30vh'}} src={require('../../assets/icons/placeholder.png')} />  
                                 </div>
                                 
                                 
@@ -135,7 +92,7 @@ class About extends React.Component {
 
                             
 
-                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', padding:'5vw'}}>
+                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', padding:20}}>
                                 <h1 style={{color:'rgb(40,40,40)'}}>
                                     Committee
                                 </h1>
@@ -246,10 +203,98 @@ class About extends React.Component {
                                 </div>
     
     
-    
-    
-    
-    
+                        </div>
+
+                        <div style={{backgroundColor: '#000000', backgroundImage: 'url("https://www.transparenttextures.com/patterns/cartographer.png")', padding:20}}>                                         
+                                <h1 style={{color:'white'}}>
+                                    Association Mission
+                                </h1>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    To provide leadership on key issues impacting the building and property
+                                    inspection industry and promote those considered views in key forums such
+                                    as:
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16}}>
+                                    1. Legislative/Code/Building Commission, Fair Trading and Consumer
+                                    Protection
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    2. Australian Standard development forums
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    3. Broader Industry user forums (REIWA, AIB, AIBS, MBA, HIA)
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    4. Industry self-regulation forums
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    5. Forums where the interest of our end clients need to be represented,
+                                    especially where that representation is not currently provided.
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    6. To promote excellence, professionalism and safety in the inspection
+                                    industry by fostering best practice work and corporate standards.
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    7. The initial focus will be on Building and Pest Inspections but it is
+                                    envisaged that this will be expanded over time to include a range of
+                                    building and property inspection professions such as, Electrics, Plumbing,
+                                    Gas, Asbestos and Drug.
+                                </p>
+                        </div>
+
+                        <div style={{backgroundColor: '#000000', backgroundImage: 'url("https://www.transparenttextures.com/patterns/dark-brick-wall.png")', padding:30}}>                                         
+                                <h1 style={{color:'white'}}>
+                                    Association Objectives
+                                </h1>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    1. To be a representative body for professional building and property inspection organisations in Western Australia
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    2. To promote and represent the industry as professional and quality service providers
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    3. To represent the industry in legislative and regulatory development
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    4. To represent the industry in forums and discussion groups that:
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16,marginLeft:20}}>
+                                    a. Are likely to utilise the services of building and property inspectors
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16,marginLeft:20}}>
+                                    b. Are impacted by building and property inspection reports
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    5. To represent the interest of our industry clients in WA forums where those interests may not currently be represented. Clients would include:
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16,marginLeft:20}}>
+                                    a. Property owners, buyers, sellers, owners and those engaging builders to
+                                    build on their behalf
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16,marginLeft:20}}>
+                                    b. Strata Companies &amp; Strata Managers
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    6. To promote quality building and property inspection practices across WA.
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    7. To promote standards of competence and performance for building and
+                                    property inspections such that:
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16,marginLeft:20}}>
+                                    a. The Association standards are recognised
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16,marginLeft:20}}>
+                                    b. The Association members are recognised as being competent and self-regulated
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
+                                    8. To facilitate the exchange of information between members relating to the issues which impact on the professional inspection of buildings and properties
+                                </p>
+
                         </div>
     
     
@@ -283,98 +328,44 @@ class About extends React.Component {
                             </div>
                             
     
-                            <div style={{backgroundColor:'rgba(255,255,255,0.7)', padding:30}}>
-                                <h1 style={{color:'rgb(40,40,40)', padding:20}}>
-                                    Our team
-                                </h1>
-                                <br></br>
-                                <div style={{display:'flex', flexDirection:'row'}}>
-                                    <div style={{flex:1, marginLeft:'10vw', marginRight:'0vw', display: 'grid', placeItems: 'center center'}}>                                        
-                                        <p style={{textAlign:'left', color:'rgb(40,40,40)', fontSize:16, width:'100%'}}>
-                                            Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
-                                        </p>
-                                    </div>
-                            
-                                    <div style={{flex:1, marginLeft:'5vw', marginRight:'10vw'}}>   
-                                        <div style={{display:'flex', flexDirection:'row'}}>
-                                            
-                                            <div style={{
-                                                    height: '200px',
-                                                    width: '200px',
-                                                    backgroundColor: 'rgb(40,40,40)',
-                                                    borderRadius: '50%',
-                                                    display: 'table-cell',
-                                                    textAlign: 'center',
-                                                    verticalAlign: 'middle',
-                                                    padding:'2vw'
-                                                }}>
-                                                <span style={{color:'rgb(200,200,200)', fontSize:40}}>
-                                                    51
-                                                </span>
-                                                <br></br>
-                                                <span style={{color:'rgb(200,200,200)', fontSize:20}}>
-                                                    Inspectors
-                                                </span>
-                                            
-                                            </div>
-                                            <div style={{
-                                                    height: '200px',
-                                                    width: '200px',
-                                                    backgroundColor: 'rgb(40,40,40)',
-                                                    borderRadius: '50%',
-                                                    display: 'table-cell',
-                                                    textAlign: 'center',
-                                                    verticalAlign: 'middle',
-                                                    padding:'2vw'
-                                                }}>
-                                                <span style={{color:'rgb(200,200,200)', fontSize:40}}>
-                                                    4,000+
-                                                </span>
-                                                <br></br>
-                                                <span style={{color:'rgb(200,200,200)', fontSize:20}}>
-                                                    Inspections completed
-                                                </span>
-                                            
-                                            </div>
-    
-    
-                                        </div>
-                                    </div>                                
-                                </div>
-                                <br></br>
+                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', padding:30}}>                                                                                                          
+                                <img style={{height:'20vh'}} src={require('../../assets/icons/placeholder.png')} />   
+
+                                <div style={{display: 'grid', placeItems: 'center center'}}>    
+                                    <h1 style={{color:'rgb(40,40,40)', padding:10}}>
+                                        Our team
+                                    </h1>                                
+                                    <p style={{textAlign:'center', color:'rgb(40,40,40)', fontSize:16, width:'60%'}}>
+                                        Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
+                                    </p>
+                                </div>          
     
                             </div>
     
     
-                            <div style={{backgroundColor:'rgba(0,0,0,0.4)', padding:30}}>
-                                <h1 style={{color:'white', padding:20}}>
-                                    Industry leaders
-                                </h1>
-                                <br></br>
-                                <div style={{display:'flex', flexDirection:'row'}}>
-                                    <div style={{flex:1, marginLeft:'10vw', marginRight:'0vw', display: 'grid', placeItems: 'center center'}}>                                    
-                                        <img style={{height:'30vh'}} src={require('../../assets/icons/seminar.png')} />
-                                    </div>
-                                    <div style={{flex:2, marginLeft:'5vw', marginRight:'10vw'}}>   
-                                        <p style={{textAlign:'left', color:'white', fontSize:16}}>
+                            <div style={{backgroundColor:'rgba(0,0,0,0.3)', padding:30}}>
+                            
+                                <div style={{width:'70%', marginLeft:'15%', textAlign:'center'}}>                              
+                                        <h1 style={{color:'white', padding:10}}>
+                                            Industry leaders
+                                        </h1>
+                                        <p style={{textAlign:'center', color:'white', fontSize:16}}>
                                             We provide thought leadership on key issues impacting the building and property inspection industry and promote those considered views in key forums. We aim to lead by example through our professionalism and safety in the inspection industry by fostering best practice work and corporate standards. 
                                         </p>
-                                        <p style={{textAlign:'left', color:'white', fontSize:16}}>
+                                        <p style={{textAlign:'center', color:'white', fontSize:16}}>
                                             The initial focus will be on Building and Pest Inspections but it is envisaged that this will be expanded over time to include a range of building and property inspection professions such as, Electrics, Plumbing, Gas, Asbestos and Drug. 
-                                        </p>
-                                        
-                                    </div>                                
+                                        </p>                                 
+                                        <img style={{maxHeight:'20vh'}} src={require('../../assets/icons/seminar.png')} />                             
                                 </div>
                                 <br></br>
     
                             </div>
 
 
-                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', padding:'5vw'}}>
-                                <h1 style={{color:'rgb(40,40,40)', padding:20}}>
+                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', padding:30}}>
+                                <h1 style={{color:'rgb(40,40,40)', padding:10}}>
                                     Current committee
                                 </h1>
-                                <br></br>
                                 <div style={{display:'flex', flexDirection:'row'}}>
                             
                                     <div style={{flex:1}}>   
@@ -487,13 +478,101 @@ class About extends React.Component {
                                 <br></br>
     
                             </div>
-    
-    
-    
-    
-    
-    
                         </div>
+
+
+                        <div style={{backgroundColor: '#000000', backgroundImage: 'url("https://www.transparenttextures.com/patterns/cartographer.png")', padding:30}}>                                         
+                                <h1 style={{color:'white'}}>
+                                    Association Mission
+                                </h1>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    To provide leadership on key issues impacting the building and property
+                                    inspection industry and promote those considered views in key forums such
+                                    as:
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    1. Legislative/Code/Building Commission, Fair Trading and Consumer
+                                    Protection
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    2. Australian Standard development forums
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    3. Broader Industry user forums (REIWA, AIB, AIBS, MBA, HIA)
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    4. Industry self-regulation forums
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    5. Forums where the interest of our end clients need to be represented,
+                                    especially where that representation is not currently provided.
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    6. To promote excellence, professionalism and safety in the inspection
+                                    industry by fostering best practice work and corporate standards.
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    7. The initial focus will be on Building and Pest Inspections but it is
+                                    envisaged that this will be expanded over time to include a range of
+                                    building and property inspection professions such as, Electrics, Plumbing,
+                                    Gas, Asbestos and Drug.
+                                </p>
+                        </div>
+
+                        <div style={{backgroundColor: '#000000', backgroundImage: 'url("https://www.transparenttextures.com/patterns/dark-brick-wall.png")', padding:30}}>                                         
+                                <h1 style={{color:'white'}}>
+                                    Association Objectives
+                                </h1>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    1. To be a representative body for professional building and property inspection organisations in Western Australia
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    2. To promote and represent the industry as professional and quality service providers
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    3. To represent the industry in legislative and regulatory development
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    4. To represent the industry in forums and discussion groups that:
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%', textIndent:20}}>
+                                    a. Are likely to utilise the services of building and property inspectors
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%', textIndent:20}}>
+                                    b. Are impacted by building and property inspection reports
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    5. To represent the interest of our industry clients in WA forums where those interests may not currently be represented. Clients would include:
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%', textIndent:20}}>
+                                    a. Property owners, buyers, sellers, owners and those engaging builders to
+                                    build on their behalf
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%', textIndent:20}}>
+                                    b. Strata Companies &amp; Strata Managers
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    6. To promote quality building and property inspection practices across WA.
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    7. To promote standards of competence and performance for building and
+                                    property inspections such that:
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%', textIndent:20}}>
+                                    a. The Association standards are recognised
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%', textIndent:20}}>
+                                    b. The Association members are recognised as being competent and self-regulated
+                                </p>
+                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
+                                    8. To facilitate the exchange of information between members relating to the issues which impact on the professional inspection of buildings and properties
+                                </p>
+
+                        </div>
+
     
                         <FooterBar />
                     </div>    

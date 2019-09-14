@@ -201,7 +201,7 @@ class Members extends React.Component {
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper1}>
+                                                            <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Dilignification of Tile Battens
                                                                 </span>
@@ -212,7 +212,7 @@ class Members extends React.Component {
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper1}>
+                                                            <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Moisture in masonary walls
                                                                 </span>
@@ -223,7 +223,7 @@ class Members extends React.Component {
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper1}>
+                                                            <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Pre Purchase inspection clarity
                                                                 </span>

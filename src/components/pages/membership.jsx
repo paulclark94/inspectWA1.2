@@ -122,7 +122,7 @@ class Membership extends React.Component {
                                     </p>
                                     <img style={{height:'30vh', margin:'5vh'}} src={require('../../assets/icons/file.png')} />
                                     
-                                    <a href={membershipForm}>
+                                    <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={membershipForm}>
                                         <div style={{backgroundColor:'rgb(100,100,100)', borderRadius:10, padding:10, color:'white', width:'30vw', marginLeft:'15vw', cursor:'pointer'}}>Download the membership form</div>
                                     </a>
 

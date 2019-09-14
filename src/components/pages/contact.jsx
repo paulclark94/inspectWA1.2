@@ -6,6 +6,7 @@ import {
     isMobile
   } from "react-device-detect";
 import { Route, Link } from 'react-router-dom'
+import Modal from "react-responsive-modal";
 
 import NavBar from '../core/navBar'
 import NavBarMobile from '../core/navBarMobile'
@@ -26,7 +27,7 @@ class Contact extends React.Component {
   
         this.state = {
             isAuthenticated: false,
-            modalVisible: false
+            open: false
         }
   
         this.authHandler = this.authHandler.bind(this)
@@ -136,6 +137,7 @@ class Contact extends React.Component {
             padding:10,
             paddingLeft:0, 
             paddingRight:0,
+            paddingBottom:0,
             fontSize:'1rem',
             lineHeight:'1rem',
             width:'90vw',
@@ -185,18 +187,28 @@ class Contact extends React.Component {
         
     }
 
+    onOpenModal = () => {
+        this.setState({ open: true });
+    };
+    
+    onCloseModal = () => {
+        this.setState({ open: false });
+    };
+
     contactSubmit = () => {
         
         this.contactName.current.value = ''
         this.contactEmail.current.value = ''
         this.contactSubject.current.value = ''
+        this.onOpenModal();
     }
     
 
     
     renderContent = () => {
 
-
+        
+        const { open } = this.state;
 
         if (isMobile) {
             return (
@@ -230,6 +242,18 @@ class Contact extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <Modal open={open} styles={{backgroundColor:'rgb(20,20,20)'}} onClose={this.onCloseModal} center={true} >
+                            <div style={{padding:20, textAlign:'center'}}>
+                                <br></br>
+                                <p>
+                                    Your message has been sent successfully. We will be in contact shortly via email. 
+                                </p>
+                                <br></br>
+                                <a onClick={this.onCloseModal} style={this.styles.formSubmit}>
+                                    <span>Ok</span>
+                                </a>
+                            </div>
+                        </Modal>
                     </div>
 
                     <FooterBarMobile />
@@ -254,22 +278,36 @@ class Contact extends React.Component {
                                     
                                     <div style={this.styles.formContainer}>
                                         <label for="name">Full Name</label>
-                                        <input style={this.styles.formInput} type="text" id="name" name="firstname" placeholder="Your name.." />
+                                        <input style={this.styles.formInput} type="text" ref={this.contactName} placeholder="Your name.." />
 
                                         <label for="email">Email Address</label>
-                                        <input style={this.styles.formInput} type="text" id="lname" name="email" placeholder="Your email address.."/>
+                                        <input style={this.styles.formInput} type="text" ref={this.contactEmail} placeholder="Your email address.."/>
 
                                         <label for="subject">Subject</label>
                                         <br></br>
-                                        <textarea style={this.styles.formTextArea} id="subject" name="subject" placeholder="Write something.."></textarea>
+                                        <textarea style={this.styles.formTextArea}  ref={this.contactSubject} placeholder="Write something.."></textarea>
 
                                         <br></br>
-                                        <div style={{width:'100%', textAlign:'center'}}>
-                                            <input style={this.styles.formSubmit} type="submit" value="Submit"/>
+                                        <div style={{width:'100%', textAlign:'center', padding:10}}>
+                                            <a onClick={this.contactSubmit} style={this.styles.formSubmit}>
+                                                <span>Submit</span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <Modal open={open} styles={{backgroundColor:'rgb(20,20,20)'}} onClose={this.onCloseModal} center={true} >
+                                <div style={{padding:20, textAlign:'center'}}>
+                                    <br></br>
+                                    <p>
+                                        Your message has been sent successfully. We will be in contact shortly via email. 
+                                    </p>
+                                    <br></br>
+                                    <a onClick={this.onCloseModal} style={this.styles.formSubmit}>
+                                        <span>Ok</span>
+                                    </a>
+                                </div>
+                            </Modal>
                         </div>
 
                         <FooterBar />
