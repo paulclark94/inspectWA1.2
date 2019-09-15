@@ -748,7 +748,7 @@ class Inspectors extends React.Component {
                                 </h1>
                                 <div style={{color:'rgb(255,255,255)',textAlign:'left',fontSize:'1rem',lineHeight:'1.2rem',width:'90vw',marginLeft:'5vw',}}>
                                     
-                                    <div style={{width: '100%',borderRadius: 10,backgroundColor: 'rgba(100,100,100,0.2)',padding: 20, display:'block'}}>
+                                    <div style={{width: '100%',borderRadius: 10,backgroundColor: 'rgba(100,100,100,0.2)',padding: 20, zIndex:5}}>
                                         <div style={{padding:30, textAlign:'center'}}>
                                             <Collapsible trigger="Refine search results" triggerStyle={{backgroundColor:'rgb(220,220,220)', color:'rgb(40,40,40)', padding:20, borderRadius:10, margin:30, cursor:'pointer'}}>
                                                 <div style={{width:'100%', display:'flex', padding:20, paddingBottom:0, textAlign:'left', marginTop:10}}>    

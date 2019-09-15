@@ -122,7 +122,8 @@ class NavBar extends Component {
             position: 'fixed',
             top: 0,
             display:'flex',
-            flexDirection:'row'
+            flexDirection:'row',
+            zIndex:1000
         },
         headerLeft: {
             display:'flex',
