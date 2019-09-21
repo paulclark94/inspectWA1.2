@@ -196,10 +196,32 @@ class Contact extends React.Component {
     };
 
     contactSubmit = () => {
-        
+        const name = this.contactName.current.value;
+        const email = this.contactEmail.current.value;
+        const subject = this.contactSubject.current.value;
+
+        fetch('https://inspectwaserver.azurewebsites.net/contact', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                msg: subject,
+            })
+        })
+
+
         this.contactName.current.value = ''
         this.contactEmail.current.value = ''
         this.contactSubject.current.value = ''
+
+
+
+
+
         this.onOpenModal();
     }
     

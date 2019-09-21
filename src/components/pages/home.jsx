@@ -67,7 +67,8 @@ class Home extends Component {
             width:'20vw', 
             color:'white',
             cursor: 'pointer',
-            margin:5
+            margin:5,
+            textDecoration:'none'
         }
     }
 
@@ -117,7 +118,7 @@ class Home extends Component {
                                     Welcome to The Industry Association of Building and Property Inspectors in WA – Inspect WA. 
                                     Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses.
                                 </p>
-                                <div style={{ display: 'inline-block'}}>
+                                <div style={{ display: 'inline-block', textDecoration:'none'}}>
                                     <Link to="/inspectors">
                                         <div style={this.styles.bannerButton}>Find an inspector</div>
                                     </Link>

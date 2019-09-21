@@ -15,9 +15,9 @@ import FooterBarMobile from '../core/footerBarMobile'
 
 import './members.css'
 
-import paper1 from '../../assets/files/Inspect WA Position Papers 1.2019 Dilignification of Tile Battens Approved for Member Comment .pdf'
-import paper2 from '../../assets/files/Inspect WA Position Papers 2.2019 Elevated Moisture Levels in Masonary Walls V2 Approved for Member Comment.pdf'
-import paper3 from '../../assets/files/Inspect WA Position Papers 3.2019 Pre Purchase Builing Insepction Report Clarity V2 Approved for Member Comment .pdf'
+import paper1 from '../../assets/files/private/Position Paper 1 2019 Delignification of Roof Tile Battens Approved.pdf'
+import paper2 from '../../assets/files/private/Position Paper 2 2019 Elevated Moisture Levels in Masonay Walls Approve.._.pdf'
+import paper3 from '../../assets/files/private/Position Paper 3 2019 Pre Purchase Builing Insepction Report.._.pdf'
 
 
 class Members extends React.Component {
@@ -166,20 +166,12 @@ class Members extends React.Component {
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Networking dinner</td>
-                                                        <td>16th September 2019</td>
+                                                        <td>Members forum</td>
+                                                        <td>24 Sept 2019</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>InspectWA AGM</td>
-                                                        <td>23rd October 2019</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Networking dinner</td>
-                                                        <td>16th November 2019</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>InspectWA breakfast</td>
-                                                        <td>23rd December 2019</td>
+                                                        <td>Inaugural AGM</td>
+                                                        <td>28 May 2020</td>
                                                     </tr>
                                                 </tbody>
                                                 
@@ -201,7 +193,7 @@ class Members extends React.Component {
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper1}>
+                                                            <a href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Dilignification of Tile Battens
                                                                 </span>
@@ -212,7 +204,7 @@ class Members extends React.Component {
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper1}>
+                                                            <a href={paper2}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Moisture in masonary walls
                                                                 </span>
@@ -223,7 +215,7 @@ class Members extends React.Component {
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper1}>
+                                                            <a href={paper3}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Pre Purchase inspection clarity
                                                                 </span>
@@ -275,20 +267,12 @@ class Members extends React.Component {
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Networking dinner</td>
-                                                        <td>16th September 2019</td>
+                                                        <td>Members forum</td>
+                                                        <td>24 Sept 2019</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>InspectWA AGM</td>
-                                                        <td>23rd October 2019</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Networking dinner</td>
-                                                        <td>16th November 2019</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>InspectWA breakfast</td>
-                                                        <td>23rd December 2019</td>
+                                                        <td>Inaugural AGM</td>
+                                                        <td>28 May 2020</td>
                                                     </tr>
                                                 </tbody>
                                                 

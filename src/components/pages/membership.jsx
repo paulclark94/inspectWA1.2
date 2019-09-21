@@ -14,7 +14,7 @@ import FooterBar from '../core/footerBar'
 import FooterBarMobile from '../core/footerBarMobile'
 
 
-import membershipForm from '../../assets/files/Membership Applciation Sept 2019 .pdf'
+import membershipForm from '../../assets/files/public/Membership Applciation Sept 2019 .pdf'
 
 
 

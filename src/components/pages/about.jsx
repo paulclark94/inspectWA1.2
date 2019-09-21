@@ -210,9 +210,6 @@ class About extends React.Component {
                                     Association Mission
                                 </h1>
                                 <p style={{textAlign:'left', color:'white', fontSize:16, }}>
-                                    Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
-                                </p>
-                                <p style={{textAlign:'left', color:'white', fontSize:16, }}>
                                     To provide leadership on key issues impacting the building and property
                                     inspection industry and promote those considered views in key forums such
                                     as:
@@ -485,9 +482,6 @@ class About extends React.Component {
                                 <h1 style={{color:'white'}}>
                                     Association Mission
                                 </h1>
-                                <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
-                                    Building Inspectors within the association must now be a WA registered builders as a minimum. Applications from engineers and or builder surveyors are encouraged where applicants demonstrate active involvement in WA building inspections . Association inspectors cover Perth & Regional WA.
-                                </p>
                                 <p style={{textAlign:'left', color:'white', fontSize:16, width:'70%', marginLeft:'15%'}}>
                                     To provide leadership on key issues impacting the building and property
                                     inspection industry and promote those considered views in key forums such

@@ -15,8 +15,7 @@ import FooterBarMobile from '../core/footerBarMobile'
 
 import './media.css'
 
-import paper1 from '../../assets/files/Published doc.pdf'
-import paper2 from '../../assets/files/Sample doc.docx'
+import paper1 from '../../assets/files/public/Inspect WA Press Release Sept 2019 .pdf'
 
 
 class Members extends React.Component {
@@ -157,21 +156,11 @@ class Members extends React.Component {
                                                     <td>
                                                         <a href={paper1}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Paper 1
+                                                                Press Release
                                                             </span>
                                                         </a>
                                                     </td>
-                                                    <td>3rd June 2019</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <a href={paper2}>
-                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Paper 2
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td>24th August 2019</td>
+                                                    <td>21st September 2019</td>
                                                 </tr>
                                             </tbody>
                                             
@@ -212,23 +201,13 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper1}>
+                                                        <a href={paper1}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Paper 1
+                                                                Press Release
                                                             </span>
                                                         </a>
                                                     </td>
-                                                    <td>3rd June 2019</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={paper2}>
-                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Paper 2
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td>24th August 2019</td>
+                                                    <td>21st September 2019</td>
                                                 </tr>
                                             </tbody>
                                             
