@@ -80,13 +80,14 @@ class Home extends Component {
                 <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
                     <div id="background" style={{width:"100%", }}>
                         <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
-                        <div style={{width:'100%',height: '100vh',contentAlign: 'center',textAlign: 'center',}}>            
-                            <img src={require("../../assets/images/logoLightSub.png")} style={{width:'80vw', marginTop:'20vh'}}></img>
+                        <div style={{width:'100%',height: '100vh',contentAlign: 'center',textAlign: 'center',}}>                                        
+                                  
+                            <img src={require("../../assets/images/logoLightSub.png")} style={{width:'100%', height:'100%'}}></img>
                             <br></br> 
                             <br></br>
                             <div style={{ display: 'inline-block', width:'90vw'}}>
                                 <p style={{fontSize:'2vh',color:'rgb(220,220,220)',cursor: 'pointer'}}>
-                                    Welcome to The Industry Association of Building and Property Inspectors in WA – Inspect WA. 
+                                    Welcome to the Industry Association of Building and Property Inspectors in WA – Inspect WA. 
                                     Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses.
                                 </p>
                                 <div style={{ display: 'inline-block'}}>
