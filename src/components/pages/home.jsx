@@ -77,7 +77,7 @@ class Home extends Component {
     renderContent = () => {
         if (isMobile) {
             return (
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
+                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
                     <div id="background" style={{width:"100%", }}>
                         <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
                         <div style={{width:'100%',height: '100vh',contentAlign: 'center',textAlign: 'center'}}>   
@@ -105,7 +105,7 @@ class Home extends Component {
             );
         } else {
             return (
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
+                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
                     <div id="background" style={{width:"100%", }}>
                         <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
                         <div style={this.styles.banner}>            

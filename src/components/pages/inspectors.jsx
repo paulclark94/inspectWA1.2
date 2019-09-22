@@ -646,7 +646,7 @@ class Inspectors extends React.Component {
         if (isMobile) {
             return (
                 
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
+                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
                     <div id="background" style={{width:"100%", }}>
                         <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 
@@ -738,7 +738,7 @@ class Inspectors extends React.Component {
         } else {
             return (     
                 
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0, backgroundColor:'black'}}>
+                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
                     <div id="background" style={{width:"100%", }}>
                         <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 
