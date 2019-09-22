@@ -1,13 +1,19 @@
-#background {
-    background-attachment:  fixed;
-    background-image: url("../images/landDark2.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: fill;
-    padding: 0;
-    text-align: center;
-}
 
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url("../images/landDark2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 .bannerButton {
     border-radius:'1vh';
     background:'rgba(100,100,100,0.5)';        
