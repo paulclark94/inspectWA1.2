@@ -207,6 +207,7 @@ class Contact extends React.Component {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
+                
                 name: name,
                 email: email,
                 msg: subject,
