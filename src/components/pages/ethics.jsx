@@ -7,6 +7,9 @@ import {
   } from "react-device-detect";
 import { Route, Link } from 'react-router-dom'
 
+
+import {Helmet} from 'react-helmet'
+
 import NavBar from '../core/navBar'
 import NavBarMobile from '../core/navBarMobile'
 
@@ -75,6 +78,10 @@ class Ethics extends React.Component {
         if (isMobile) {
             return (
                 <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                    <Helmet>
+                        <title>InspectWA</title>
+                        <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
+                    </Helmet>
                     <div id="background" style={{width:"100%", }}>
                         <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 
@@ -128,6 +135,10 @@ class Ethics extends React.Component {
         } else {
             return (               
                 <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                    <Helmet>
+                        <title>InspectWA</title>
+                        <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
+                    </Helmet>
                     <div id="background" style={{width:"100%", }}>
                         <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 

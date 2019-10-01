@@ -5,6 +5,8 @@ import {
     isBrowser,
     isMobile
   } from "react-device-detect";
+  
+import {Helmet} from 'react-helmet'
 import { Route, Link } from 'react-router-dom'
 
 import NavBar from '../core/navBar'
@@ -78,6 +80,10 @@ class Home extends Component {
         if (isMobile) {
             return (
                 <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                    <Helmet>
+                        <title>InspectWA</title>
+                        <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
+                    </Helmet>
                     <div id="background" style={{width:"100%", }}>
                         <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
                         <div style={{width:'100%',height: '100vh',contentAlign: 'center',textAlign: 'center'}}>   
@@ -106,6 +112,10 @@ class Home extends Component {
         } else {
             return (
                 <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                    <Helmet>
+                        <title>InspectWA</title>
+                        <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
+                    </Helmet>
                     <div id="background" style={{width:"100%", }}>
                         <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
                         <div style={this.styles.banner}>            

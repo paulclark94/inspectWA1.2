@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 //Import 3rd party modules from npm
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Link,
   Redirect,

@@ -11,6 +11,7 @@ import {
 import { Route, Link } from 'react-router-dom'
 
 
+import {Helmet} from 'react-helmet'
 
 import NavBar from '../core/navBar'
 import NavBarMobile from '../core/navBarMobile'
@@ -357,6 +358,10 @@ class Inspectors extends React.Component {
         const fullWebsite = 'http://' + Website
         return(
             <div style={{backgroundColor:'rgba(0,0,0,0.6)', borderRadius:10, marginLeft:'1%', marginTop:10, width:'98%'}}>
+                <Helmet>
+                    <title>InspectWA</title>
+                    <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
+                </Helmet>
                 <div style={{width: '100%', textAlign:'left',}}>
                     <div style={{width:'100%', padding:10, contentAlign:'center', justifyContent:'center'}}>
                         <span style={{color:'rgb(150,150,150)', fontSize:10}}>
@@ -489,6 +494,11 @@ class Inspectors extends React.Component {
         const fullWebsite = 'http://' + Website
         return(
             <div style={{backgroundColor:'rgba(0,0,0,0.6)', borderRadius:10, margin:10, width:'98%', height:100}}>
+                
+                <Helmet>
+                    <title>InspectWA</title>
+                    <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
+                </Helmet>
                 <div style={{display:'flex', flexDirection: 'row', width: '100%', textAlign:'left', padding:5}}>
                     <div style={{width:'33%', height: 80, padding:10, contentAlign:'center', justifyContent:'center'}}>
                         <span style={{color:'rgb(150,150,150)', fontSize:10}}>
