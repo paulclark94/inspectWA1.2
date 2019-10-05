@@ -14,11 +14,8 @@ class FooterBarMobile extends Component {
             width:'100%',
             background: 'rgb(30,30,30)',
             color: 'rgb(200,200,200)',
-            height: '10vh',
             textAlign:'center',
-            display: 'grid', 
-            placeItems: 'center center',
-            padding:20
+            padding:10
 
         },
 
@@ -27,6 +24,10 @@ class FooterBarMobile extends Component {
     render() { 
         return ( 
             <div style={this.styles.footerBar}>
+                <a href="https://www.facebook.com/Inspectwa-103514357727017/" target="_blank" className="fa fa-facebook"></a>
+                <a href="https://twitter.com/inspectwa2" target="_blank" className="fa fa-twitter"></a>
+                <a href="https://www.linkedin.com/company/inspectwa/" target="_blank" className="fa fa-linkedin"></a>
+                <br></br>
                 <span style = {{color:'rgb(200,200,200)', fontSize:10, display: 'table-cell',textAlign: 'center',verticalAlign: 'middle', }}>The Industry Association of Building and Property Inspectors in WA Inc. – Inspect WA</span>
             </div>
          );
