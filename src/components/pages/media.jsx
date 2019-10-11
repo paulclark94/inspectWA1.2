@@ -18,6 +18,9 @@ import FooterBarMobile from '../core/footerBarMobile'
 import './media.css'
 
 import paper1 from '../../assets/files/public/Inspect WA Press Release Sept 2019 .pdf'
+import paper2 from '../../assets/files/public/Delignification of Tile Battens.pdf'
+import paper3 from '../../assets/files/public/Elevated Moisture in Walls.pdf'
+import paper4 from '../../assets/files/public/Clarity in Pre Purchase Building Inspection Reports.pdf'
 
 
 class Members extends React.Component {
@@ -169,6 +172,36 @@ class Members extends React.Component {
                                                     </td>
                                                     <td>21st September 2019</td>
                                                 </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href={paper2}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Delignification of Tile Battens
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>11th October 2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href={paper3}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Elevated Moisture in Walls
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>11th October 2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href={paper4}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Clarity in Pre Purchase Building Inspection Reports
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>11th October 2019</td>
+                                                </tr>
                                             </tbody>
                                             
                                         </table>
@@ -219,6 +252,36 @@ class Members extends React.Component {
                                                         </a>
                                                     </td>
                                                     <td>21st September 2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href={paper2}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Delignification of Tile Battens
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>11th October 2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href={paper3}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Elevated Moisture in Walls
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>11th October 2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href={paper4}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Clarity in Pre Purchase Building Inspection Reports
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>11th October 2019</td>
                                                 </tr>
                                             </tbody>
                                             

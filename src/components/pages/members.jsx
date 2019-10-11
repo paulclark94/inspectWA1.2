@@ -170,6 +170,10 @@ class Members extends React.Component {
                                                         <td>24 Sept 2019</td>
                                                     </tr>
                                                     <tr>
+                                                        <td>Members Forum</td>
+                                                        <td>26 Nov 2019</td>
+                                                    </tr>
+                                                    <tr>
                                                         <td>Inaugural AGM</td>
                                                         <td>28 May 2020</td>
                                                     </tr>
@@ -269,6 +273,10 @@ class Members extends React.Component {
                                                     <tr>
                                                         <td>Members forum</td>
                                                         <td>24 Sept 2019</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Members Forum</td>
+                                                        <td>26 Nov 2019</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Inaugural AGM</td>
