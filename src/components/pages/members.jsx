@@ -166,10 +166,6 @@ class Members extends React.Component {
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Members forum</td>
-                                                        <td>24 Sept 2019</td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>Members Forum</td>
                                                         <td>26 Nov 2019</td>
                                                     </tr>
@@ -203,8 +199,8 @@ class Members extends React.Component {
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>9th September 2019</td>
-                                                        <td>Draft</td>
+                                                        <td>10th October 2019</td>
+                                                        <td>Final</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
@@ -214,8 +210,8 @@ class Members extends React.Component {
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>9th September 2019</td>
-                                                        <td>Draft</td>
+                                                        <td>10th October 2019</td>
+                                                        <td>Final</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
@@ -225,8 +221,8 @@ class Members extends React.Component {
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>9th September 2019</td>
-                                                        <td>Draft</td>
+                                                        <td>10th October 2019</td>
+                                                        <td>Final</td>
                                                     </tr>
                                                 </tbody>
                                                 
@@ -271,10 +267,6 @@ class Members extends React.Component {
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Members forum</td>
-                                                        <td>24 Sept 2019</td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>Members Forum</td>
                                                         <td>26 Nov 2019</td>
                                                     </tr>
@@ -308,8 +300,8 @@ class Members extends React.Component {
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>9th September 2019</td>
-                                                        <td>Draft</td>
+                                                        <td>10th October 2019</td>
+                                                        <td>Final</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
@@ -319,8 +311,8 @@ class Members extends React.Component {
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>9th September 2019</td>
-                                                        <td>Draft</td>
+                                                        <td>10th October 2019</td>
+                                                        <td>Final</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
@@ -330,8 +322,8 @@ class Members extends React.Component {
                                                                 </span>
                                                             </a>
                                                         </td>
-                                                        <td>9th September 2019</td>
-                                                        <td>Draft</td>
+                                                        <td>10th October 2019</td>
+                                                        <td>Final</td>
                                                     </tr>
                                                 </tbody>
                                                 
