@@ -87,17 +87,20 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 
 
 //Define routing
+//
 const routing = (
     <Router>
       <div>
-        <Route exact path="/" component={App} />
-        <Route path="/about" component={About} />
-        <Route path="/membership" component={Membership} />
-        <Route path="/ethics" component={Ethics} />
-        <Route path="/inspectors" component={Inspectors} />
-        <Route path="/contact" component={Contact} />          
-        <Route path="/media" component={Media} />           
-        <PrivateRoute path='/members' component={Members} />
+        <Route path="/" component={App} exact />
+        <Route path="/about" component={About} exact />
+        <Route path="/membership" component={Membership} exact />
+        <Route path="/ethics" component={Ethics} exact />
+        <Route path="/inspectors" component={Inspectors} exact />
+        <Route path="/contact" component={Contact} exact />          
+        <Route path="/media" component={Media} exact />           
+        <PrivateRoute path='/members' component={Members} exact />
+        <Route path="/index.html" component={App} exact />
+        <Route path="*" component={App} exact />
       </div>
     </Router>
     
