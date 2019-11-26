@@ -142,7 +142,7 @@ class Members extends React.Component {
     renderContent = () => {
         if (isMobile) {
             return (
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     <div id="background" style={{width:"100%", }}>
                         <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 
@@ -193,7 +193,7 @@ class Members extends React.Component {
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper1}>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Dilignification of Tile Battens
                                                                 </span>
@@ -204,7 +204,7 @@ class Members extends React.Component {
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper2}>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper2}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Moisture in masonary walls
                                                                 </span>
@@ -215,7 +215,7 @@ class Members extends React.Component {
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper3}>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper3}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Pre Purchase inspection clarity
                                                                 </span>
@@ -242,7 +242,7 @@ class Members extends React.Component {
             );
         } else {
             return (                
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     <div id="background" style={{width:"100%", }}>
                         <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
 
@@ -294,7 +294,7 @@ class Members extends React.Component {
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper1}>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper1}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Dilignification of Tile Battens
                                                                 </span>
@@ -305,7 +305,7 @@ class Members extends React.Component {
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper1}>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper2}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Moisture in masonary walls
                                                                 </span>
@@ -316,7 +316,7 @@ class Members extends React.Component {
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a href={paper1}>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper3}>
                                                                 <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                     Pre Purchase inspection clarity
                                                                 </span>

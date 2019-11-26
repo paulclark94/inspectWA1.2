@@ -36,7 +36,7 @@ class About extends React.Component {
     renderContent = () => {
         if (isMobile) {
             return (
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     <Helmet>
                         <title>InspectWA</title>
                         <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
@@ -313,7 +313,7 @@ class About extends React.Component {
             );
         } else {
             return (
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     <Helmet>
                         <title>InspectWA</title>
                         <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />

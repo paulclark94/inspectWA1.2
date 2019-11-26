@@ -76,7 +76,7 @@ class Membership extends React.Component {
         if (isMobile) {
             return (
                 
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     
                     <Helmet>
                         <title>InspectWA</title>
@@ -97,7 +97,7 @@ class Membership extends React.Component {
                                     </p>
                                     <img style={{height:'20vw', margin:'5vh'}} src={require('../../assets/icons/file.png')} />
 
-                                    <a href={membershipForm}>
+                                    <a rel="noopener noreferrer" target='_blank' href={membershipForm}>
                                         <div style={{backgroundColor:'rgb(100,100,100)', borderRadius:10, padding:10, color:'white', width:'60vw',marginLeft:'15vw', cursor:'pointer'}}>Download the membership form</div>
                                     </a>
 
@@ -114,7 +114,7 @@ class Membership extends React.Component {
         } else {
             return (               
                 
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     <Helmet>
                         <title>InspectWA</title>
                         <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
@@ -134,7 +134,7 @@ class Membership extends React.Component {
                                     </p>
                                     <img style={{height:'30vh', margin:'5vh'}} src={require('../../assets/icons/file.png')} />
                                     
-                                    <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} href={membershipForm}>
+                                    <a style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}} rel="noopener noreferrer" target='_blank' href={membershipForm}>
                                         <div style={{backgroundColor:'rgb(100,100,100)', borderRadius:10, padding:10, color:'white', width:'30vw', marginLeft:'15vw', cursor:'pointer'}}>Download the membership form</div>
                                     </a>
 

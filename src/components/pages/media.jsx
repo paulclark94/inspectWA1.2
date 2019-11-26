@@ -138,7 +138,7 @@ class Members extends React.Component {
     renderContent = () => {
         if (isMobile) {
             return (
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     
                     <Helmet>
                         <title>InspectWA</title>
@@ -164,7 +164,7 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper1}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper1}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Press Release
                                                             </span>
@@ -174,7 +174,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper2}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper2}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Delignification of Tile Battens
                                                             </span>
@@ -184,7 +184,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper3}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper3}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Elevated Moisture in Walls
                                                             </span>
@@ -194,7 +194,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper4}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper4}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Clarity in Pre Purchase Building Inspection Reports
                                                             </span>
@@ -219,7 +219,7 @@ class Members extends React.Component {
             );
         } else {
             return (                
-                <div className="App" style={{width:"100%", height:"100vh", margin:0, padding:0}}>
+                <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     <Helmet>
                         <title>InspectWA</title>
                         <meta name="description" content="The Industry Association of Building and Property Inspectors in WA – Inspect WA. Inspect WA’s vision is to be Western Australia’s peak body representing professional independent building and property inspection businesses." />
@@ -245,7 +245,7 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper1}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper1}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Press Release
                                                             </span>
@@ -255,7 +255,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper2}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper2}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Delignification of Tile Battens
                                                             </span>
@@ -265,7 +265,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper3}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper3}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Elevated Moisture in Walls
                                                             </span>
@@ -275,7 +275,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a href={paper4}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper4}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Clarity in Pre Purchase Building Inspection Reports
                                                             </span>
@@ -291,9 +291,8 @@ class Members extends React.Component {
                                 </div>
                             </div>
                         </div>
-
-                        <FooterBar />
                     </div>    
+                    <FooterBar />
                 </div>
                 
                 
