@@ -22,6 +22,9 @@ import paper2 from '../../assets/files/public/Delignification of Tile Battens.pd
 import paper3 from '../../assets/files/public/Elevated Moisture in Walls.pdf'
 import paper4 from '../../assets/files/public/Clarity in Pre Purchase Building Inspection Reports.pdf'
 
+import paper6 from '../../assets/files/public/Sagging ceilings.pdf'
+import paper7 from '../../assets/files/public/Party Walls.pdf'
+
 
 class Members extends React.Component {
     constructor(props) {
@@ -164,13 +167,25 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper1}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper6}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Press Release
+                                                                Sagging ceilings
                                                             </span>
                                                         </a>
                                                     </td>
-                                                    <td>21st September 2019</td>
+                                                    <td>30th November 2019</td>
+                                                    <td>Final</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper7}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Party and Firewalls
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>30th November 2019</td>
+                                                    <td>Final</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -201,6 +216,16 @@ class Members extends React.Component {
                                                         </a>
                                                     </td>
                                                     <td>11th October 2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper1}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Press Release
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>21st September 2019</td>
                                                 </tr>
                                             </tbody>
                                             
@@ -245,13 +270,25 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper1}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper6}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Press Release
+                                                                Sagging ceilings
                                                             </span>
                                                         </a>
                                                     </td>
-                                                    <td>21st September 2019</td>
+                                                    <td>30th November 2019</td>
+                                                    <td>Final</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper7}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Party and Firewalls
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>30th November 2019</td>
+                                                    <td>Final</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -282,6 +319,16 @@ class Members extends React.Component {
                                                         </a>
                                                     </td>
                                                     <td>11th October 2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper1}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Press Release
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>21st September 2019</td>
                                                 </tr>
                                             </tbody>
                                             

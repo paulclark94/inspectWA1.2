@@ -19,6 +19,8 @@ import paper1 from '../../assets/files/private/Position Paper 1 2019 Delignifica
 import paper2 from '../../assets/files/private/Position Paper 2 2019 Elevated Moisture Levels in Masonay Walls Approve.._.pdf'
 import paper3 from '../../assets/files/private/Position Paper 3 2019 Pre Purchase Builing Insepction Report.._.pdf'
 
+import paper6 from '../../assets/files/private/Position Paper 6 2019 Sagging ceilings .pdf'
+import paper7 from '../../assets/files/private/Position Paper 7 Party and Firewalls Final.pdf'
 
 class Members extends React.Component {
     constructor(props) {
@@ -167,7 +169,7 @@ class Members extends React.Component {
                                                 <tbody>
                                                     <tr>
                                                         <td>Members Forum</td>
-                                                        <td>26 Nov 2019</td>
+                                                        <td>25 Feb 2020</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Inaugural AGM</td>
@@ -191,6 +193,28 @@ class Members extends React.Component {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper6}>
+                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                    Sagging ceilings
+                                                                </span>
+                                                            </a>
+                                                        </td>
+                                                        <td>30th November 2019</td>
+                                                        <td>Final</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper7}>
+                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                    Party and Firewalls
+                                                                </span>
+                                                            </a>
+                                                        </td>
+                                                        <td>30th November 2019</td>
+                                                        <td>Final</td>
+                                                    </tr>
                                                     <tr>
                                                         <td>
                                                             <a rel="noopener noreferrer" target='_blank' href={paper1}>
@@ -268,7 +292,7 @@ class Members extends React.Component {
                                                 <tbody>
                                                     <tr>
                                                         <td>Members Forum</td>
-                                                        <td>26 Nov 2019</td>
+                                                        <td>25 Feb 2020</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Inaugural AGM</td>
@@ -292,6 +316,28 @@ class Members extends React.Component {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper6}>
+                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                    Sagging ceilings
+                                                                </span>
+                                                            </a>
+                                                        </td>
+                                                        <td>30th November 2019</td>
+                                                        <td>Final</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a rel="noopener noreferrer" target='_blank' href={paper7}>
+                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                    Party and Firewalls
+                                                                </span>
+                                                            </a>
+                                                        </td>
+                                                        <td>30th November 2019</td>
+                                                        <td>Final</td>
+                                                    </tr>
                                                     <tr>
                                                         <td>
                                                             <a rel="noopener noreferrer" target='_blank' href={paper1}>
