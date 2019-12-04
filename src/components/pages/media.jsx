@@ -167,7 +167,7 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper6}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper6} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Sagging ceilings
                                                             </span>
@@ -177,7 +177,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper7}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper7} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Party and Firewalls
                                                             </span>
@@ -187,7 +187,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper2}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper2} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Delignification of Tile Battens
                                                             </span>
@@ -197,7 +197,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper3}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper3} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Elevated Moisture in Walls
                                                             </span>
@@ -207,7 +207,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper4}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper4} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Clarity in Pre Purchase Building Inspection Reports
                                                             </span>
@@ -217,7 +217,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper1}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper1} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Press Release
                                                             </span>
@@ -268,7 +268,7 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper6}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper6} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Sagging ceilings
                                                             </span>
@@ -278,7 +278,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper7}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper7} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Party and Firewalls
                                                             </span>
@@ -288,7 +288,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper2}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper2} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Delignification of Tile Battens
                                                             </span>
@@ -298,7 +298,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper3}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper3} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Elevated Moisture in Walls
                                                             </span>
@@ -308,7 +308,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper4}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper4} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Clarity in Pre Purchase Building Inspection Reports
                                                             </span>
@@ -318,7 +318,7 @@ class Members extends React.Component {
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper1}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper1} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Press Release
                                                             </span>

@@ -4,25 +4,10 @@ import { Route, Link, withRouter } from 'react-router-dom'
 import { addtoken } from '../../actions/addtoken'
 import { removetoken } from '../../actions/removetoken'
 
-import Auth0Lock from 'auth0-lock';
 
 import { elastic as Menu } from 'react-burger-menu'
 
 
-
-
-var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.com', {   
-    theme: {
-        primaryColor: 'rgb(100,100,100)',            
-    },        
-    auth: {
-        redirect: false
-    },
-    languageDictionary: {
-        title: "InspectWA sign in"
-    },    
-    allowSignUp: false
-});
 
 
 
@@ -32,88 +17,8 @@ class NavBarMobile extends Component {
         super(props);
 
         this.state = {
-            token: 0,
-            isAuthenticated: ''
         }
     } 
-
-    
-
-
-    componentDidMount() {
-        let that = this;
-        lock.checkSession({}, (error, authResult) => {     
-            if (error || !authResult) {                   
-                that.setState({isAuthenticated: false});
-            } else {  
-                that.setState({isAuthenticated: true});
-            }
-      
-        })
-    }
-
-
-
-    loginBtnClick = () => {
-        let that = this;
-        lock.checkSession({}, (error, authResult) => {     
-            if (error || !authResult) {
-                lock.on("authenticated", function(authResult) {            
-                    //Update state of parent component
-                    that.props.authHandler(true);
-        
-                    //Set the token in the local storage
-                    localStorage.setItem("accessToken", authResult.accessToken);             
-                    
-                    that.setState({isAuthenticated: true});    
-
-                    window.location.reload();
-                    
-                });
-                
-                lock.show();
-            } else {  
-                //USER IS CURRENTLY LOGGED IN
-                that.props.history.push('/members')
-            }
-      
-        })
-              
-    }
-
-    checkToken = () => {
-        lock.checkSession({}, function (error, authResult) {
-            if (error || !authResult) {
-                lock.show();
-                alert('dead')
-            } else {
-                alert('alive')
-                // user has an active session, so we can use the accessToken directly.
-                lock.getUserInfo(authResult.accessToken, function (error, profile) {
-
-                        console.log(error, profile);
-                });
-
-            }
-        });
-    }
-
-    navButton = () => {        
-        var buttonString = ''
-
-        if(this.state.isAuthenticated === true) {
-            buttonString = 'Members'
-        } else if(this.state.isAuthenticated === false) {
-            buttonString = 'Login'
-        } else if(this.state.isAuthenticated === '') {
-            buttonString = ''
-        }
-        return buttonString
-    }
-
-    logout = () => {
-        lock.logout();
-    }
 
     styles = {
         bar: {
@@ -267,9 +172,9 @@ class NavBarMobile extends Component {
                             <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Contact</p>
                         </Link>
                         <br></br>
-                        <a onClick={this.loginBtnClick} style={{}}>
-                            <div style={{color:'rgb(200,200,200)', textDecoration:'none'}}>{this.navButton()}</div>
-                        </a>
+                        <Link to="/members" style={{}}>
+                            <p style={{color:'rgb(200,200,200)', textDecoration:'none'}}>Members</p>
+                        </Link>
                     </Menu>
                     <span style={{color:'rgb(200,200,200)', fontSize:'3vh', lineHeight:'3vh', marginLeft:'8vh', marginTop:'3.5vh'}}>
                         Menu

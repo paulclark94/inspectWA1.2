@@ -6,12 +6,15 @@ import {
     isMobile
   } from "react-device-detect";
 import { Route, Link } from 'react-router-dom'
+import firebase from '../../Firebase'
 
 import NavBar from '../core/navBar'
 import NavBarMobile from '../core/navBarMobile'
 
 import FooterBar from '../core/footerBar'
 import FooterBarMobile from '../core/footerBarMobile'
+
+import Loading from '../../components/loading.js'
 
 import './members.css'
 
@@ -27,17 +30,43 @@ class Members extends React.Component {
         super(props);
         
         this.state = {
-            isAuthenticated: false
-        }
-  
-        this.authHandler = this.authHandler.bind(this)
+            isAuthenticated: false,
+            loadingVisible: false,
+            email: '', 
+            password: '',
+            changePasswordVisible: false,
+            passwordNew1:'',
+            passwordNew2:''
+        }  
     } 
   
     
-    authHandler(newValue) {
+    onEmailChange = (event) => {
+        this.setState({email: event.target.value})
+    }
+    
+    onPasswordChange = (event) => {
+        this.setState({password: event.target.value})
+    }
+
+    changePasswordShow = () => {
         this.setState({
-          isAuthenticated: newValue
+            changePasswordVisible:true
         })
+    }
+
+    changePasswordHide = () => {
+        this.setState({
+            changePasswordVisible:false
+        })
+    }
+
+    onPasswordNew1Change = (event) => {
+        this.setState({passwordNew1: event.target.value})
+    }
+    
+    onPasswordNew2Change = (event) => {
+        this.setState({passwordNew2: event.target.value})
     }
     
     mobileStyles = {
@@ -139,259 +168,409 @@ class Members extends React.Component {
         alert(msg);
     }
 
+    renderLoader = () => {
+        if(this.state.loadingVisible) {
+            return(
+                <Loading />
+            )
+        } else {
+            return null;
+        }
+    }
+
+    submitLogin = () => {
+        const that = this;
+        this.setState({loadingVisible:true});
+
+        //Make the Firebase call
+        let ref = firebase.database().ref('/');
+        ref.on('value', function(snapshot) {
+            let authCheck = false;            let dataObj = snapshot.val();
+            for(var i = 0; i < dataObj.users.length; i++) {
+                if((that.state.email === dataObj.users[i].email) && (that.state.password === dataObj.users[i].password)) {
+                    that.setState({
+                        loadingVisible: false, 
+                        isAuthenticated: true
+                    })
+                }
+            }
+            setTimeout(function(){ 
+                that.setState({
+                    loadingVisible: false
+                })
+                if(that.state.isAuthenticated == false) {
+                    alert('Credentials are incorrect, please try again.')
+                } 
+            }, 2000);
+        }); 
+    }
+
+    
+
+    submitChangePassword = () => {
+        const that = this;
+        if((this.state.passwordNew1 === this.state.passwordNew2) && (this.state.passwordNew1 !== '')) {
+            this.setState({loadingVisible:true});
+
+            //Make the Firebase call
+            let ref = firebase.database().ref('/');
+            ref.on('value', function(snapshot) {
+                let dataObj = snapshot.val();
+                var originalObj = dataObj.users
+                var newObj = dataObj.users
+                for(var i = 0; i < originalObj.length; i++) {
+                    if((that.state.email === originalObj[i].email) && (that.state.password === originalObj[i].password)) {
+                        newObj[i].password = that.state.passwordNew1 
+                        alert('Password has successfully been changed')
+                        //Send to database and wrap up
+                        firebase.database().ref('/users').set(newObj)
+                        that.setState({
+                            loadingVisible: false, 
+                            isAuthenticated: true
+                        })
+                    }
+                }
+                setTimeout(function(){ 
+                    that.setState({
+                        loadingVisible: false
+                    })
+                    if(that.state.isAuthenticated == false) {
+                        alert('Existing email and password is incorrect, please try again.')
+                    } 
+                }, 2000);
+            }); 
+        } else {
+            alert('Your new password fields do not match, please ensure they are the same and resubmit.')
+        }        
+    }
     
     
     renderContent = () => {
-        if (isMobile) {
+        if(!isMobile) {
+            if(!this.state.isAuthenticated) {
+                if(this.state.changePasswordVisible) {
+                    return (
+                        <div>                        
+                            <div style={{backgroundColor:'rgba(0,0,0,0.6)', zIndex:20, height:'90vh', marginTop:'10vh', display:'flex', alignItems:'center', justifyContent:'center'}}>
+                                <div style={{width:'30%',}}> 
+                                
+                                    <img src={require("../../assets/images/logoLightSub.png")} style={{width:'100%'}}></img>
+                                                                    
+                                    <span style={{color:'white', fontSize:18,}}>
+                                        Complete the form below to change your password
+                                    </span>
+                                    <br />
+                                    <br />
+        
+                                    <span style={{color:'white'}}>
+                                        Email:
+                                    </span>
+                                    <br />
+                                    <input 
+                                        onChange={this.onEmailChange.bind(this)}
+                                        style={{backgroundColor:'white', borderRadius:5,border:'none', textIndent:10, padding:5, width:'100%'}} 
+                                        type="text"
+                                        placeholder="Your email.." />
+                                    <br />
+                                    <br />  
+                                    <span style={{color:'white'}}>
+                                        Old password:
+                                    </span>
+                                    <br />
+                                    <input 
+                                        onChange={this.onPasswordChange.bind(this)}
+                                        style={{backgroundColor:'white', borderRadius:5,border:'none', textIndent:10, padding:5, width:'100%'}} 
+                                        type="password"
+                                        placeholder="Your password.." />
+                                    <br />
+                                    <br />  
+                                    <span style={{color:'white'}}>
+                                        New password:
+                                    </span>
+                                    <br />
+                                    <input 
+                                        onChange={this.onPasswordNew1Change.bind(this)}
+                                        style={{backgroundColor:'white', borderRadius:5,border:'none', textIndent:10, padding:5, width:'100%'}} 
+                                        type="password"
+                                        placeholder="New password.." />
+                                    <br />
+                                    <br />  
+                                    <span style={{color:'white'}}>
+                                        Retype new password:
+                                    </span>
+                                    <br />
+                                    <input 
+                                        onChange={this.onPasswordNew2Change.bind(this)}
+                                        style={{backgroundColor:'white', borderRadius:5,border:'none', textIndent:10, padding:5, width:'100%'}} 
+                                        type="password"
+                                        placeholder="Retype new password.." />
+                                    <br />
+                                    <br />
+                                    
+                                    <div style={{display:'flex', flexDirection:'row'}}>
+                                        <div style={{display:'flex', flex:1, textAlign:'center', justifyContent:'center'}}>
+                                            <div 
+                                                style={{padding:10, backgroundColor:'#4CAF50', borderRadius:5, color:'white', width:'80%', cursor:'pointer'}} 
+                                                onClick={this.submitChangePassword} >                         
+                                                <span style={{color:'white'}}>
+                                                    Confirm
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div style={{display:'flex', flex:1, textAlign:'center', justifyContent:'center'}}>
+                                            <div 
+                                                style={{padding:10, backgroundColor:'#e74c3c', borderRadius:5, color:'white', width:'80%', cursor:'pointer'}} 
+                                                onClick={this.changePasswordHide} >                         
+                                                <span style={{color:'white'}}>
+                                                    Cancel
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+        
+                            </div>                
+                            <div className="App" style={{width:"100%", margin:0, padding:0}}>
+                                <div id="background" style={{width:"100%", }}>
+                                    <NavBar />
+            
+                                    <FooterBar />
+                                </div>    
+                            </div>
+                        </div>                
+                    );
+                } else {
+                    return (
+                        <div>                        
+                            <div style={{backgroundColor:'rgba(0,0,0,0.6)', zIndex:20, height:'90vh', marginTop:'10vh', display:'flex', alignItems:'center', justifyContent:'center'}}>
+                                <div style={{width:'30%',}}> 
+                                
+                                    <img src={require("../../assets/images/logoLightSub.png")} style={{width:'100%'}}></img>
+                                                                    
+                                    <span style={{color:'white', fontSize:18,}}>
+                                        Please login to access the members section
+                                    </span>
+                                    <br />
+                                    <br />
+        
+                                    <span style={{color:'white'}}>
+                                        Email:
+                                    </span>
+                                    <br />
+                                    <input 
+                                        onChange={this.onEmailChange.bind(this)}
+                                        style={{backgroundColor:'white', borderRadius:5,border:'none', textIndent:10, padding:5, width:'100%'}} 
+                                        type="text"
+                                        placeholder="Your email.." />
+                                    <br />
+                                    <br />  
+                                    <span style={{color:'white'}}>
+                                        Password:
+                                    </span>
+                                    <br />
+                                    <input 
+                                        onChange={this.onPasswordChange.bind(this)}
+                                        style={{backgroundColor:'white', borderRadius:5,border:'none', textIndent:10, padding:5, width:'100%'}} 
+                                        type="password"
+                                        placeholder="Your password.." />
+                                    <br />
+                                    <br />
+                                    
+                                    <div style={{width:'100%', textAlign:'center', display:'flex', justifyContent:'center'}}>
+                                        <div 
+                                            style={{padding:5, backgroundColor:'rgb(52,152,219)', borderRadius:5, color:'white', width:'40%', cursor:'pointer'}} 
+                                            onClick={this.changePasswordShow} >                         
+                                            <span style={{color:'white'}}>
+                                                Change password
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    
+                                    <div style={{width:'100%', textAlign:'center', display:'flex', justifyContent:'center'}}>
+                                        <div 
+                                            style={{padding:10, backgroundColor:'#4CAF50', borderRadius:5, color:'white', width:'40%', cursor:'pointer'}} 
+                                            onClick={this.submitLogin} >                         
+                                            <span style={{color:'white'}}>
+                                                Submit
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>                
+                            <div className="App" style={{width:"100%", margin:0, padding:0}}>
+                                <div id="background" style={{width:"100%", }}>
+                                    <NavBar />
+            
+                                    <FooterBar />
+                                </div>    
+                            </div>
+                        </div>                
+                    );
+
+                }
+                
+            } else {            
+                return (                
+                    <div className="App" style={{width:"100%", margin:0, padding:0}}>
+                        <div id="background" style={{width:"100%", }}>
+                            <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
+
+                            <div>    
+                                <div style={this.styles.BodySection}>
+                                    <h1 style={this.styles.BodySectionHeaderText}>
+                                        InspectWA members area
+                                    </h1>
+                                    <div style={this.styles.BodySectionTextDiv}>
+                                        
+                                        <div style={this.styles.membersContainer}>
+                                            <div style={this.styles.calendarContainer}>
+                                                <h3>
+                                                    Events Calendar
+                                                </h3>
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Event</th>
+                                                            <th>Date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Members Forum</td>
+                                                            <td>25 Feb 2020</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Inaugural AGM</td>
+                                                            <td>28 May 2020</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    
+                                                </table>
+
+                                            </div>
+                                            <div style={this.styles.docLibraryContainer}>
+                                                <h3>
+                                                    Document library
+                                                </h3>
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Document</th>
+                                                            <th>Date modified</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper6} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Sagging ceilings
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>30th November 2019</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper7} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Party and Firewalls
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>30th November 2019</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper1} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Dilignification of Tile Battens
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>10th October 2019</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper2} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Moisture in masonary walls
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>10th October 2019</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper3} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Pre Purchase inspection clarity
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>10th October 2019</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <FooterBar />
+                        </div>    
+                    </div>
+                    
+                    
+                );
+                
+            }
+        } else {
             return (
                 <div className="App" style={{width:"100%", margin:0, padding:0}}>
                     <div id="background" style={{width:"100%", }}>
                         <NavBarMobile isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
-
-                            <div style={this.mobileStyles.BodySection}>
-                                <h1 style={this.mobileStyles.BodySectionHeaderText}>
-                                    Members area
-                                </h1>
-                                <div style={this.mobileStyles.BodySectionTextDiv}>
-                                    
-                                    <div style={this.mobileStyles.membersContainer}>
-                                        <div style={this.mobileStyles.calendarContainer}>
-                                            <h3>
-                                                Events Calendar
-                                            </h3>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>Event</th>
-                                                        <th>Date</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Members Forum</td>
-                                                        <td>25 Feb 2020</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Inaugural AGM</td>
-                                                        <td>28 May 2020</td>
-                                                    </tr>
-                                                </tbody>
-                                                
-                                            </table>
-
-                                        </div>
-                                        <div style={this.mobileStyles.docLibraryContainer}>
-                                            <h3>
-                                                Document library
-                                            </h3>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>Document</th>
-                                                        <th>Date modified</th>
-                                                        <th>Status</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper6}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Sagging ceilings
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>30th November 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper7}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Party and Firewalls
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>30th November 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper1}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Dilignification of Tile Battens
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>10th October 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper2}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Moisture in masonary walls
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>10th October 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper3}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Pre Purchase inspection clarity
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>10th October 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                </tbody>
-                                                
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <FooterBarMobile />
-                    </div>    
-                </div>
-            
-                
-                
-            );
-        } else {
-            return (                
-                <div className="App" style={{width:"100%", margin:0, padding:0}}>
-                    <div id="background" style={{width:"100%", }}>
-                        <NavBar isAuthenticated={this.state.isAuthenticated} authHandler={this.authHandler}/>
-
-                        <div>    
-                            <div style={this.styles.BodySection}>
-                                <h1 style={this.styles.BodySectionHeaderText}>
-                                    InspectWA members area
-                                </h1>
-                                <div style={this.styles.BodySectionTextDiv}>
-                                    
-                                    <div style={this.styles.membersContainer}>
-                                        <div style={this.styles.calendarContainer}>
-                                            <h3>
-                                                Events Calendar
-                                            </h3>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>Event</th>
-                                                        <th>Date</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Members Forum</td>
-                                                        <td>25 Feb 2020</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Inaugural AGM</td>
-                                                        <td>28 May 2020</td>
-                                                    </tr>
-                                                </tbody>
-                                                
-                                            </table>
-
-                                        </div>
-                                        <div style={this.styles.docLibraryContainer}>
-                                            <h3>
-                                                Document library
-                                            </h3>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>Document</th>
-                                                        <th>Date modified</th>
-                                                        <th>Status</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper6}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Sagging ceilings
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>30th November 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper7}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Party and Firewalls
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>30th November 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper1}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Dilignification of Tile Battens
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>10th October 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper2}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Moisture in masonary walls
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>10th October 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a rel="noopener noreferrer" target='_blank' href={paper3}>
-                                                                <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                    Pre Purchase inspection clarity
-                                                                </span>
-                                                            </a>
-                                                        </td>
-                                                        <td>10th October 2019</td>
-                                                        <td>Final</td>
-                                                    </tr>
-                                                </tbody>
-                                                
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
+                        <div style={{width:'100%',height: '100vh',contentAlign: 'center',textAlign: 'center'}}>   
+                            <img src={require("../../assets/images/logoLightSub.png")} style={{width:'80vw', marginTop:'20vh'}}></img>
+                            <br></br> 
+                            <br></br>
+                            <div style={{ display: 'inline-block', width:'90vw'}}>
+                                <p style={{fontSize:'2vh',color:'rgb(220,220,220)',cursor: 'pointer'}}>
+                                    The members section is not available on mobile devices. Please use a desktop computer to access this section.    
+                                </p>
+                                
                             </div>
                         </div>
-
-                        <FooterBar />
-                    </div>    
+                        <FooterBarMobile />
+                    </div>
                 </div>
                 
                 
             );
+        
         }
+        
     }
      
     render() {
-        return this.renderContent();
+        return (
+            <div>
+                {this.renderLoader()}
+                {this.renderContent()}
+            </div>
+        )
     }
 
   

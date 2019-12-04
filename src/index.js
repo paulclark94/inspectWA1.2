@@ -13,10 +13,6 @@ import {
 } from 'react-router-dom'
 
 
-import Auth0Lock from 'auth0-lock';
-
-
-
 //Import stylesheets
 import '../src/assets/css/inspectWA.css'
 
@@ -32,60 +28,6 @@ import Members from './components/pages/members'
 import Media from './components/pages/media'
 
 
-
-var lock = new Auth0Lock('lVnzQWTkw8KQa7ZrU94L2Tx0BCYVnQPj', 'pclark.au.auth0.com', {   
-    theme: {
-        primaryColor: 'rgb(100,100,100)',            
-    },        
-    auth: {
-        redirect: false
-    },
-    languageDictionary: {
-        title: "InspectWA sign in"
-    },    
-    allowSignUp: false
-});
-
-        
-       
-const useCheckAuth = () => {    
-  
-  const [isAuth, setAuth] = useState(false);
-
-   useEffect(()=>{
-
-   lock.checkSession({}, (error, authResult) => {
-     
-      if (error || !authResult) {
-          //USER IS NOT ALLOWED TO ACCESS ROUTE, REDIRECT TO /contact
-          setAuth(false)
-      } else {  
-          //USER CAN PROCEED TO MEMBERS ROUTE
-          setAuth(true)
-      }
-
-    })
-
-  })
-
-  return isAuth
-
-}
-
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  
-  const isAuth = useCheckAuth()
-  
-  return (
-    <Route {...rest} render={(props) => (
-      isAuth === true
-        ? <Component {...props} />
-        : <Redirect to='/membership' />
-    )} />
-  )
-}
-
-
 //Define routing
 //
 const routing = (
@@ -98,7 +40,7 @@ const routing = (
         <Route path="/inspectors" component={Inspectors} />
         <Route path="/contact" component={Contact} />          
         <Route path="/media" component={Media} />           
-        <PrivateRoute path='/members' component={Members} />
+        <Route path='/members' component={Members} />
         <Route path="/index.html" component={App} />
       </div>
     </Router>
