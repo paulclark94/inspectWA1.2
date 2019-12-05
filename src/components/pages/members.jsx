@@ -22,7 +22,7 @@ import paper1 from '../../assets/files/private/Position Paper 1 2019 Delignifica
 import paper2 from '../../assets/files/private/Position Paper 2 2019 Elevated Moisture Levels in Masonay Walls Approve.._.pdf'
 import paper3 from '../../assets/files/private/Position Paper 3 2019 Pre Purchase Builing Insepction Report.._.pdf'
 
-import paper6 from '../../assets/files/private/Position Paper 6 2019 Sagging ceilings .pdf'
+import paper6 from '../../assets/files/private/Position Paper 6 2019 Sagging ceilings.pdf'
 import paper7 from '../../assets/files/private/Position Paper 7 Party and Firewalls Final.pdf'
 
 class Members extends React.Component {
