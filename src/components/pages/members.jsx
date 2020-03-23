@@ -25,6 +25,9 @@ import paper3 from '../../assets/files/private/Position Paper 3 2019 Pre Purchas
 import paper6 from '../../assets/files/private/Position Paper 6 2019 Sagging ceilings.pdf'
 import paper7 from '../../assets/files/private/Position Paper 7 Party and Firewalls Final.pdf'
 
+import paper8 from '../../assets/files/private/Position Paper 8 DownLighting & Insulation.pdf'
+import paper9 from '../../assets/files/private/Position Paper 9 Texture Rendered Finishes as an Alternative to Weep holes.pdf'
+
 class Members extends React.Component {
     constructor(props) {
         super(props);
@@ -439,12 +442,28 @@ class Members extends React.Component {
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>Members Forum</td>
-                                                            <td>25 Feb 2020</td>
+                                                            <td>AGM</td>
+                                                            <td>July 2020</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Members Forum - Waterpoofing and various</td>
+                                                            <td>26 May 2020</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Structerre Framing World</td>
+                                                            <td>February 2020</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Members Forum - Windows and various</td>
+                                                            <td>November 2019</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Members Forum - REIWA and various</td>
+                                                            <td>November 2019</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Inaugural AGM</td>
-                                                            <td>28 May 2020</td>
+                                                            <td>28 May 2019</td>
                                                         </tr>
                                                     </tbody>
                                                     
@@ -464,6 +483,28 @@ class Members extends React.Component {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper8} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Downlighting & Insulation
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>23rd March 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper9} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Rendered Finishes as an Alternative to Weep holes
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>23rd March 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
                                                         <tr>
                                                             <td>
                                                                 <a rel="noopener noreferrer" target='_blank' href={paper6} style={{textDecoration:'none'}}>

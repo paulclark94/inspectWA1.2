@@ -25,6 +25,9 @@ import paper4 from '../../assets/files/public/Clarity in Pre Purchase Building I
 import paper6 from '../../assets/files/public/Sagging ceilings.pdf'
 import paper7 from '../../assets/files/public/Party Walls.pdf'
 
+import paper8 from '../../assets/files/public/Downlighting & Insulation.pdf'
+import paper9 from '../../assets/files/public/Rendered Finishes as an Alternative to Weep holes.pdf'
+
 
 class Members extends React.Component {
     constructor(props) {
@@ -167,6 +170,26 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper8} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Downlighting & Insulation
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>23rd March 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper9} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Rendered Finishes as an alternative to Weep holes
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>23rd March 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper6} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Sagging ceilings
@@ -266,6 +289,26 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper8} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Downlighting & Insulation
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>23rd March 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper9} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Rendered Finishes as an alternative to Weep holes
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>23rd March 2020</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper6} style={{textDecoration:'none'}}>
