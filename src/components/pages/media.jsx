@@ -175,7 +175,7 @@ class Members extends React.Component {
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper10} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Open Letter to The Minister
+                                                                Economic stimulus during COVID-19
                                                             </span>
                                                         </a>
                                                     </td>
@@ -306,7 +306,7 @@ class Members extends React.Component {
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper10} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Open Letter to The Minister
+                                                                Economic stimulus during COVID-19
                                                             </span>
                                                         </a>
                                                     </td>
