@@ -29,6 +29,9 @@ import paper8 from '../../assets/files/public/Downlighting & Insulation.pdf'
 import paper9 from '../../assets/files/public/Rendered Finishes as an Alternative to Weep holes.pdf'
 
 
+import paper10 from '../../assets/files/public/Open Letter to The Minister.pdf'
+
+
 class Members extends React.Component {
     constructor(props) {
         super(props);
@@ -170,6 +173,16 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper10} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Open Letter to The Minister
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>24th March 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper8} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Downlighting & Insulation
@@ -289,6 +302,16 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper10} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Open Letter to The Minister
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>24th March 2020</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper8} style={{textDecoration:'none'}}>

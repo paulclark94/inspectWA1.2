@@ -451,15 +451,15 @@ class Members extends React.Component {
                                                         </tr>
                                                         <tr>
                                                             <td>Structerre Framing World</td>
-                                                            <td>February 2020</td>
+                                                            <td>25 February 2020</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Members Forum - Windows and various</td>
-                                                            <td>November 2019</td>
+                                                            <td>27 November 2019</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Members Forum - REIWA and various</td>
-                                                            <td>November 2019</td>
+                                                            <td>24 September 2019</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Inaugural AGM</td>
