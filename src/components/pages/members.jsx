@@ -28,6 +28,10 @@ import paper7 from '../../assets/files/private/Position Paper 7 Party and Firewa
 import paper8 from '../../assets/files/private/Position Paper 8 DownLighting & Insulation.pdf'
 import paper9 from '../../assets/files/private/Position Paper 9 Texture Rendered Finishes as an Alternative to Weep holes.pdf'
 
+import paper11 from '../../assets/files/private/11 Pre Purchase Inspection Report.pdf'
+import paper12 from '../../assets/files/private/12 Structural Defects Notices.pdf'
+import paper13 from '../../assets/files/private/13 Defining Residential Buildings.pdf'
+
 class Members extends React.Component {
     constructor(props) {
         super(props);
@@ -483,6 +487,39 @@ class Members extends React.Component {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper13} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Defining Residential Buildings
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>20th April 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper12} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Structural Defects Notices
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>20th April 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper11} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Pre Purchase Inspection Report
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>20th April 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
                                                         <tr>
                                                             <td>
                                                                 <a rel="noopener noreferrer" target='_blank' href={paper8} style={{textDecoration:'none'}}>

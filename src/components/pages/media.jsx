@@ -28,8 +28,13 @@ import paper7 from '../../assets/files/public/Party Walls.pdf'
 import paper8 from '../../assets/files/public/Downlighting & Insulation.pdf'
 import paper9 from '../../assets/files/public/Rendered Finishes as an Alternative to Weep holes.pdf'
 
-
 import paper10 from '../../assets/files/public/Open Letter to The Minister.pdf'
+
+import paper11 from '../../assets/files/public/11 Pre Purchase Inspection Report.pdf'
+import paper12 from '../../assets/files/public/12 Structural Defects Notices.pdf'
+import paper13 from '../../assets/files/public/13 Defining Residential Buildings.pdf'
+
+
 
 
 class Members extends React.Component {
@@ -173,6 +178,36 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper13} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Defining Residential Buildings
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>20th April 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper12} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Structural Defects Notices
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>20th April 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper11} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Pre Purchase Inspection Report
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>20th April 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper10} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                 Economic stimulus during COVID-19
@@ -302,6 +337,36 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper13} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Defining Residential Buildings
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>20th April 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper12} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Structural Defects Notices
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>20th April 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper11} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Pre Purchase Inspection Report
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>20th April 2020</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper10} style={{textDecoration:'none'}}>
