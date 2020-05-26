@@ -32,6 +32,10 @@ import paper11 from '../../assets/files/private/11 Pre Purchase Inspection Repor
 import paper12 from '../../assets/files/private/12 Structural Defects Notices.pdf'
 import paper13 from '../../assets/files/private/13 Defining Residential Buildings.pdf'
 
+import paper14 from '../../assets/files/private/14 RCDs Smoke Alarms Electrical Testing.pdf'
+import paper15 from '../../assets/files/private/15 InspectWA Responds to CRIS Reforms.pdf'
+
+
 class Members extends React.Component {
     constructor(props) {
         super(props);
@@ -487,6 +491,28 @@ class Members extends React.Component {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper15} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        InspectWA Responds to CRIS Reforms
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>26th May 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        RCDs Smoke Alarms Electrical Testing
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>26th May 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
                                                         <tr>
                                                             <td>
                                                                 <a rel="noopener noreferrer" target='_blank' href={paper13} style={{textDecoration:'none'}}>

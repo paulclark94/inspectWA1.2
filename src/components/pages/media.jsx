@@ -34,6 +34,7 @@ import paper11 from '../../assets/files/public/11 Pre Purchase Inspection Report
 import paper12 from '../../assets/files/public/12 Structural Defects Notices.pdf'
 import paper13 from '../../assets/files/public/13 Defining Residential Buildings.pdf'
 
+import paper14 from '../../assets/files/public/14 RCDs Smoke Alarms Electrical Testing.pdf'
 
 
 
@@ -176,6 +177,16 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                RCDs Smoke Alarms Electrical Testing
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>26th May 2020</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper13} style={{textDecoration:'none'}}>
@@ -337,6 +348,16 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                RCDs Smoke Alarms Electrical Testing
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>26th May 2020</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper13} style={{textDecoration:'none'}}>
