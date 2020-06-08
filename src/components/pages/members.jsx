@@ -35,6 +35,9 @@ import paper13 from '../../assets/files/private/13 Defining Residential Building
 import paper14 from '../../assets/files/private/14 RCDs Smoke Alarms Electrical Testing.pdf'
 import paper15 from '../../assets/files/private/15 InspectWA Responds to CRIS Reforms.pdf'
 
+import paper16 from '../../assets/files/private/16 Wet Area Waterproofing CPD Presentation.pdf'
+
+
 
 class Members extends React.Component {
     constructor(props) {
@@ -491,6 +494,17 @@ class Members extends React.Component {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper16} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Wet Area Waterproofing CPD Presentation
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>26th May 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
                                                         <tr>
                                                             <td>
                                                                 <a rel="noopener noreferrer" target='_blank' href={paper15} style={{textDecoration:'none'}}>
