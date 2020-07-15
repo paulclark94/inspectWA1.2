@@ -36,6 +36,8 @@ import paper13 from '../../assets/files/public/13 Defining Residential Buildings
 
 import paper14 from '../../assets/files/public/14 RCDs Smoke Alarms Electrical Testing.pdf'
 
+import paper17 from '../../assets/files/public/17 Roof Leaks and Structural Damage.pdf'
+import paper18 from '../../assets/files/public/18 InspectWA Position Paper.pdf'
 
 
 class Members extends React.Component {
@@ -179,23 +181,23 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper18} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                RCDs Smoke Alarms Electrical Testing
+                                                                Restricted Access
                                                             </span>
                                                         </a>
                                                     </td>
-                                                    <td>26th May 2020</td>
+                                                    <td>15th July 2020</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper13} style={{textDecoration:'none'}}>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper17} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                Defining Residential Buildings
+                                                                Roof Leaks and Structural Damage
                                                             </span>
                                                         </a>
                                                     </td>
-                                                    <td>20th April 2020</td>
+                                                    <td>15th July 2020</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -348,6 +350,26 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper18} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Restricted Access
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>15th July 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper17} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                Roof Leaks and Structural Damage
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>15th July 2020</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
