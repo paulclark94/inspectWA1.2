@@ -119,7 +119,7 @@ class About extends React.Component {
                                             </span>
                                             <br></br>
                                             <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
-                                                Andrew Booth
+                                                Elias Oostveen
                                             </span>                                        
                                         </div>      
                                     </div>     
@@ -139,7 +139,7 @@ class About extends React.Component {
                                             </span>
                                             <br></br>
                                             <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
-                                                Ross Hall
+                                                Andrew Booth
                                             </span>                                         
                                         </div>      
                                     </div>     
@@ -199,7 +199,7 @@ class About extends React.Component {
                                             </span>
                                             <br></br>
                                             <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
-                                                Elias Oostveen
+                                                Peter Huber
                                             </span>                                         
                                         </div> 
                                     </div>     
@@ -390,7 +390,7 @@ class About extends React.Component {
                                             </span>
                                             <br></br>
                                             <span style={{color:'rgb(200,200,200)', fontSize:'1.5vw'}}>
-                                                Andrew Booth
+                                                Elias Oostveen
                                             </span>                                        
                                         </div>      
                                     </div>     
@@ -411,7 +411,7 @@ class About extends React.Component {
                                             </span>
                                             <br></br>
                                             <span style={{color:'rgb(200,200,200)', fontSize:'1.5vw'}}>
-                                                Ross Hall
+                                                Andrew Booth
                                             </span>                                        
                                         </div>      
                                     </div>     
@@ -474,7 +474,7 @@ class About extends React.Component {
                                             </span>
                                             <br></br>
                                             <span style={{color:'rgb(200,200,200)', fontSize:'1.5vw'}}>
-                                                Elias Oostveen
+                                                Peter Huber
                                             </span>                                        
                                         </div>      
                                     </div>     

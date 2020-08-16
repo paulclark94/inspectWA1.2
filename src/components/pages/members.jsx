@@ -40,6 +40,8 @@ import paper16 from '../../assets/files/private/16 Wet Area Waterproofing CPD Pr
 import paper17 from '../../assets/files/public/17 Roof Leaks and Structural Damage.pdf'
 import paper18 from '../../assets/files/public/18 InspectWA Position Paper.pdf'
 
+import paper19 from '../../assets/files/public/19 Pre purchase structural inspections.pdf'
+
 
 class Members extends React.Component {
     constructor(props) {
@@ -496,6 +498,17 @@ class Members extends React.Component {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper18} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                        Pre purchase structural inspections
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>16th August 2020</td>
+                                                            <td>Final</td>
+                                                        </tr>
                                                         <tr>
                                                             <td>
                                                                 <a rel="noopener noreferrer" target='_blank' href={paper18} style={{textDecoration:'none'}}>
