@@ -500,7 +500,7 @@ class Members extends React.Component {
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <a rel="noopener noreferrer" target='_blank' href={paper18} style={{textDecoration:'none'}}>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper19} style={{textDecoration:'none'}}>
                                                                     <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                                         Pre purchase structural inspections
                                                                     </span>
