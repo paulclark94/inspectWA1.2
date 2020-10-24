@@ -40,6 +40,7 @@ import paper17 from '../../assets/files/public/17 Roof Leaks and Structural Dama
 import paper18 from '../../assets/files/public/18 InspectWA Position Paper.pdf'
 
 import paper19 from '../../assets/files/public/19 Pre purchase structural inspections.pdf'
+import paper20 from '../../assets/files/public/20 Tie Downs Part 1.pdf'
 
 
 class Members extends React.Component {
@@ -181,6 +182,16 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper20} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                            Tie Downs - Part 1
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>25th October 2020</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper19} style={{textDecoration:'none'}}>
@@ -382,6 +393,16 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper20} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                            Tie Downs - Part 1
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>25th October 2020</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper19} style={{textDecoration:'none'}}>
