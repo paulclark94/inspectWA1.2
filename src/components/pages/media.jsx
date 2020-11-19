@@ -184,6 +184,16 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                RCDs Smoke Alarms Electrical Testing
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>19th November 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper20} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                             Tie Downs - Part 1
@@ -221,16 +231,6 @@ class Members extends React.Component {
                                                         </a>
                                                     </td>
                                                     <td>15th July 2020</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
-                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                RCDs Smoke Alarms Electrical Testing
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td>26th May 2020</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -395,6 +395,16 @@ class Members extends React.Component {
                                             <tbody>
                                                 <tr>
                                                     <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                RCDs Smoke Alarms Electrical Testing
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>19th November 2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper20} style={{textDecoration:'none'}}>
                                                             <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
                                                             Tie Downs - Part 1
@@ -432,16 +442,6 @@ class Members extends React.Component {
                                                         </a>
                                                     </td>
                                                     <td>15th July 2020</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
-                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
-                                                                RCDs Smoke Alarms Electrical Testing
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td>26th May 2020</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
