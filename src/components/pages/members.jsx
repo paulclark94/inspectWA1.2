@@ -43,6 +43,9 @@ import paper18 from '../../assets/files/public/18 InspectWA Position Paper.pdf'
 import paper19 from '../../assets/files/public/19 Pre purchase structural inspections.pdf'
 import paper20 from '../../assets/files/public/20 Tie Downs Part 1.pdf'
 
+import paper21 from '../../assets/files/public/21 Tie Downs Part 2.pdf'
+
+
 
 class Members extends React.Component {
     constructor(props) {
@@ -458,6 +461,14 @@ class Members extends React.Component {
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td>Members Forum - Tiling</td>
+                                                            <td>23 February 2021</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Members Forum - Cavity Walls and Water Ingress</td>
+                                                            <td>22 September 2020</td>
+                                                        </tr>
+                                                        <tr>
                                                             <td>AGM</td>
                                                             <td>July 2020</td>
                                                         </tr>
@@ -499,6 +510,17 @@ class Members extends React.Component {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper21} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                    Tie Downs - Part 2
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>8th March 2021</td>
+                                                            <td>Final</td>
+                                                        </tr>
                                                         <tr>
                                                             <td>
                                                                 <a rel="noopener noreferrer" target='_blank' href={paper14} style={{textDecoration:'none'}}>
