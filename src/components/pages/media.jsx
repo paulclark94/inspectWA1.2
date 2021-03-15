@@ -36,13 +36,13 @@ import paper13 from '../../assets/files/public/13 Defining Residential Buildings
 
 import paper14 from '../../assets/files/public/14 RCDs Smoke Alarms Electrical Testing.pdf'
 
-import paper17 from '../../assets/files/public/17 Roof Leaks and Structural Damage (r).pdf'
+import paper17 from '../../assets/files/public/17 Roof Leaks and Structural Damage.pdf'
 import paper18 from '../../assets/files/public/18 InspectWA Position Paper.pdf'
 
 import paper19 from '../../assets/files/public/19 Pre purchase structural inspections.pdf'
 import paper20 from '../../assets/files/public/20 Tie Downs Part 1.pdf'
 
-import paper21 from '../../assets/files/public/20 Tie Downs Part 2.pdf'
+import paper21 from '../../assets/files/public/21 Tie Downs Part 2.pdf'
 
 
 class Members extends React.Component {
