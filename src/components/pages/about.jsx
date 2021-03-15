@@ -199,7 +199,7 @@ class About extends React.Component {
                                             </span>
                                             <br></br>
                                             <span style={{color:'rgb(200,200,200)', fontSize:'3vh'}}>
-                                                Peter Huber
+                                                Michael Booth
                                             </span>                                         
                                         </div> 
                                     </div>     
