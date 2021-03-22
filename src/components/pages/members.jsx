@@ -37,14 +37,15 @@ import paper15 from '../../assets/files/private/15 InspectWA Responds to CRIS Re
 
 import paper16 from '../../assets/files/private/16 Wet Area Waterproofing CPD Presentation.pdf'
 
-import paper17 from '../../assets/files/public/17 Roof Leaks and Structural Damage.pdf'
-import paper18 from '../../assets/files/public/18 InspectWA Position Paper.pdf'
+import paper17 from '../../assets/files/private/17 Roof Leaks and Structural Damage.pdf'
+import paper18 from '../../assets/files/private/18 InspectWA Position Paper.pdf'
 
-import paper19 from '../../assets/files/public/19 Pre purchase structural inspections.pdf'
-import paper20 from '../../assets/files/public/20 Tie Downs Part 1.pdf'
+import paper19 from '../../assets/files/private/19 Pre purchase structural inspections.pdf'
+import paper20 from '../../assets/files/private/20 Tie Downs Part 1.pdf'
 
-import paper21 from '../../assets/files/public/21 Tie Downs Part 2.pdf'
+import paper21 from '../../assets/files/private/21 Tie Downs Part 2.pdf'
 
+import paper22 from '../../assets/files/private/22 Tile Presentation.pdf'
 
 
 class Members extends React.Component {
@@ -519,6 +520,17 @@ class Members extends React.Component {
                                                                 </a>
                                                             </td>
                                                             <td>8th March 2021</td>
+                                                            <td>Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a rel="noopener noreferrer" target='_blank' href={paper22} style={{textDecoration:'none'}}>
+                                                                    <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                                    Tile presentation
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                            <td>1st March 2021</td>
                                                             <td>Final</td>
                                                         </tr>
                                                         <tr>
