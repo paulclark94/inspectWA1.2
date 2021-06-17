@@ -44,6 +44,8 @@ import paper20 from '../../assets/files/public/20 Tie Downs Part 1.pdf'
 
 import paper21 from '../../assets/files/public/21 Tie Downs Part 2.pdf'
 
+import paper24 from '../../assets/files/public/24 Pre Purchase Building Inspection Annexures.pdf'
+
 
 class Members extends React.Component {
     constructor(props) {
@@ -184,6 +186,16 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper24} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                            Pre Purchase Building Inspection Annexures
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>1st May 2021</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper21} style={{textDecoration:'none'}}>
@@ -405,6 +417,16 @@ class Members extends React.Component {
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a rel="noopener noreferrer" target='_blank' href={paper24} style={{textDecoration:'none'}}>
+                                                            <span style={{textDecorationColor:'rgba(0,0,0,0)', color:'white'}}>
+                                                            Pre Purchase Building Inspection Annexures
+                                                            </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>1st May 2021</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a rel="noopener noreferrer" target='_blank' href={paper21} style={{textDecoration:'none'}}>

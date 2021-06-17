@@ -417,6 +417,14 @@ class Inspectors extends React.Component {
                 var Phone = InspectorsObject[i].Phone;
                 var Website = InspectorsObject[i].Website;
                 var Qualification = InspectorsObject[i].Qualification;
+                var Registration = InspectorsObject[i].Registration;
+                var QualificationString;
+
+                if(InspectorsObject[i].Registration == '') {
+                    QualificationString = Qualification;
+                } else {
+                    QualificationString = Qualification + ' (' + Registration + ')';
+                }
 
                 if(InspectorsObject[i].PIInsurance == 1) {
                     var PIInsurance = 'Yes'
@@ -481,7 +489,7 @@ class Inspectors extends React.Component {
                 if(displayIndicator === true) {
                     
                     views.push(             
-                        this.GenerateOpacityMobile(Name, Phone, Website, Qualification, PIInsurance )
+                        this.GenerateOpacityMobile(Name, Phone, Website, QualificationString, PIInsurance )
                     );
                 }
 
@@ -582,6 +590,14 @@ class Inspectors extends React.Component {
                 var Phone = InspectorsObject[i].Phone;
                 var Website = InspectorsObject[i].Website;
                 var Qualification = InspectorsObject[i].Qualification;
+                var Registration = InspectorsObject[i].Registration;
+                var QualificationString;
+
+                if(InspectorsObject[i].Registration == '') {
+                    QualificationString = Qualification;
+                } else {
+                    QualificationString = Qualification + ' (' + Registration + ')';
+                }
 
                 if(InspectorsObject[i].PIInsurance == 1) {
                     var PIInsurance = 'Yes'
@@ -646,7 +662,7 @@ class Inspectors extends React.Component {
                 if(displayIndicator === true) {
                     
                     views.push(             
-                        this.GenerateOpacity(Name, Phone, Website, Qualification, PIInsurance )
+                        this.GenerateOpacity(Name, Phone, Website, QualificationString, PIInsurance )
                     );
                 }
 

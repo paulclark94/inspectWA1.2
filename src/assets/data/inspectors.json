@@ -1,9 +1,10 @@
 [{
-    "Name": "Andrew Booth ",
+    "Name": "Andrew Booth",
     "Phone": "9200 4200",
     "Website": "www.abbc.net.au",
     "Company": "ABBC Builing Inspectors",
     "Qualification": "WA Registered Builder ",
+    "Registration": "9179",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -41,137 +42,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "John Tyrrell",
-    "Phone": "9200 4200",
-    "Website": "www.abbc.net.au",
-    "Company": "ABBC Builing Inspectors",
-    "Qualification": "WA Registered Builder ",
-    "PIInsurance": "1",
-    "Types": {
-        "Type1": 1,
-        "Type2": 1,
-        "Type3": 1,
-        "Type4": 1,
-        "Type5": 1,
-        "Type6": 1,
-        "Type7": 1,
-        "Type8": 1,
-        "Type9": 1,
-        "Type10": 1,
-        "Type11": 1,
-        "Type12": 1,
-        "Type13": 1
-    },
-    "Locations": {
-        "Location1": 1,
-        "Location2": 0,
-        "Location3": 1,
-        "Location4": 0,
-        "Location5": 0,
-        "Location7": 0,
-        "Location8": 0,
-        "Location9": 0,
-        "Location10": 0,
-        "Location11": 0,
-        "Location12": 0
-    },
-    "Properties": {
-        "Property1": 1,
-        "Property2": 1,
-        "Property3": 1,
-        "Property4": 1,
-        "Property5": 1
-    }
-}, {
-    "Name": "Michael Booth",
-    "Phone": "9200 4200",
-    "Website": "www.abbc.net.au",
-    "Company": "ABBC Builing Inspectors",
-    "Qualification": "WA Registered Builder ",
-    "PIInsurance": "1",
-    "Types": {
-        "Type1": 1,
-        "Type2": 1,
-        "Type3": 1,
-        "Type4": 1,
-        "Type5": 1,
-        "Type6": 1,
-        "Type7": 1,
-        "Type8": 1,
-        "Type9": 1,
-        "Type10": 1,
-        "Type11": 1,
-        "Type12": 1,
-        "Type13": 1
-    },
-    "Locations": {
-        "Location1": 1,
-        "Location2": 0,
-        "Location3": 1,
-        "Location4": 0,
-        "Location5": 0,
-        "Location7": 0,
-        "Location8": 0,
-        "Location9": 0,
-        "Location10": 0,
-        "Location11": 0,
-        "Location12": 0
-    },
-    "Properties": {
-        "Property1": 1,
-        "Property2": 1,
-        "Property3": 1,
-        "Property4": 1,
-        "Property5": 1
-    }
-}, {
-    "Name": "Brian Connor",
-    "Phone": "9200 4200",
-    "Website": "www.abbc.net.au",
-    "Company": "ABBC Builing Inspectors",
-    "Qualification": "WA Registered Builder ",
-    "PIInsurance": "1",
-    "Types": {
-        "Type1": 1,
-        "Type2": 1,
-        "Type3": 1,
-        "Type4": 1,
-        "Type5": 1,
-        "Type6": 1,
-        "Type7": 1,
-        "Type8": 1,
-        "Type9": 1,
-        "Type10": 1,
-        "Type11": 1,
-        "Type12": 1,
-        "Type13": 1
-    },
-    "Locations": {
-        "Location1": 1,
-        "Location2": 0,
-        "Location3": 1,
-        "Location4": 0,
-        "Location5": 0,
-        "Location7": 0,
-        "Location8": 0,
-        "Location9": 0,
-        "Location10": 0,
-        "Location11": 0,
-        "Location12": 0
-    },
-    "Properties": {
-        "Property1": 1,
-        "Property2": 1,
-        "Property3": 1,
-        "Property4": 1,
-        "Property5": 1
-    }
-}, {
-    "Name": "Andrew Scales ",
+    "Name": "Andrew Scales",
     "Phone": "0448 767 964",
     "Website": "www.proconsult.com.au",
     "Company": "ProConsult Building Inspections",
     "Qualification": "WA Registered Builder ",
+    "Registration": "10599",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -214,6 +90,7 @@
     "Website": "www.abelinspections.com.au",
     "Company": "ABEL Builing Inspections ",
     "Qualification": "WA Registered Builder ",
+    "Registration": "14236",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -251,11 +128,55 @@
         "Property5": 1
     }
 }, {
-    "Name": "Brian Gray ",
+    "Name": "Brian Connor",
+    "Phone": "9200 4200",
+    "Website": "www.abbc.net.au",
+    "Company": "ABBC Builing Inspectors",
+    "Qualification": "WA Registered Builder ",
+    "Registration": "",
+    "PIInsurance": "1",
+    "Types": {
+        "Type1": 1,
+        "Type2": 1,
+        "Type3": 1,
+        "Type4": 1,
+        "Type5": 1,
+        "Type6": 1,
+        "Type7": 1,
+        "Type8": 1,
+        "Type9": 1,
+        "Type10": 1,
+        "Type11": 1,
+        "Type12": 1,
+        "Type13": 1
+    },
+    "Locations": {
+        "Location1": 1,
+        "Location2": 0,
+        "Location3": 1,
+        "Location4": 0,
+        "Location5": 0,
+        "Location7": 0,
+        "Location8": 0,
+        "Location9": 0,
+        "Location10": 0,
+        "Location11": 0,
+        "Location12": 0
+    },
+    "Properties": {
+        "Property1": 1,
+        "Property2": 1,
+        "Property3": 1,
+        "Property4": 1,
+        "Property5": 1
+    }
+}, {
+    "Name": "Brian Gray",
     "Phone": "9240 8855",
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "11504",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -293,11 +214,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "Colin Merritt ",
+    "Name": "Colin Merritt",
     "Phone": "9240 8855",
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "8836",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -335,11 +257,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "Dan Mitchell ",
+    "Name": "Dan Mitchell",
     "Phone": "0411 244 943",
     "Website": "www.southwestwabuildinginspections.com.au/about-us/",
     "Company": "South West WA Building Inspections",
     "Qualification": "WA Registered Builder ",
+    "Registration": "101044",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -377,11 +300,55 @@
         "Property5": 0
     }
 }, {
-    "Name": "Dean Mullumby ",
+    "Name": "David Elder",
+    "Phone": "0499 826 889",
+    "Website": "www.elderpropertyservices.com.au ",
+    "Company": "Personal Membership ",
+    "Qualification": "WA Registered Builder ",
+    "Registration": "103721",
+    "PIInsurance": "1",
+    "Types": {
+        "Type1": 1,
+        "Type2": 1,
+        "Type3": 0,
+        "Type4": 1,
+        "Type5": 0,
+        "Type6": 1,
+        "Type7": 0,
+        "Type8": 0,
+        "Type9": 0,
+        "Type10": 0,
+        "Type11": 0,
+        "Type12": 0,
+        "Type13": 0
+    },
+    "Locations": {
+        "Location1": 1,
+        "Location2": 0,
+        "Location3": 1,
+        "Location4": 0,
+        "Location5": 0,
+        "Location7": 0,
+        "Location8": 0,
+        "Location9": 0,
+        "Location10": 0,
+        "Location11": 0,
+        "Location12": 0
+    },
+    "Properties": {
+        "Property1": 1,
+        "Property2": 1,
+        "Property3": 0,
+        "Property4": 0,
+        "Property5": 0
+    }
+}, {
+    "Name": "Dean Mullumby",
     "Phone": "6118 4942",
     "Website": "www.homeintegrity.com.au",
     "Company": "Home Integrity ",
     "Qualification": "WA Registered Builder ",
+    "Registration": "BP12017",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -419,11 +386,12 @@
         "Property5": 0
     }
 }, {
-    "Name": "Elias Oostveen ",
+    "Name": "Elias Oostveen",
     "Phone": "6118 4942",
     "Website": "www.homeintegrity.com.au",
     "Company": "Home Integrity ",
     "Qualification": "WA Registered Builder ",
+    "Registration": "11323",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -461,11 +429,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "Gary Hart ",
+    "Name": "Gary Hart",
     "Phone": "6160 5915",
     "Website": "www.smartbuildingspecialists.com.au",
     "Company": "Smart Builing Specialist ",
-    "Qualification": "",
+    "Qualification": "WA Registered Builder ",
+    "Registration": "BP103982",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -503,11 +472,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "Glen Webster ",
+    "Name": "Glen Webster",
     "Phone": "6118 4942",
     "Website": "www.homeintegrity.com.au",
     "Company": "Home Integrity ",
     "Qualification": "WA Registered Builder ",
+    "Registration": "BP12170",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -550,6 +520,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "9417",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -587,11 +558,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "James Ganon ",
+    "Name": "James Ganon",
     "Phone": "0488114262",
     "Website": "",
     "Company": "Personal Membership ",
     "Qualification": "Registered Engineer",
+    "Registration": "",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -629,11 +601,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "Jeremy Rimmer ",
+    "Name": "Jeremy Rimmer",
     "Phone": "6118 4942",
     "Website": "www.homeintegrity.com.au",
     "Company": "Home Integrity ",
     "Qualification": "WA Registered Builder ",
+    "Registration": "BC43014",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -676,6 +649,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "2025",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -718,6 +692,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "5834",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -755,11 +730,55 @@
         "Property5": 1
     }
 }, {
-    "Name": "Malcolm Galloway ",
+    "Name": "John Tyrrell",
+    "Phone": "9200 4200",
+    "Website": "www.abbc.net.au",
+    "Company": "ABBC Builing Inspectors",
+    "Qualification": "WA Registered Builder ",
+    "Registration": "7469",
+    "PIInsurance": "1",
+    "Types": {
+        "Type1": 1,
+        "Type2": 1,
+        "Type3": 1,
+        "Type4": 1,
+        "Type5": 1,
+        "Type6": 1,
+        "Type7": 1,
+        "Type8": 1,
+        "Type9": 1,
+        "Type10": 1,
+        "Type11": 1,
+        "Type12": 1,
+        "Type13": 1
+    },
+    "Locations": {
+        "Location1": 1,
+        "Location2": 0,
+        "Location3": 1,
+        "Location4": 0,
+        "Location5": 0,
+        "Location7": 0,
+        "Location8": 0,
+        "Location9": 0,
+        "Location10": 0,
+        "Location11": 0,
+        "Location12": 0
+    },
+    "Properties": {
+        "Property1": 1,
+        "Property2": 1,
+        "Property3": 1,
+        "Property4": 1,
+        "Property5": 1
+    }
+}, {
+    "Name": "Malcolm Galloway",
     "Phone": "9240 8855",
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "10732",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -797,11 +816,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "Marc De Padova ",
+    "Name": "Marc De Padova",
     "Phone": "0417715405",
     "Website": "www.guardianbuildinginspections.net.au",
     "Company": "Guardian Building & Termite Inspections",
     "Qualification": "WA Registered Builder ",
+    "Registration": "7791",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -839,11 +859,12 @@
         "Property5": 0
     }
 }, {
-    "Name": "Mark Cleary ",
+    "Name": "Mark Cleary",
     "Phone": "9240 8855",
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "8326",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -883,9 +904,10 @@
 }, {
     "Name": "Martin Philpott",
     "Phone": "6160 5915",
-    "Website": "www.smartbuildingspecialists.com.au",
-    "Company": "Smart Builing Specialist ",
+    "Website": "https://www.pbiperthbuildinginspections.com/",
+    "Company": "PBI Perth Building Inspections",
     "Qualification": "WA Registered Builder ",
+    "Registration": "101524",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -923,11 +945,98 @@
         "Property5": 1
     }
 }, {
+    "Name": "Michael Booth",
+    "Phone": "9200 4200",
+    "Website": "www.abbc.net.au",
+    "Company": "ABBC Builing Inspectors",
+    "Qualification": "WA Registered Builder ",
+    "Registration": "BP100890",
+    "PIInsurance": "1",
+    "Types": {
+        "Type1": 1,
+        "Type2": 1,
+        "Type3": 1,
+        "Type4": 1,
+        "Type5": 1,
+        "Type6": 1,
+        "Type7": 1,
+        "Type8": 1,
+        "Type9": 1,
+        "Type10": 1,
+        "Type11": 1,
+        "Type12": 1,
+        "Type13": 1
+    },
+    "Locations": {
+        "Location1": 1,
+        "Location2": 0,
+        "Location3": 1,
+        "Location4": 0,
+        "Location5": 0,
+        "Location7": 0,
+        "Location8": 0,
+        "Location9": 0,
+        "Location10": 0,
+        "Location11": 0,
+        "Location12": 0
+    },
+    "Properties": {
+        "Property1": 1,
+        "Property2": 1,
+        "Property3": 1,
+        "Property4": 1,
+        "Property5": 1
+    }
+}, {
+    "Name": "Neil Bridger",
+    "Phone": "",
+    "Website": "www.smartbuildingspecialists.com.au",
+    "Company": "Smart Builing Specialist ",
+    "Qualification": "WA Registered Builder ",
+    "Registration": "12632",
+    "PIInsurance": "1",
+    "Types": {
+        "Type1": 1,
+        "Type2": 1,
+        "Type3": 1,
+        "Type4": 1,
+        "Type5": 0,
+        "Type6": 1,
+        "Type7": 1,
+        "Type8": 1,
+        "Type9": 1,
+        "Type10": 0,
+        "Type11": 0,
+        "Type12": 0,
+        "Type13": 1
+    },
+    "Locations": {
+        "Location1": 1,
+        "Location2": 0,
+        "Location3": 1,
+        "Location4": 0,
+        "Location5": 0,
+        "Location7": 0,
+        "Location8": 0,
+        "Location9": 0,
+        "Location10": 0,
+        "Location11": 0,
+        "Location12": 0
+    },
+    "Properties": {
+        "Property1": 1,
+        "Property2": 1,
+        "Property3": 0,
+        "Property4": 0,
+        "Property5": 1
+    }
+}, {
     "Name": "Peter Barnes",
     "Phone": "0412269263",
     "Website": "hqas@iinet.net.au",
     "Company": "Housing Quality Assurance Services",
     "Qualification": "WA Registered Builder ",
+    "Registration": "7539",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -965,11 +1074,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "Peter Cook ",
+    "Name": "Peter Cook",
     "Phone": "9240 8855",
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "10197",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1012,6 +1122,7 @@
     "Website": "",
     "Company": "Personal Membership ",
     "Qualification": "WA Registered Builder ",
+    "Registration": "5720",
     "PIInsurance": "0",
     "Types": {
         "Type1": 1,
@@ -1054,6 +1165,7 @@
     "Website": "www.precisionbi.com.au",
     "Company": "BPI Building & Pest Inspection Perth South",
     "Qualification": "WA Registered Builder ",
+    "Registration": "S1577",
     "PIInsurance": "1",
     "Types": {
         "Type1": 0,
@@ -1096,6 +1208,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "7220",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1138,6 +1251,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "7631",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1180,6 +1294,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "6376",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1217,11 +1332,12 @@
         "Property5": 1
     }
 }, {
-    "Name": "Ross Hall ",
+    "Name": "Ross Hall",
     "Phone": "94576066",
     "Website": "www.housecalls.net.au",
     "Company": "Housecalls",
     "Qualification": "WA Registered Builder ",
+    "Registration": "7487",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1264,6 +1380,7 @@
     "Website": "",
     "Company": "Personal Membership ",
     "Qualification": "Registered Engineer",
+    "Registration": "",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1306,6 +1423,7 @@
     "Website": "www.raeburninspections.com.au",
     "Company": "Raeburn Building Inspections",
     "Qualification": "WA Registered Builder ",
+    "Registration": "12607",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1348,6 +1466,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "8615",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1390,6 +1509,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "BP100459",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1432,6 +1552,7 @@
     "Website": "www.houspect.com.au/wa",
     "Company": "Houspect WA",
     "Qualification": "WA Registered Builder ",
+    "Registration": "10649",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1467,47 +1588,5 @@
         "Property3": 1,
         "Property4": 1,
         "Property5": 1
-    }
-}, {
-    "Name": "David Elder",
-    "Phone": "0499 826 889",
-    "Website": "www.elderpropertyservices.com.au ",
-    "Company": "Personal Membership ",
-    "Qualification": "WA Registered Builder ",
-    "PIInsurance": "1",
-    "Types": {
-        "Type1": 1,
-        "Type2": 1,
-        "Type3": 0,
-        "Type4": 1,
-        "Type5": 0,
-        "Type6": 1,
-        "Type7": 0,
-        "Type8": 0,
-        "Type9": 0,
-        "Type10": 0,
-        "Type11": 0,
-        "Type12": 0,
-        "Type13": 0
-    },
-    "Locations": {
-        "Location1": 1,
-        "Location2": 0,
-        "Location3": 1,
-        "Location4": 0,
-        "Location5": 0,
-        "Location7": 0,
-        "Location8": 0,
-        "Location9": 0,
-        "Location10": 0,
-        "Location11": 0,
-        "Location12": 0
-    },
-    "Properties": {
-        "Property1": 1,
-        "Property2": 1,
-        "Property3": 0,
-        "Property4": 0,
-        "Property5": 0
     }
 }]
