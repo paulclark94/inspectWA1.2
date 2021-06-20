@@ -133,7 +133,7 @@
     "Website": "www.abbc.net.au",
     "Company": "ABBC Builing Inspectors",
     "Qualification": "WA Registered Builder ",
-    "Registration": "",
+    "Registration": "BP100541",
     "PIInsurance": "1",
     "Types": {
         "Type1": 1,
@@ -1589,4 +1589,5 @@
         "Property4": 1,
         "Property5": 1
     }
-}]
+}
+]
